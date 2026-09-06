@@ -74,7 +74,27 @@ This file is generated from repository truth and bounded for the web channel. It
       "web_status": "active"
     }
   ],
-  "attempts": [],
+  "attempts": [
+    {
+      "artifacts": [],
+      "attempt_id": "attempt:web-20260906-erdos81-a01",
+      "claims": [],
+      "completed_at": null,
+      "generator": "chatgpt-web-github",
+      "inputs": [
+        "problem-library/records/canonical-problems.jsonl",
+        "research/records/failed-routes.jsonl"
+      ],
+      "lifecycle": "running",
+      "method": "proof",
+      "objective": "证明或反驳结构化缩减猜想：对每个 n 顶点 chordal graph G，是否存在同为 n 顶点的 split graph H，使 edge clique partition number cp(H)≥cp(G)。",
+      "obligation_graph_id": "graph:erdos81-initial-v1",
+      "problem_contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58",
+      "problem_id": "problem:erdos-81-chordal-clique-partition",
+      "route_id": "route:split-extremal-reduction-v1",
+      "started_at": "2026-09-06T05:03:30Z"
+    }
+  ],
   "failed_routes": [],
   "knowledge_operators": [
     {
@@ -203,7 +223,40 @@ This file is generated from repository truth and bounded for the web channel. It
       "source_id": "sagemath"
     }
   ],
-  "obligation_graphs": [],
+  "obligation_graphs": [
+    {
+      "attempt_id": "attempt:web-20260906-erdos81-a01",
+      "graph_id": "graph:erdos81-initial-v1",
+      "obligations": [
+        {
+          "dependencies": [
+            "obligation:erdos81-split-extremal-reduction"
+          ],
+          "kind": "root_claim",
+          "obligation_id": "obligation:erdos81-root",
+          "statement": {
+            "formal_declaration": null,
+            "language": "en",
+            "text": "Do there exist universal constants C and n₀ such that every chordal graph G on n≥n₀ vertices has an edge partition into at most n²/6 + Cn cliques?"
+          },
+          "statement_sha256": "e80f2371b8d6256ce092f6c203b68a9d85e6141e54c641e1bad336ec286beaa1"
+        },
+        {
+          "dependencies": [],
+          "kind": "lemma",
+          "obligation_id": "obligation:erdos81-split-extremal-reduction",
+          "statement": {
+            "formal_declaration": null,
+            "language": "zh",
+            "text": "证明或反驳结构化缩减猜想：对每个 n 顶点 chordal graph G，是否存在同为 n 顶点的 split graph H，使 edge clique partition number cp(H)≥cp(G)。"
+          },
+          "statement_sha256": "7dad9b11ed2b75715bab68f05789963525f7ef278720ff330d5991dc92399257"
+        }
+      ],
+      "root_obligation_id": "obligation:erdos81-root",
+      "route_id": "route:split-extremal-reduction-v1"
+    }
+  ],
   "problem_contract": {
     "acceptance": {
       "policy": "solution-admission-v1"
