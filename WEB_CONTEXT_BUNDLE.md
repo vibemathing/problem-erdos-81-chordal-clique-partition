@@ -208,72 +208,109 @@ This file is generated from repository truth and bounded for the web channel. It
     "acceptance": {
       "policy": "solution-admission-v1"
     },
-    "aliases": [],
+    "aliases": [
+      "Erdős 81"
+    ],
     "allowed_axioms": [
-      "none"
+      "finite-graph-basic",
+      "finite-combinatorics",
+      "real-arithmetic"
     ],
     "assumptions": [
-      "This record must never be treated as an active research problem."
+      "All graphs and digraphs are finite and simple unless the statement explicitly says otherwise."
     ],
     "constraints": {
       "allowed_adapters": [
-        "template-validation-v1"
+        "chordal-graph-enumerator-v1",
+        "clique-partition-ilp-v1",
+        "lean-obligation-v1"
       ],
       "allowed_methods": [
-        "discovery"
+        "discovery",
+        "derivation",
+        "computation",
+        "proof",
+        "formalization"
       ],
-      "max_attempts": 1,
+      "max_attempts": 20,
       "runtime": {
-        "max_output_bytes": 65536,
-        "max_retries": 1,
-        "max_transitions": 10,
-        "timeout_seconds": 60
+        "max_output_bytes": 5242880,
+        "max_retries": 3,
+        "max_transitions": 300,
+        "timeout_seconds": 1800
       }
     },
-    "created_at": "2026-09-06T00:00:00Z",
+    "created_at": "2026-09-06T03:30:00Z",
     "definitions": [
       {
-        "definition": "A non-admitted draft record used only to validate the physical public repository template.",
-        "term": "template placeholder"
+        "definition": "A graph with no induced cycle of length greater than 3.",
+        "term": "chordal graph"
+      },
+      {
+        "definition": "A family of complete subgraphs whose edge sets are pairwise disjoint and whose union is E(G).",
+        "term": "edge partition into cliques"
+      },
+      {
+        "definition": "Existence of constants C and n₀ giving the bound n²/6+Cn for all n≥n₀.",
+        "term": "n²/6+O(n)"
       }
     ],
     "domain": {
-      "description": "Template-only placeholder domain; not a mathematical research question.",
+      "description": "Finite simple chordal graphs G on n vertices.",
       "objects": [
-        "template-placeholder"
+        "chordal graph",
+        "edge clique partition",
+        "asymptotic upper bound"
       ]
     },
-    "lifecycle": "draft",
+    "lifecycle": "active",
     "msc": [
-      "00A00"
+      "05C70",
+      "05C35"
     ],
-    "problem_id": "problem:template-placeholder",
+    "problem_id": "problem:erdos-81-chordal-clique-partition",
     "quantifiers": [
       {
-        "domain": "a reviewed public canonical ProblemContract supplied by the repository builder",
-        "kind": "find",
+        "domain": "a real constant C>0 and an integer n₀≥1",
+        "kind": "exists",
         "variables": [
-          "replacement_problem"
+          "C",
+          "n₀"
+        ]
+      },
+      {
+        "domain": "integers n≥n₀ and finite simple chordal graphs G on n vertices",
+        "kind": "forall",
+        "variables": [
+          "n",
+          "G"
+        ]
+      },
+      {
+        "domain": "edge partitions P of G into at most n²/6+Cn complete subgraphs",
+        "kind": "exists",
+        "variables": [
+          "P"
         ]
       }
     ],
     "schema_version": "1.0.0",
     "sources": [
       {
-        "retrieved_at": "2026-09-06T00:00:00Z",
-        "source": "Vibe Mathing public Web Harness",
-        "source_record_id": "public-template-placeholder-v1",
-        "url": "https://github.com/vibemathing/vibe-mathing-problem-public-template"
+        "retrieved_at": "2026-08-31T18:49:04Z",
+        "source": "ErdosProblems",
+        "source_record_id": "erdosproblems-74f32b0809bd8e0d",
+        "url": "https://www.erdosproblems.com/81"
       }
     ],
     "statement": {
       "language": "en",
-      "text": "This is a non-research placeholder. Replace it with exactly one reviewed public ProblemContract before creating a public problem repository.",
+      "text": "Do there exist universal constants C and n₀ such that every chordal graph G on n≥n₀ vertices has an edge partition into at most n²/6 + Cn cliques?",
       "version": 1
     },
-    "title": "Vibe Mathing public problem repository template placeholder",
-    "updated_at": "2026-09-06T00:00:00Z"
+    "title": "Clique partitions of chordal graphs (Erdős Problem 81)",
+    "updated_at": "2026-09-06T03:30:00Z"
   },
-  "problem_contract_sha256": "e64cd03254e03dd661eade23243c3c21793fc2d8bffa2d33c172cf8ed2e7f940"
+  "problem_contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58"
 }
 ```

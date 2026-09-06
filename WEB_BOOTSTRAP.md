@@ -1,18 +1,18 @@
 # Web Research Bootstrap
 
-- Repository: `vibemathing/vibe-mathing-problem-public-template`
+- Repository: `vibemathing/problem-erdos-81-chordal-clique-partition`
 - Repository binding: `verified`
-- Repository database ID: `1358726712`
-- Repository node ID: `R_kgDOUPyGOA`
+- Repository database ID: `1358762751`
+- Repository node ID: `R_kgDOUP0S_w`
 - Default branch: `main`
 - Visibility: `public`
-- Canonical Problem: `problem:template-placeholder`
-- ProblemContract SHA-256: `e64cd03254e03dd661eade23243c3c21793fc2d8bffa2d33c172cf8ed2e7f940`
-- Problem lifecycle: `draft`
-- Problem admission: `preview_unadmitted`
+- Canonical Problem: `problem:erdos-81-chordal-clique-partition`
+- ProblemContract SHA-256: `39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58`
+- Problem lifecycle: `active`
+- Problem admission: `canonical_admitted`
 - Harness suite: `harness-source:web-research-full` `1.1.0`
 - Suite manifest SHA-256: `7dfdb41a68bfda314d663ba03b4b2a713ea194168ade5287e58c6434be5cc4fb`
-- Harness snapshot SHA-256: `2e5a81b661248d816f60d55ad7f5eaa6000fa64fb92820cf305e48652aed6262`
+- Harness snapshot SHA-256: `13629e5f0df831b7991975cb7e73cf7ca70bb067fe557aaddbdf0db05418edd5`
 - Channel: `chatgpt-web-github-issue-pr-writer`
 
 ## Required read order
