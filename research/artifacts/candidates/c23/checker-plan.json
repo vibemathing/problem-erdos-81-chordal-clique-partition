@@ -1,0 +1,89 @@
+{
+  "actual_complete_order": null,
+  "actual_graph_count": null,
+  "actual_mathematical_test_count": 0,
+  "algorithms": {
+    "fractional_packing": "Fraction tableau simplex with exact primal/dual validation",
+    "fractional_partition": "Separate revised simplex with exact Gauss-Jordan basis solve; not evaluated via packing identity",
+    "integer_packing": "Conflict graph include/exclude search",
+    "integer_partitions": "Exact edge-mask cover recurrence for both clique alphabets"
+  },
+  "authored_mutation_count": 14,
+  "budgets": {
+    "cpu_threads": 1,
+    "integer_state_cap": 1000000,
+    "lp_pivot_cap": 10000,
+    "max_output_file_bytes": 1048576,
+    "max_output_files": 4,
+    "memory_bytes": 1073741824,
+    "wall_seconds": 1200
+  },
+  "checker": {
+    "bytes": 22250,
+    "path": "research/artifacts/candidates/c23/exact_checker.py",
+    "sha256": "a543c3bbfb6d2f0cce6f7d1bac837d72dff84e4b10bdd9165a6d6fa6e99995b3"
+  },
+  "completion_rule": "Report only completed ranges with emitted exact tables and digests. A timeout or failed mutation is not success. If order 7 fails resource limits, a separately authorized smaller full range may be replayed in a fresh output directory.",
+  "controls": [
+    "empty graphs",
+    "trees",
+    "K_n for 0<=n<=7",
+    "nonchordal C4",
+    "diamond",
+    "J(3,2)",
+    "P6 squared",
+    "two K4 blocks sharing one vertex",
+    "split branch boundaries"
+  ],
+  "duals_tested_on_replay": "Two computed exact optima and their midpoint; every global maximizing clique pair of each. This does not exhaust the optimal face.",
+  "executed_mutation_count": 0,
+  "execution_gate": "Current Web profile command_execution=false; no math execution in this turn. Trusted coordinator must select and attest an authorized runtime.",
+  "execution_status": "pending_unverified",
+  "expected_output_paths": [
+    "research/artifacts/candidates/c23/replay/summary.json",
+    "research/artifacts/candidates/c23/replay/finite-table.csv",
+    "research/artifacts/candidates/c23/replay/controls.json",
+    "research/artifacts/candidates/c23/replay/corpus.json"
+  ],
+  "format": "candidate-exact-replay-plan-v1",
+  "generation": {
+    "A": "All simple graphs by every vertex extension with exact isomorphism canonicalization",
+    "B": "Simplicial extensions with clique neighborhoods, cross-checked against A using induced-hole recognition",
+    "trusted_atlas_dependency": false
+  },
+  "intended_complete_orders": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "mathematical_scope": "Finite selfcheck only; no uniform theorem or independent verification is inferred.",
+  "mutation_names": [
+    "cp=lambda",
+    "wrong factor three",
+    "cover as partition",
+    "missing edge",
+    "nonclique piece",
+    "negative piece weight",
+    "edge overload",
+    "missing triangle dual constraint",
+    "feasible nonoptimal dual",
+    "omitted chordality",
+    "omitted theta sign",
+    "nonglobal maximizer",
+    "nonclique suffix",
+    "p23=cp"
+  ],
+  "outputs_exist": false,
+  "planned_command": "python3 research/artifacts/candidates/c23/exact_checker.py --max-order 7 --seconds 1200 --out research/artifacts/candidates/c23/replay",
+  "syntax_parse": {
+    "method": "Python ast.parse only; checker was not imported or run",
+    "python_version": "3.13.5",
+    "status": "pass"
+  },
+  "verdict": "candidate_only"
+}
