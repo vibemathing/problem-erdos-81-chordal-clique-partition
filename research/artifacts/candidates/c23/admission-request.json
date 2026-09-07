@@ -1,0 +1,130 @@
+{
+  "base_revision": "168492ce3df8528240507deee4cbc961317c8b72",
+  "best_verified_result": "none",
+  "current_attestation": {
+    "actual_exit_status": null,
+    "output_sha256": null,
+    "run_id": null,
+    "source_document_sha256": null,
+    "verifier_fingerprint": null,
+    "verifier_id": null
+  },
+  "format": "candidate-admission-request-v1",
+  "frozen_artifacts": [
+    {
+      "bytes": 19577,
+      "path": "research/artifacts/candidates/c23/audit.md",
+      "sha256": "f437194f25d8a2b5f40467cf63b54ef7645b03983009bc324042d305c007f187"
+    },
+    {
+      "bytes": 22250,
+      "path": "research/artifacts/candidates/c23/exact_checker.py",
+      "sha256": "a543c3bbfb6d2f0cce6f7d1bac837d72dff84e4b10bdd9165a6d6fa6e99995b3"
+    },
+    {
+      "bytes": 1793,
+      "path": "research/artifacts/source-notes/erdos81-a01-c23-primary-source-audit.md",
+      "sha256": "e584583e726f74e301a15d8f51297b1bbda114d17586589f244511bf89420094"
+    },
+    {
+      "bytes": 2309,
+      "path": "research/artifacts/source-notes/erdos81-a01-c23-source-capture.json",
+      "sha256": "bf537bb38db5571c07d9eea90b1361c044aa1ffb7dc678385af420d52b598bef"
+    },
+    {
+      "bytes": 3363,
+      "path": "research/artifacts/candidates/c23/checker-plan.json",
+      "sha256": "af3c9580b82899a726ebd4d92d00f41395b616b7254d59c19ed7237bd1de6484"
+    }
+  ],
+  "gate_observations": [
+    {
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "observation": "Empty; merged artifact files have not been imported into this ledger.",
+      "path": "research/records/candidate-artifacts.jsonl"
+    },
+    {
+      "git_blob_sha": "99a023b0bb7817bed6b00fd6780b438b111727d0",
+      "observation": "Only exact split domination and O(n) root; neither is equivalent to the two statements in this request.",
+      "path": "research/records/obligation-graphs.jsonl"
+    },
+    {
+      "git_blob_sha": "b93b32955eb94c3b4ee82f045f7bbb85fd900f05",
+      "observation": "Fixture-policy entries exist but no exact toolchain_allowlist entries.",
+      "path": "research/verifiers.json"
+    },
+    {
+      "git_blob_sha": "c2a6284e89329de8ae17d1c05ab457ceb4ecc730",
+      "observation": "Requires imported candidate, actual Lean sources, admitted exact toolchain; natural-language proof is not an eligible Lean artifact.",
+      "path": "scripts/vibe_mathing/lean_obligation.py"
+    },
+    {
+      "git_blob_sha": "c232051b6e2332ac5e4a3a7ddde7ec542ca4d9d6",
+      "observation": "Only read-only structural transport checks; no source/proof/admission execution.",
+      "path": ".github/workflows/web-candidate-gate.yml"
+    },
+    {
+      "git_blob_sha": "86644e8238ccbd11351b028f5226c376b3dbfeac",
+      "observation": "command_execution=false and generator role; current session cannot sign verification.",
+      "path": "WEB_CHANNEL_PROFILE.json"
+    }
+  ],
+  "is_verifier_receipt": false,
+  "issue_number": 1,
+  "next_action": "Trusted intake and correctly scoped replay/review; do not rerun transport reconciliation.",
+  "previous_candidate": {
+    "candidate_id": "candidate:erdos81-a01-c22-c20-audit",
+    "path": "research/artifacts/candidates/erdos81-a01-c22-c20-audit.md",
+    "sha256": "ae590742af282d4fbac0b62031114a9043c662e82faa39c0a4013d6ff782b831"
+  },
+  "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+  "request_id": "request:erdos81-c23-asymptotic-audit",
+  "requested_trusted_actions": [
+    "Admit a correctly scoped asymptotic/low-core statement and dependency graph through authorized coordinator procedures; retain the two stronger obligations open.",
+    "Import the frozen candidate through the trusted importer; do not treat PR metadata as a candidate-ledger registration.",
+    "Review the new checker code, admit a bounded exact runtime, then execute checker-plan.json without changing its mathematical definitions; preserve actual input/output digests, maximum completed range and all mutations.",
+    "Obtain the original source PDFs in an authorized runtime, hash their bytes, confirm the bounded capture and primary-body page locators. Source-backed reuse is not a kernel proof.",
+    "Assign a trust-separated mathematical and semantic reviewer to the whole optimal-face clipping lemma, arbitrary-clique suffix induction, signed compression, fixed-epsilon bridge, and simultaneous-choice inequalities.",
+    "Only after valid registered verifier receipts, statement-faithfulness and nonconflicting obligation closure, run the trusted admission gate for the correctly scoped statement. Do not close the O(n) root or exact split domination from this weaker statement."
+  ],
+  "requesting_principal": "chatgpt-web-github",
+  "requesting_trust_domain": "web-candidate-generation",
+  "required_attestation_fields": [
+    "verifier_id",
+    "trust_domain",
+    "verifier_fingerprint",
+    "toolchain_id_version_fingerprint",
+    "frozen_statement_sha256",
+    "candidate_code_input_sha256",
+    "source_document_sha256",
+    "method_or_command",
+    "resource_limits",
+    "actual_exit_status",
+    "output_sha256",
+    "checked_at",
+    "scope_and_limitations"
+  ],
+  "secondary_integrality_gap_work": "deferred_until_primary_acceptance",
+  "statements": [
+    {
+      "admitted_obligation_id": null,
+      "sha256_utf8": "f66f1c5de64ce4670081161405c57768c97e8e0d920215035a6027def93b54da",
+      "text": "For every real eta>0 there exists an integer N_eta>=1 such that for every integer n>=N_eta and every finite simple chordal graph G on n vertices, cp(G)<=(1/6+eta)*n^2, where cp is the minimum exact edge-disjoint clique partition number."
+    },
+    {
+      "admitted_obligation_id": null,
+      "sha256_utf8": "cb02651e70166f2ac8129c83d5e456d5f4e3a27c2fd9b1ec0805e3efc827b204",
+      "text": "For every sequence of finite simple chordal graphs G_j with n_j tending to infinity and cp(G_j)>=(1/6-delta_j)*n_j^2 for nonnegative delta_j tending to zero, eventually every optimal equality-constrained fractional edge-and-triangle partition dual and every globally maximum weighted clique neighborhood is low-core; simultaneously over all these choices and compatible PEOs, r_j/n_j->1/3, t_j/n_j->2/3, theta_j/n_j->1/3, P_j/n_j->0 and (R_j+D_j)/n_j^2->0, with parameters defined in audit.md Section 6."
+    }
+  ],
+  "status": "pending_trusted_intake",
+  "transport_binding": {
+    "attempt_id": "attempt:web-20260906-erdos81-a01",
+    "graph_id": "graph:erdos81-initial-v1",
+    "obligation_id": "obligation:erdos81-split-extremal-reduction",
+    "route_id": "route:split-extremal-reduction-v1",
+    "warning": "Transport binding is not the statement to close. The asymptotic bound is weaker and has no separate admitted node at the base."
+  },
+  "user_authorized_trusted_admission": true,
+  "verdict": "candidate_only"
+}

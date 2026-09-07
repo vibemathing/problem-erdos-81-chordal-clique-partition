@@ -1,0 +1,56 @@
+{
+  "capture_format": "bounded-primary-statement-capture-v1",
+  "digest_scope": "This JSON capture, not source PDF bytes.",
+  "read_date": "2026-09-07",
+  "sources": [
+    {
+      "authors": [
+        "Stephen Boyd",
+        "Lieven Vandenberghe"
+      ],
+      "body_read": true,
+      "locators": [
+        "Section 5.2.1, printed page 224, PDF page index 237, equations 5.17-5.20",
+        "Section 5.2.3, printed pages 226-227, PDF indices 239-240"
+      ],
+      "mapping": "Use w=-v in the standard-form LP dual. Positive feasible edge/triangle weights and finite optimum satisfy Slater's condition.",
+      "original_document_sha256": null,
+      "quote": "the dual optimal value is attained",
+      "source_id": "S1",
+      "title": "Convex Optimization",
+      "url": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
+      "visual_check": "screenshot failed"
+    },
+    {
+      "author": "Raphael Yuster",
+      "body_read": true,
+      "locators": [
+        "page 1 Section 1 definitions",
+        "page 2 Theorems 1.1 and 1.2",
+        "page 3 Section 3 opening paragraph"
+      ],
+      "mapping": "n is the original vertex count; packings are edge-disjoint with edge capacity one. Isolates are bridged in audit.md. No density assumption or linear error is imported.",
+      "normalized_statement": "For fixed F={K3}, for every epsilon>0 there exists N(F,epsilon) such that every n>N and every n-vertex simple graph without isolates has nu_star(G)-nu(G)<epsilon*n^2.",
+      "original_document_sha256": null,
+      "quote": "for all n > N, if G is an n-vertex graph then",
+      "source_id": "S2",
+      "title": "Integer and fractional packing of families of graphs",
+      "url": "https://arxiv.org/pdf/math/0305350",
+      "version": "math/0305350v4, 27 July 2003",
+      "visual_check": "screenshot failed"
+    },
+    {
+      "authors": [
+        "P. E. Haxell",
+        "V. Rodl"
+      ],
+      "full_body_read": false,
+      "original_document_sha256": null,
+      "role": "original attribution only; subscription preview omits formulas; not theorem-text evidence",
+      "source_id": "S2-attribution",
+      "title": "Integer and Fractional Packings in Dense Graphs",
+      "url": "https://link.springer.com/article/10.1007/s004930170003"
+    }
+  ],
+  "verdict": "candidate_only"
+}
