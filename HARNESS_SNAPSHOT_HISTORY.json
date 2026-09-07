@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "harness_snapshot_sha256": "d65b1ecee7ad8ec718eb7dd5c1e4e7a3fed08120bfab53794c1c908de75c65dc",
+      "harness_version": "1.1.2",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "97499c98e0774ef58c0be06ff8f3035c89cda1dffb6f9a9d222fb281b049cdb4",
+      "tree_sha256": "43a9a92114080812a315e759237885357d015d67a1ac8fc07981b1209623adb8"
+    },
+    {
+      "harness_snapshot_sha256": "6aec4dd32a244bc91a4ff4fc8307322d6d6e8d03e33a667b3cb823414e59efff",
+      "harness_version": "1.2.3",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993",
+      "tree_sha256": "950bd2e1e5b296aec4386619b1dbb48d9554001b295e0a4e39d579d6cdc237d2"
+    }
+  ],
+  "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+  "repository_identity": {
+    "database_id": 1358762751,
+    "default_branch": "main",
+    "node_id": "R_kgDOUP0S_w",
+    "visibility": "public"
+  },
+  "schema_version": "1.0.0"
+}
