@@ -13,6 +13,13 @@
       "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
       "source_manifest_sha256": "27a22779f4ea8418115002a4a180553b0f23425b69e4deb76f2bd6ae893b2993",
       "tree_sha256": "950bd2e1e5b296aec4386619b1dbb48d9554001b295e0a4e39d579d6cdc237d2"
+    },
+    {
+      "harness_snapshot_sha256": "8094cdb2e62dd9a252acb1d45095225ede87dc4153f25fb6a7ffb28114cab788",
+      "harness_version": "1.2.4",
+      "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+      "source_manifest_sha256": "fedd664f1ac16c5232eb05076b73f2bab566ed672840e7f2af851c77253813b3",
+      "tree_sha256": "97e5850b6e7b6d4d98187221ad70e458435c707286f5cc1fc4bbf9e7e86e9050"
     }
   ],
   "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
