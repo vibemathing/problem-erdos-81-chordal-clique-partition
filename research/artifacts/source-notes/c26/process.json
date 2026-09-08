@@ -1,0 +1,20 @@
+{
+  "command": "python repacking_check.py --out repacking-results.json",
+  "elapsed_seconds": 7.124180552000098,
+  "exit_code": 0,
+  "outer_wall_limit_seconds": 44,
+  "output_bytes": 22183,
+  "output_sha256": "315153ef1c73a16cebaa7b9819bc32eba000b93095e4a64220c8a62e3614ac12",
+  "source_sha256": "465d1cf274dabbc232f03664ab968ebfea3874157495e820548d12bd30e32150",
+  "stderr_empty": true,
+  "stdout_summary": {
+    "hamilton_inputs": 37,
+    "mutations": 12,
+    "output_sha256": "315153ef1c73a16cebaa7b9819bc32eba000b93095e4a64220c8a62e3614ac12",
+    "parameter_cases": 149,
+    "seconds": 6.336430446000122,
+    "status": "finite_checks_passed"
+  },
+  "trusted_verifier_run": false,
+  "verdict": "candidate_only"
+}

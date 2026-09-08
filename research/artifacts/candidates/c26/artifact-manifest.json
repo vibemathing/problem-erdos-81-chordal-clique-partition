@@ -1,0 +1,89 @@
+{
+  "files": [
+    {
+      "bytes": 3778,
+      "git_blob_sha1": "e6a14b78ace9a56495281db562dd22451a313a2b",
+      "path": "research/artifacts/candidates/c26/README.md",
+      "sha256": "6c9b6ffb03853bce2542d18ba0d665a5a22b750b808d3a68b93a6ba85ea5917f"
+    },
+    {
+      "bytes": 12924,
+      "git_blob_sha1": "0b32b633ea90df1f60d6b3ff4e1abb6a42cbda81",
+      "path": "research/artifacts/candidates/c26/proof.md",
+      "sha256": "c706fd2c69aa35e2255332d9e5f49b544e47da7ccea5a8f317250ffb9cb8143c"
+    },
+    {
+      "bytes": 2658,
+      "git_blob_sha1": "c7a334754c39115e768b4c8d0a9b5acf045c1044",
+      "path": "research/artifacts/candidates/c26/proper-two-prefix.json",
+      "sha256": "9d2d6711e27ef5ef1ca837de62d186488f158a1f095b229d6653478562d77689"
+    },
+    {
+      "bytes": 1639,
+      "git_blob_sha1": "e4cc83bd548d74e93517191f55eebb4188588135",
+      "path": "research/artifacts/candidates/c26/reconstruct.py",
+      "sha256": "ee01a3c0a3a3a1cb9b62882ddb3b8161055135da11007847f9227fe67d3552b9"
+    },
+    {
+      "bytes": 2931,
+      "git_blob_sha1": "4ab99889250d229b757514a85183bd8e66ced6e1",
+      "path": "research/artifacts/candidates/c26/repacking-report.json",
+      "sha256": "35ec16c38866babcb77aef745fc1857c411f588b446826962f8d0673e08c4b51"
+    },
+    {
+      "bytes": 3468,
+      "git_blob_sha1": "f7284cd9aca5ecfea0ca3bcdd7b0bbf4a1dc8284",
+      "path": "research/artifacts/candidates/c26/repacking-table.csv",
+      "sha256": "84326cd993738f95b58787570430d0298ed8132ea98935e4a6a83231b5758766"
+    },
+    {
+      "bytes": 15029,
+      "git_blob_sha1": "94244b807f28974540f316c2fa26f84ab6dbe12d",
+      "path": "research/artifacts/candidates/c26/repacking_check.py",
+      "sha256": "465d1cf274dabbc232f03664ab968ebfea3874157495e820548d12bd30e32150"
+    },
+    {
+      "bytes": 2544,
+      "git_blob_sha1": "b64dbc8b26708a42dc3e818992b82126aa7e6027",
+      "path": "research/artifacts/candidates/c26/repair-r200.json",
+      "sha256": "0e7a3868e4786db2f42469eccb9ffb22c6e519dea7c191e6055eda24f43de05d"
+    },
+    {
+      "bytes": 2804,
+      "git_blob_sha1": "98e127fd65de9ec5ab4542956b5212cb5619f4f5",
+      "path": "research/artifacts/candidates/c26/repair-r220.json",
+      "sha256": "af388b8c9580b907254664c3ce0208fd4a7e7d236dcd43915487b80153d7cd55"
+    },
+    {
+      "bytes": 1119,
+      "git_blob_sha1": "953d438564848235b2449b1443d3303b09e0b1ed",
+      "path": "research/artifacts/candidates/c26/repair-r241.json",
+      "sha256": "9b4c6fb1cfc3a8b8a5a7b94cd5cab668013ae412675e178feeafd904d9ac7f70"
+    },
+    {
+      "bytes": 5146,
+      "git_blob_sha1": "81a50bfe1611403de9c61270766e0520dd18ea9a",
+      "path": "research/artifacts/candidates/c26/repair-r400.json",
+      "sha256": "aa64b6e744e153ead71d0655a13c44077a25566718a2fb03cc389551cc876782"
+    },
+    {
+      "bytes": 716,
+      "git_blob_sha1": "1454730ebddabd983afeb259a488346166cd8888",
+      "path": "research/artifacts/source-notes/c26/process.json",
+      "sha256": "f363ba22e188340f40f9bad6daf94690485048668f70700acf1baba80865b806"
+    },
+    {
+      "bytes": 3204,
+      "git_blob_sha1": "73f96e7874cade4516306293a751717a802cbe03",
+      "path": "research/artifacts/source-notes/c26/source-audit.json",
+      "sha256": "c6a34e43428629cc375744f321a4a4a8ec2a81b2536ac47a8d53af7ae3cb0ce8"
+    }
+  ],
+  "original_process_output": {
+    "bytes": 22183,
+    "reconstruction": "reconstruct.py with the report, table, four repair cases and proper-two-prefix.json",
+    "sha256": "315153ef1c73a16cebaa7b9819bc32eba000b93095e4a64220c8a62e3614ac12"
+  },
+  "schema": "c26-artifact-byte-manifest-v1",
+  "verdict": "candidate_only"
+}
