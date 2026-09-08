@@ -1,0 +1,20 @@
+{
+  "verdict": "candidate_only",
+  "trusted_verifier_run": false,
+  "best_verified_result": "none",
+  "command": "python extreme_audit.py --seconds 38 --out extreme-results-replayed.json",
+  "python": "3.13.5",
+  "exit_code": 0,
+  "outer_timeout": false,
+  "outer_seconds": 3.342404641999991,
+  "outer_wall_limit_seconds": 42,
+  "internal_wall_limit_seconds": 38,
+  "memory_limit_bytes": 1073741824,
+  "threads": 1,
+  "max_rss_kib": 96680,
+  "source_sha256": "bcee9e8a3d427059c5a10b9e3ce893ec1ae674f58feec3b10333e18ad8984c49",
+  "stdout_sha256": "fd8e7b8bcc2966520ea2d0e8dc9c1f3f431244c6bf612bc893453eba16edb4aa",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output_sha256": "5cdd83711fd2b0f806fff44a8617b4b28819e34fc7afe1ae7ffdf90533bf9d2c",
+  "output_bytes": 23313
+}
