@@ -1,0 +1,18 @@
+{
+  "verdict": "candidate_only",
+  "trusted_verifier_run": false,
+  "exit_code": 0,
+  "outer_wall_seconds": 1.5381303970000317,
+  "outer_timeout_seconds": 23,
+  "command": "python frozen-nine-replay.py --checker recovery_checker.py --out frozen-nine-result.json",
+  "stdout": "{\"status\": \"finite_named_replay_pass\", \"python\": \"3.13.5\", \"row\": {\"n\": 9, \"mask\": 4966055935, \"m\": 29, \"chordal\": true, \"cp\": 9, \"p23\": 13, \"nu\": 8, \"nu_star\": \"9\", \"lambda\": \"11\", \"maximizer_checks\": 10}, \"elapsed_seconds\": 0.9417190149999897, \"max_rss_kib\": 109988}",
+  "stderr": "",
+  "frozen-nine-replay.py": {
+    "sha256": "eb43413fd719805204854869e9bd24cf03d6883e81391b7f6b987485783c4bf2",
+    "bytes": 3468
+  },
+  "frozen-nine-result.json": {
+    "sha256": "f20879bbe052dc01e26d64b1553957876334b9686960fe4dc14182cc02d33810",
+    "bytes": 4051
+  }
+}
