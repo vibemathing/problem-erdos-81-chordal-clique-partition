@@ -1,0 +1,49 @@
+{
+  "acquisition_limits": [
+    "Primary body text was read through web.open. Screenshot requests for Dross printed page 3 and the transfer paper failed with cache-miss errors.",
+    "Direct PDF download failed. No original-document byte digest or visual inspection is asserted.",
+    "The proof of the external decomposition theorem is not independently reproduced or formally checked here.",
+    "Searches about threshold graphs, detachment and newer decomposition thresholds were exploratory only; no result from those hits is a proof premise."
+  ],
+  "comparison": {
+    "conclusion": "An exact integer decomposition of the repaired core, not merely an o(r^2) leave.",
+    "divisibility": "Parity repaired by a cycle T-join; edge count repaired by deleting a C4 or C5, preserving even degrees.",
+    "fixed_epsilon": "1/100",
+    "isolates": "Positive minimum degree precludes them in the source application.",
+    "numerical_N": "Unknown and not fabricated.",
+    "original_graph_chordal": "Not required for S1; the repaired core is not asserted chordal.",
+    "proved_candidate_minimum_degree": "r-1-h-4 >= 19*r/20-5 >= 91*r/100 for r>=200 and h<=r/20",
+    "quantifiers": "epsilon is fixed once; N is independent of r,a,b,p,q; no epsilon=1/r substitution.",
+    "relation": "external_sufficient_input",
+    "source_minimum_degree": "91*r/100",
+    "source_order": "s = r, the number of core vertices; not r+p+q"
+  },
+  "dependency_chain": {
+    "candidate_use": "Use Dross Theorem 7 directly, not an inference from an abstract or a search snippet.",
+    "local_steps": "C25 leaf rank charging; full-core leaf optimization; explicit Hamilton cycle proof; parity join and residue cycle; exact objective-loss identity.",
+    "transfer_source_url": "https://arxiv.org/pdf/1410.5750",
+    "underlying_transfer": "Dross Theorem 6 cites Barber, Kuhn, Lo, Osthus, arXiv:1410.5750; the latter primary PDF was also opened."
+  },
+  "dependency_status": "source_backed_not_trusted_attestation",
+  "source": {
+    "arxiv": "1503.08191v3",
+    "author": "Francois Dross",
+    "excerpt_note": "Greek epsilon and subscript were normalized to ASCII; not a byte-exact PDF quotation.",
+    "id": "S1",
+    "normalized_statement": "For every epsilon > 0 there exists N(epsilon) such that every finite simple graph F with s >= N(epsilon) vertices, all vertex degrees even, edge count divisible by 3, and minimum degree at least (9/10 + epsilon)*s admits an exact edge-disjoint triangle decomposition.",
+    "normalized_statement_sha256": "5467378252b29323aba58014791ebe7220adeac901b6750a3d52d6e6df2b8090",
+    "parsed_line_locator": "118-121 in the current web PDF extraction; printed page and theorem are canonical locators",
+    "pdf_bytes_captured": false,
+    "pdf_sha256": null,
+    "printed_page": 3,
+    "screenshot_succeeded": false,
+    "short_quotation_normalized": "Let epsilon > 0. There exists an n0",
+    "theorem": 7,
+    "title": "Fractional triangle decompositions in graphs with large minimum degree",
+    "url_read": "https://arxiv.org/pdf/1503.08191",
+    "version_date": "2015-07-21"
+  },
+  "statement_faithfulness_receipt": null,
+  "trusted_source_receipt": null,
+  "verdict": "candidate_only"
+}
