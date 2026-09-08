@@ -1,0 +1,174 @@
+{
+  "best_verified_result": "none",
+  "cases": [
+    {
+      "J": 58,
+      "J_fixed": 51,
+      "K4_blocks": 8,
+      "actual_integer_packing_leave": [
+        [
+          2,
+          17
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          12,
+          17
+        ]
+      ],
+      "anchor_positive_coordinates": 7,
+      "complete_design_triangles": 57,
+      "core_edges": 171,
+      "core_fractional_half_load_certificate": true,
+      "cp": 7,
+      "cp_basis": "general clique-piece proof; not a whole-host cp solver run",
+      "fixed_integral_core_triangles": 41,
+      "frozen_gap": 8,
+      "host_edges": 177,
+      "k": 1,
+      "n": 21,
+      "nu": 58,
+      "nu_star": "59",
+      "odd_vertices": [
+        2,
+        3
+      ],
+      "positive_fractional_z": 30,
+      "r": 19,
+      "support_ranks": [
+        4,
+        7
+      ],
+      "true_gap": 1
+    },
+    {
+      "J": 21661,
+      "J_fixed": 21358,
+      "K4_blocks": 304,
+      "actual_integer_packing_leave": [
+        [
+          2,
+          17
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          12,
+          17
+        ]
+      ],
+      "anchor_positive_coordinates": 7,
+      "complete_design_triangles": 21660,
+      "core_edges": 64980,
+      "core_fractional_half_load_certificate": true,
+      "cp": 7,
+      "cp_basis": "general clique-piece proof; not a whole-host cp solver run",
+      "fixed_integral_core_triangles": 21052,
+      "frozen_gap": 304,
+      "host_edges": 64986,
+      "k": 2,
+      "n": 363,
+      "nu": 21661,
+      "nu_star": "21662",
+      "odd_vertices": [
+        2,
+        3
+      ],
+      "positive_fractional_z": 1214,
+      "r": 361,
+      "support_ranks": [
+        4,
+        7
+      ],
+      "true_gap": 1
+    }
+  ],
+  "limitations": [
+    "Product constructions instantiated only at k=1,2; all-order assertions are proved in proof.md.",
+    "No numerical solver or trusted verifier is called in this check.",
+    "The freezing obstruction is not a counterexample to nu_star-J=O(r)."
+  ],
+  "mutations": [
+    {
+      "name": "01_duplicate_complement_triangle",
+      "reason": "packing edge overlap",
+      "rejected": true
+    },
+    {
+      "name": "02_deleted_template_triangle",
+      "reason": "wrong exact covered edge set",
+      "rejected": true
+    },
+    {
+      "name": "03_nontriangle_vertex_repeat",
+      "reason": "repeated triangle vertex",
+      "rejected": true
+    },
+    {
+      "name": "04_complement_uses_forbidden_edge",
+      "reason": "triangle edge outside graph",
+      "rejected": true
+    },
+    {
+      "name": "05_double_owned_core_edge",
+      "reason": "capacity violation",
+      "rejected": true
+    },
+    {
+      "name": "06_long_endpoint_overload",
+      "reason": "capacity violation",
+      "rejected": true
+    },
+    {
+      "name": "07_removed_dual_price",
+      "reason": "dual undercoverage",
+      "rejected": true
+    },
+    {
+      "name": "08_negative_fractional_coordinate",
+      "reason": "negative primal/dual",
+      "rejected": true
+    },
+    {
+      "name": "09_support_half_integrality_assumption",
+      "reason": "quarter-valued joint extreme point",
+      "rejected": true
+    },
+    {
+      "name": "10_cartesian_mixed_coordinate_triangle",
+      "reason": "nontriangle in residual product",
+      "rejected": true
+    },
+    {
+      "name": "11_unaccounted_anchor_leave",
+      "reason": "leave cannot be empty",
+      "rejected": true
+    },
+    {
+      "name": "12_frozen_gap_is_true_gap",
+      "reason": "frozen optimum differs from unrestricted optimum",
+      "rejected": true
+    }
+  ],
+  "runtime": {
+    "arithmetic": "integer_edge_checks_and_Fraction",
+    "cpu_seconds": 35,
+    "elapsed_seconds": 1.4572740830000157,
+    "internal_seconds": 32,
+    "max_rss_kib": 126052,
+    "memory_bytes": 1073741824,
+    "python": "3.13.5",
+    "source_sha256": "ba24fc6ea119544fd4755faff1c15a11d87d12e3796b8bc1079ef168977e2020",
+    "threads": 1
+  },
+  "status": "exact_certificates_passed",
+  "template_sha256": "fd6a00d6826e65fbd8e36ec22ae8b15a1ac1c08a890005b6f17ee04df0783071",
+  "trusted_verifier_run": false,
+  "verdict": "candidate_only",
+  "version": "c25-freezing-exact-v2"
+}
