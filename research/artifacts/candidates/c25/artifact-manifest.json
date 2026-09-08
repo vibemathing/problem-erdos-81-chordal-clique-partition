@@ -1,0 +1,71 @@
+{
+  "files": [
+    {
+      "bytes": 5986,
+      "git_blob_sha1": "bdc01804f8e72707b791d0f5c0cba885da8a5d60",
+      "path": "research/artifacts/candidates/c25/README.md",
+      "sha256": "d6608ed3d6f040e21924b91769e6b9529bd2d6502d33023001494599827cd3f8"
+    },
+    {
+      "bytes": 4084,
+      "git_blob_sha1": "d3eefcf136e0e3c5b754459c679ecef6ff429491",
+      "path": "research/artifacts/candidates/c25/extreme-report.json",
+      "sha256": "cbc425703e2d3ca0d92f2e0469e69d2519f6a110b1c544e5bcbfaf0932539412"
+    },
+    {
+      "bytes": 2473,
+      "git_blob_sha1": "359b39173c20a2b3ae1c9f1280de34a195268ffe",
+      "path": "research/artifacts/candidates/c25/extreme-table.csv",
+      "sha256": "c2f301ed0a1306503066443163450132fe5107be10a5777ce4248b1253968293"
+    },
+    {
+      "bytes": 11152,
+      "git_blob_sha1": "0269a0350413f2969bfe13136bebeb3b19dda048",
+      "path": "research/artifacts/candidates/c25/extreme_audit.py",
+      "sha256": "bcee9e8a3d427059c5a10b9e3ce893ec1ae674f58feec3b10333e18ad8984c49"
+    },
+    {
+      "bytes": 4216,
+      "git_blob_sha1": "4a563b3d247acbafede87b1d1c45316d3d0cfdfd",
+      "path": "research/artifacts/candidates/c25/freezing-results-replayed.json",
+      "sha256": "d241db2ba1347cdbfed47e9e44e3202787d3664bc910e690b29b8e2f7887c1f5"
+    },
+    {
+      "bytes": 9220,
+      "git_blob_sha1": "5933d6e5204d0094abdfacc6d28161aea9a8cf45",
+      "path": "research/artifacts/candidates/c25/freezing_checker.py",
+      "sha256": "ba24fc6ea119544fd4755faff1c15a11d87d12e3796b8bc1079ef168977e2020"
+    },
+    {
+      "bytes": 18803,
+      "git_blob_sha1": "0e934eb90b011cb4aa57259967a35ffd8d65fab6",
+      "path": "research/artifacts/candidates/c25/proof.md",
+      "sha256": "1f8345d1559c6fedbbb65d95c780c42c6c1aba809f9264eccec743f2159d27ab"
+    },
+    {
+      "bytes": 6511,
+      "git_blob_sha1": "ed8e4860dce21671e861ec24371152a61b5d9fc7",
+      "path": "research/artifacts/candidates/c25/templates.json",
+      "sha256": "fd6a00d6826e65fbd8e36ec22ae8b15a1ac1c08a890005b6f17ee04df0783071"
+    },
+    {
+      "bytes": 814,
+      "git_blob_sha1": "870e1a7bf0559405270254de618f6b71553777fc",
+      "path": "research/artifacts/source-notes/c25/extreme-process-replayed.json",
+      "sha256": "1892d28207932d6c649ef633bdd86132c793a0c03437047b67a7046501c63a50"
+    },
+    {
+      "bytes": 806,
+      "git_blob_sha1": "c28730d05b70a1414f0b9908cbc87f367c5985ca",
+      "path": "research/artifacts/source-notes/c25/freezing-process-replayed.json",
+      "sha256": "38b1ba62be4dc8ab689c808c4ac78da00634e7d1087b970d06a6925935c10e3e"
+    }
+  ],
+  "original_extreme_output": {
+    "bytes": 23313,
+    "representation": "Losslessly reconstruct from extreme-report.json and extreme-table.csv as documented in README.md.",
+    "sha256": "5cdd83711fd2b0f806fff44a8617b4b28819e34fc7afe1ae7ffdf90533bf9d2c"
+  },
+  "schema": "c25-artifact-byte-manifest-v1",
+  "verdict": "candidate_only"
+}

@@ -1,0 +1,197 @@
+{
+  "format": "exact-run-table-split-v1",
+  "original_output_bytes": 23313,
+  "original_output_sha256": "5cdd83711fd2b0f806fff44a8617b4b28819e34fc7afe1ae7ffdf90533bf9d2c",
+  "parameter_table": {
+    "bytes": 2473,
+    "integer_columns": [
+      "r",
+      "a",
+      "b",
+      "p",
+      "q",
+      "J"
+    ],
+    "path": "extreme-table.csv",
+    "rows": 149,
+    "sha256": "c2f301ed0a1306503066443163450132fe5107be10a5777ce4248b1253968293",
+    "string_columns": [
+      "nu_star",
+      "gap"
+    ]
+  },
+  "reconstruction": "Read CSV using the declared column types, insert rows as parameter_rows in result_without_parameter_rows, then json.dumps(result,sort_keys=True,indent=2)+a single LF. The original process-output SHA-256 must match.",
+  "result_without_parameter_rows": {
+    "best_verified_result": "none",
+    "charged_fractional_groups": 164,
+    "complete_capped_core_range": [
+      {
+        "cases": 1,
+        "r": 0
+      },
+      {
+        "cases": 3,
+        "r": 1
+      },
+      {
+        "cases": 11,
+        "r": 2
+      },
+      {
+        "cases": 43,
+        "r": 3
+      },
+      {
+        "cases": 91,
+        "r": 4
+      }
+    ],
+    "leaf_residual_cases": 1056,
+    "limitations": [
+      "No complete core range above four; core five is one named extra case.",
+      "Independent implementations share one generator trust domain.",
+      "The conditional leaf bound assumes integral residual core capacities.",
+      "No universal bound nu_star-J is proved by these finite tests."
+    ],
+    "maximum_leaf_discarded_mass": "7/2",
+    "named_quarter_example": {
+      "J": 5,
+      "a": 2,
+      "b": 4,
+      "dual": [
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      "objective": 5,
+      "p": 1,
+      "positive_columns": 11,
+      "primal": [
+        {
+          "kind": "z",
+          "value": "1/2",
+          "vertices": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "kind": "z",
+          "value": "1/4",
+          "vertices": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "z",
+          "value": "1/2",
+          "vertices": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "kind": "z",
+          "value": "1/4",
+          "vertices": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "z",
+          "value": "1/2",
+          "vertices": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "z",
+          "value": "1/2",
+          "vertices": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "a",
+          "value": "1/2",
+          "vertices": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "b",
+          "value": "1/4",
+          "vertices": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "b",
+          "value": "3/4",
+          "vertices": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "b",
+          "value": "3/4",
+          "vertices": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "b",
+          "value": "1/4",
+          "vertices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "q": 1,
+      "r": 5,
+      "tight_column_rank": 11
+    },
+    "runtime": {
+      "arithmetic": "fractions.Fraction",
+      "internal_seconds": 38,
+      "max_rss_kib": 96552,
+      "memory_bytes": 1073741824,
+      "python": "3.13.5",
+      "source_sha256": "bcee9e8a3d427059c5a10b9e3ce893ec1ae674f58feec3b10333e18ad8984c49",
+      "threads": 1,
+      "wall_seconds": 2.6433329550000053
+    },
+    "status": "finite_exact_checks_passed",
+    "trusted_verifier_run": false,
+    "verdict": "candidate_only",
+    "version": "c25-exact-v2"
+  }
+}

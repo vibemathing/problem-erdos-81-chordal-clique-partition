@@ -1,0 +1,20 @@
+{
+  "verdict": "candidate_only",
+  "trusted_verifier_run": false,
+  "best_verified_result": "none",
+  "command": "python freezing_checker.py --out freezing-results-replayed.json",
+  "python": "3.13.5",
+  "exit_code": 0,
+  "outer_timeout": false,
+  "outer_seconds": 2.1741873529999793,
+  "outer_wall_limit_seconds": 42,
+  "internal_wall_limit_seconds": 32,
+  "memory_limit_bytes": 1073741824,
+  "threads": 1,
+  "max_rss_kib": 126052,
+  "source_sha256": "ba24fc6ea119544fd4755faff1c15a11d87d12e3796b8bc1079ef168977e2020",
+  "stdout_sha256": "c5aae71e6e71e3195f7337a971257bf035d591806097f168c015310064ed437e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output_sha256": "d241db2ba1347cdbfed47e9e44e3202787d3664bc910e690b29b8e2f7887c1f5",
+  "output_bytes": 4216
+}
