@@ -1,0 +1,31 @@
+{
+  "format": "static-text-processing-only-v1",
+  "verdict": "candidate_only",
+  "timestamp": "2026-09-07T05:56:50.243151Z",
+  "python_for_text_processing": "3.13.5",
+  "operations": [
+    "AST syntax parse without importing or executing the checker",
+    "JSON syntax parse",
+    "SHA-256 of local bytes and comparison with local packet entries"
+  ],
+  "not_performed": [
+    "Mathematical checker execution",
+    "Graph enumeration",
+    "LP optimization",
+    "Mutation execution",
+    "Lean or SMT run",
+    "Repository Harness validation",
+    "Trusted verification"
+  ],
+  "mathematical_execution": false,
+  "checker": {
+    "path": "research/artifacts/candidates/erdos81-a01-c23-exact-checker.py",
+    "sha256": "6413676247c2dcc5533a86736e2762a0493d11c5e4c4d5dffd71bc6b2324fc80",
+    "bytes": 21591
+  },
+  "syntax_parse": "success",
+  "json_parse": "success",
+  "local_packet_digest_binding": "match",
+  "repository_schema_gate": "not_executed",
+  "runtime_fingerprint_for_mathematics": null
+}

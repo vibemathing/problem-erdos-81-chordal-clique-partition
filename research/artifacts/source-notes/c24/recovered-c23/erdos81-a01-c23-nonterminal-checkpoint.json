@@ -1,0 +1,106 @@
+{
+  "status": "NONTERMINAL_CHECKPOINT",
+  "verdict": "candidate_only",
+  "storage_scope": "local_only_not_published",
+  "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+  "final_main_read": "168492ce3df8528240507deee4cbc961317c8b72",
+  "harness_version": "1.2.4",
+  "harness_snapshot_sha256": "8094cdb2e62dd9a252acb1d45095225ede87dc4153f25fb6a7ffb28114cab788",
+  "issue_number": 1,
+  "last_remote_checkpoint_confirmed": 5565263014,
+  "issue_checkpoint_written_this_turn": false,
+  "best_verified_result": "none",
+  "best_verified_candidate": "none",
+  "best_available_local_candidate": "candidate:erdos81-a01-c23-admission-audit",
+  "proof_scope": "Uniform cp<=n^2/6+o(n^2) and all-choice low-core necessary conditions, conditional on explicit source-backed S1/S2 inputs. Written audit is not trusted admission.",
+  "new_audit_points": [
+    "Every optimal signed lambda-dual lies in [-1,1]^E.",
+    "D=tM-W+w(E(S)) is unchanged by the compatible PEO.",
+    "The graph-invariant strict inequality (cp-n-1)^2>6*n^2*(B-lambda), with cp>n+1, excludes every dense optimal-dual maximizing pair."
+  ],
+  "open_obligations": [
+    "obligation:erdos81-split-extremal-reduction",
+    "obligation:erdos81-root"
+  ],
+  "failed_routes": [],
+  "failed_route_ledger_read": "empty; unchanged",
+  "mathematical_execution": {
+    "status": "not_executed",
+    "largest_completed_order": null,
+    "graphs_checked_by_execution": 0,
+    "mutations_executed": 0,
+    "run": null,
+    "attestation": null
+  },
+  "source_inputs": {
+    "S2": "https://arxiv.org/pdf/math/0305350; v4, pages 1-3 definitions/Theorems 1.1-1.2/Section 3 opening",
+    "S1": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf; Sections 5.2.1 and 5.2.3, printed pages 224,226-227",
+    "source_pdf_digests": null,
+    "normalized_excerpt_digests": "recorded separately; not PDF fingerprints",
+    "screenshots": "attempted; Internal Error; no visual inspection"
+  },
+  "transport": {
+    "proposed_branch": "web/attempt-erdos81-a01-c23-admission-audit",
+    "branch_created": false,
+    "head": null,
+    "new_commits": [],
+    "new_pr": null,
+    "final_head_checks": [],
+    "new_merge_sha": null,
+    "open_prs_final_read": [],
+    "matching_c23_refs_read": []
+  },
+  "unpublished_files": [
+    {
+      "path": "research/artifacts/candidates/erdos81-a01-c23-admission-audit.md",
+      "sha256": "b8232287635b2acdb30a3bd5fcd2d03f7ab8d7d93416b4a264f712f809e5600e",
+      "bytes": 21680
+    },
+    {
+      "path": "research/artifacts/candidates/erdos81-a01-c23-exact-checker.py",
+      "sha256": "6413676247c2dcc5533a86736e2762a0493d11c5e4c4d5dffd71bc6b2324fc80",
+      "bytes": 21591
+    },
+    {
+      "path": "research/artifacts/source-notes/erdos81-a01-c23-admission-request.json",
+      "sha256": "1c79ec2453fc3eda55bdbd63dd8523361c9096771e37bc5db6b98c9e532ba78a",
+      "bytes": 6877
+    },
+    {
+      "path": "research/artifacts/source-notes/erdos81-a01-c23-checker-contract.md",
+      "sha256": "dd7d672275fc886a5b29a3fc9ee2e0909f89868ad63a6278ec1d9feff2fa431b",
+      "bytes": 6764
+    },
+    {
+      "path": "research/artifacts/source-notes/erdos81-a01-c23-source-comparison.json",
+      "sha256": "6f73122668aebc1092cc63ee3f8d9a584f7bd510a55302f73d1f925d89e93746",
+      "bytes": 4310
+    },
+    {
+      "path": "research/artifacts/source-notes/erdos81-a01-c23-static-processing.json",
+      "sha256": "ef7ac09257c1fd568ed8521eb087eb2b15df45e63e10e3b61c9034ec72f98d08",
+      "bytes": 1001
+    },
+    {
+      "path": "research/artifacts/web-inbox/erdos81-a01-c23.json",
+      "sha256": "9d7f07091cdecede44a358d5074bf0c79a0812d03c7b44283d93c30b6537bf03",
+      "bytes": 7265
+    }
+  ],
+  "blockers": [
+    "Current GitHub tool exposure contains no create/update/comment/review/merge actions after three bounded discovery attempts; installed-plugin search found only the same installed connector. This is not an inferred GitHub OAuth denial.",
+    "The web profile still has command_execution=false; the only discovered workflow validates transport.",
+    "Registered fixture policies do not expose a matching general proof/source audit call.",
+    "The weaker asymptotic theorem is not the statement of either currently admitted obligation."
+  ],
+  "secondary_O_n_task": "not_started; primary admission-grade audit and requested finite execution remain open",
+  "next_action": "Fresh-read main and Issue #1 when writer actions are exposed. Reuse or create only the proposed unique branch after an idempotent check, refresh the local packet base and source refs, publish the frozen files, allocate/backfill one PR, require three real final-head checks, merge and write/read back the Issue checkpoint. Separately route the admission request through an eligible trusted source/proof reviewer and authorized mathematical runtime. Do not claim this local request has been dispatched.",
+  "completion_not_claimed": [
+    "GitHub latest for C23",
+    "Complete finite range",
+    "All mutation tests passed",
+    "Trusted verification",
+    "Admission",
+    "Root solution"
+  ]
+}

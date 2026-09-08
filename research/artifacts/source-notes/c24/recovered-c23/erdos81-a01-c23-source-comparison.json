@@ -1,0 +1,86 @@
+{
+  "format": "source-comparison-not-receipt-v1",
+  "verdict": "candidate_only",
+  "artifact_scope": "Bounded original-body quotations and semantic mapping. Digests identify normalized quotation strings only; none identifies an original PDF.",
+  "sources": [
+    {
+      "source_id": "S2-yuster-fixed-triangle",
+      "title": "Integer and fractional packing of families of graphs",
+      "author": "Raphael Yuster",
+      "url": "https://arxiv.org/pdf/math/0305350",
+      "version_read": "math/0305350v4 [math.CO], 27 July 2003",
+      "read_date": "2026-09-07",
+      "quote_locator": "Page 2 (PDF index 1), Theorem 1.1",
+      "limited_quote": "If H_0 is a fixed graph and G is a graph with n vertices, then nu*_{H_0}(G)-nu_{H_0}(G)=o(n^2).",
+      "quote_normalization": "Mathematical typography and PDF line wrapping normalized to ASCII. Not a byte-exact PDF extraction.",
+      "additional_locators": [
+        "Page 1, Section 1 first paragraph and packing definitions",
+        "Page 2, Theorem 1.2",
+        "Page 3, Section 3 opening paragraph",
+        "Page 4, choice of N depending only on fixed parameters"
+      ],
+      "original_body_read": true,
+      "full_proof_audited": false,
+      "source_pdf_sha256": null,
+      "visual_audit": "Screenshot requests returned Internal Error; no successful visual inspection.",
+      "reuse": "source-backed theorem input; fixed family {K3}; original graph vertex count n; for every epsilon>0 exists N(epsilon) for all n>N and all n-vertex graphs in the source domain.",
+      "scope_bridge": "Source excludes isolates. Pair isolates and optionally add a pendant edge, preserving n and all triangles. Edgeless graphs have zero gap.",
+      "not_reused": [
+        "Search abstract as evidence",
+        "Lemma 2.3 auxiliary hypergraph order",
+        "Growing pattern family",
+        "A linear error estimate",
+        "Algorithm execution"
+      ],
+      "normalized_excerpt_sha256": "de418bb7681816a4d940d3f3e223ddc02a6e84c28570e8ad269944e7531803ea"
+    },
+    {
+      "source_id": "S1-finite-lp",
+      "title": "Convex Optimization",
+      "authors": [
+        "Stephen Boyd",
+        "Lieven Vandenberghe"
+      ],
+      "url": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
+      "version_read": "Author-hosted text; 2004 publication, seventh printing with corrections (2009) identified in source.",
+      "read_date": "2026-09-07",
+      "quote_locator": "Section 5.2.3, printed page 226 (PDF index 239)",
+      "limited_quote": "Slater’s theorem states that strong duality holds, if Slater’s condition holds (and the problem is convex).",
+      "quote_normalization": "Line wrapping normalized; punctuation retained.",
+      "additional_locators": [
+        "Section 5.2.1, printed page 224, equations (5.17)-(5.20), PDF index 237",
+        "Section 5.2.3, printed page 227, dual attainment paragraph, PDF index 240"
+      ],
+      "original_body_read": true,
+      "full_proof_audited": false,
+      "source_pdf_sha256": null,
+      "visual_audit": "Screenshot requests returned Internal Error; no successful visual inspection.",
+      "reuse": "source-backed LP duality/attainment. Primal min c^T x, Ax=b, x>=0 maps by w=-v to max b^T w, A^T w<=c. Compact feasible primal and strictly positive point are supplied in C23.",
+      "not_reused": [
+        "Integrality conclusion",
+        "A sign restriction w>=0",
+        "A kernel proof"
+      ],
+      "normalized_excerpt_sha256": "589e18cf1bba73fe077b3128144d32bd18de51f2a4783e117ae1e06d12539650"
+    },
+    {
+      "source_id": "S2-original-attribution",
+      "title": "Integer and Fractional Packings in Dense Graphs",
+      "authors": [
+        "P. E. Haxell",
+        "V. Rödl"
+      ],
+      "journal": "Combinatorica 21 (2001), 13-38",
+      "url": "https://link.springer.com/article/10.1007/s004930170003",
+      "read_date": "2026-09-07",
+      "limited_quote": null,
+      "original_body_read": false,
+      "full_proof_audited": false,
+      "source_pdf_sha256": null,
+      "reuse": "Bibliographic attribution only. Publisher page read; full theorem text not obtained. The usable primary theorem body is Yuster, not this preview.",
+      "normalized_excerpt_sha256": null
+    }
+  ],
+  "source_attestation": null,
+  "trusted_source_verifier_fingerprint": null
+}

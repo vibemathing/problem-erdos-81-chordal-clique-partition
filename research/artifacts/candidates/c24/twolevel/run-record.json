@@ -1,0 +1,64 @@
+{
+  "verdict": "candidate_only",
+  "run_kind": "generator_side_exact_computation",
+  "trusted_verifier_run": false,
+  "best_verified_result": "none",
+  "python_version": "3.13.5",
+  "arithmetic": "fractions.Fraction",
+  "threads": 1,
+  "memory_limit_bytes": 1073741824,
+  "code_and_output_digests": "bundle-manifest.json members",
+  "transport_payload_sha256": "3c9b799b01aaa3494ab7be05a992d0c3134d5722c907f95cf7eeeb9d869d1f09",
+  "xz_sha256": "40f9e46abe7530f02c20582eb770d508ac2ac674c9ce29423506a95ff1111a9d",
+  "decoded_json_sha256": "5fa20b3eca2e4f412d1277bc6709e93f17663147fd021696edce96d16b370b87",
+  "runs": [
+    {"name":"n4-through-n8","command":"python twolevel_audit.py --min-n 4 --max-n 8 --seconds 40 --out twolevel-n4-n8.json","status":"completed","exit_code":0,"wall_seconds":13.93,"max_rss_kib":101924,"internal_wall_limit_seconds":40,"completed_rows":126},
+    {"name":"n9-initial","command":"python twolevel_audit.py --min-n 9 --max-n 9 --seconds 40 --out twolevel-n9.json","status":"internal_deadline_checkpoint","exit_code":null,"outer_tool_timeout":true,"wall_seconds":40.000406535,"max_rss_kib":205856,"completed_rows":108,"note":"The outer process exit was not read back. This run alone does not complete order nine."},
+    {"name":"n9-rows-108-to-116","command":"python resume_n9.py --start 108 --stop 117 --out n9-108-117.json","status":"completed","exit_code":0,"wall_seconds":13.35,"max_rss_kib":190208,"internal_wall_limit_seconds":37,"completed_rows":9},
+    {"name":"n9-rows-117-to-125","command":"python resume_n9.py --start 117 --stop 126 --out n9-117-126.json","status":"completed","exit_code":0,"wall_seconds":32.76,"max_rss_kib":247484,"internal_wall_limit_seconds":37,"completed_rows":9},
+    {"name":"joint-and-fan-audit","command":"python joint_audit.py --seconds 38 --out joint-audit.json","status":"completed","exit_code":0,"wall_seconds":7.89,"max_rss_kib":99888,"internal_wall_limit_seconds":38},
+    {"name":"explicit-nine-and-boundaries","command":"python examples.py","status":"completed","exit_code":0,"wall_seconds":1.88,"max_rss_kib":108720,"internal_wall_limit_seconds":23}
+  ],
+  "combined_complete_range": {
+    "domain":"All parameter representations 0<a<b<=r, p,q>=1, n=r+p+q<=9; not graph isomorphism classes.",
+    "max_complete_order":9,
+    "order_counts":[{"n":4,"count":1},{"n":5,"count":5},{"n":6,"count":15},{"n":7,"count":35},{"n":8,"count":70},{"n":9,"count":126}],
+    "parameter_representations":252,
+    "max_observed_gap":"5/3",
+    "table_sha256":"cceb471230d82de2ce61270dc50caa7a8fb1ce288006e5a525f8cf6c1aa1869c",
+    "completeness_check":"All n4..n8 rows, initial n9 indices 0..107, and two disjoint indexed continuations 108..116 and 117..125 were checked against the exact lexicographic parameter list. No missing or duplicate tuple remained."
+  },
+  "additional_complete_ranges": {
+    "capped_core_parameter_counts":[{"r":2,"cases":2},{"r":3,"cases":14},{"r":4,"cases":42},{"r":5,"cases":108}],
+    "capped_core_total":166,
+    "fan_labeled_graphs_through_order_five":1100,
+    "dropped_matching_edges_checked":348,
+    "explicit_bad_assignment_trades":27,
+    "boundary_controls":5
+  },
+  "new_mutations": [
+    "duplicate_adjacent_colors",
+    "extra_edge_outside_prefix",
+    "shared_short_long_core_edge",
+    "core_triangle_overlap",
+    "exceeded_leaf_degree_budget",
+    "bad_color_range",
+    "loop_not_simple",
+    "bad_core_vertex",
+    "integer_macro_implies_real_packing",
+    "triple_counts_one_core_edge",
+    "positive_spoke_with_zero_leaves",
+    "lossless_single_color_claim"
+  ],
+  "all_new_mutations_detected":true,
+  "normalized_counterexample":{"r":6,"a":4,"b":6,"p":2,"q":1,"n":9,"m":29,"nu":8,"nu_star":"9","cp":9,"joint_integer_allocation":9},
+  "limitations":[
+    "Different implementations are still written and run by the same generator, not separate trust domains.",
+    "Finite successful checks do not prove the uniform two-level or root theorem.",
+    "The continuous optimal dual face is not computationally exhausted.",
+    "The initial order-nine outer exit remains unknown; later indexed runs close the finite range, not that process receipt.",
+    "No complete positive-multiplicity parameter range above order nine is asserted.",
+    "No actual integer J optimum was enumerated for every parameter; the uniform mathematical leaf-lift bound and the explicit J=9 witness have separate proofs.",
+    "Older partial C24 archive files are not inputs to these computations."
+  ]
+}

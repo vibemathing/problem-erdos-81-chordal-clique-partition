@@ -1,0 +1,104 @@
+{
+  "format": "candidate-admission-request-v1",
+  "verdict": "candidate_only",
+  "request_status": "pending_trusted_intake",
+  "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+  "base_revision": "168492ce3df8528240507deee4cbc961317c8b72",
+  "problem_id": "problem:erdos-81-chordal-clique-partition",
+  "problem_contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58",
+  "transport_obligation_id": "obligation:erdos81-split-extremal-reduction",
+  "candidate": {
+    "candidate_id": "candidate:erdos81-a01-c23-admission-audit",
+    "path": "research/artifacts/candidates/erdos81-a01-c23-admission-audit.md",
+    "sha256": "b8232287635b2acdb30a3bd5fcd2d03f7ab8d7d93416b4a264f712f809e5600e",
+    "bytes": 21680
+  },
+  "checker": {
+    "path": "research/artifacts/candidates/erdos81-a01-c23-exact-checker.py",
+    "sha256": "6413676247c2dcc5533a86736e2762a0493d11c5e4c4d5dffd71bc6b2324fc80",
+    "bytes": 21591
+  },
+  "requested_statements": [
+    {
+      "local_statement_key": "uniform-asymptotic-upper-bound",
+      "text": "For every real eta>0 there exists an integer N_eta such that for every integer n>=N_eta and every finite simple chordal graph G on n vertices, allowing isolated vertices, cp(G)<=(1/6+eta)*n^2.",
+      "sha256": "e1e1d0d66e0b3e5da0c3d59c992c5eed80bb0dc22bc339beedc847dd5b84e01b",
+      "relation_to_root": "strictly weaker remainder; cannot close the O(n) root",
+      "proposed_admitted_obligation_id": null
+    },
+    {
+      "local_statement_key": "all-choice-low-core-necessity",
+      "text": "For any sequence of finite simple chordal G_j with n_j tending to infinity and cp(G_j)>=(1/6-delta_j)*n_j^2, where delta_j>=0 tends to zero, eventually every optimal signed lambda-dual and every maximizing clique-neighborhood pair is low-core; uniformly over all such pairs and compatible PEOs, r/n tends to 1/3, t/n tends to 2/3, theta/n tends to 1/3, P/n tends to zero and (R+D)/n^2 tends to zero.",
+      "sha256": "e9d2fe66d5e08b0343e8604b0a5786d774dc419aa55a8c82dc0f1e4b3a4a00a8",
+      "relation_to_root": "necessary dual conditions; not sufficient and not a graph edit-distance conclusion",
+      "proposed_admitted_obligation_id": null
+    }
+  ],
+  "requested_external_inputs": [
+    {
+      "key": "S1",
+      "url": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
+      "locator": "Section 5.2.1 printed p224 (5.17)-(5.20); Section 5.2.3 pp226-227",
+      "needed_claim": "Finite LP duality and attainment after the displayed sign substitution, with strictly positive primal feasibility and finite optimum checked.",
+      "source_document_sha256": null,
+      "source_verifier_fingerprint": null
+    },
+    {
+      "key": "S2",
+      "url": "https://arxiv.org/pdf/math/0305350",
+      "locator": "math/0305350v4, pages 1-3: definitions, Theorems 1.1/1.2, Section 3 opening",
+      "needed_claim": "Fixed K3 edge packing: for each epsilon>0 one cutoff works for every original n-vertex graph; isolate convention bridged without changing triangles or n.",
+      "source_document_sha256": null,
+      "source_verifier_fingerprint": null
+    }
+  ],
+  "live_gate_observations": [
+    {
+      "path": "research/verifiers.json",
+      "observation": "Registered verifier policies are the sympy-counterexample-fixture-v1, sympy-smt-counterexample-fixture-v1, semantic fixture policies and lean-kernel/axiom/faithfulness-fixture-v1. No general source-text or exact rational chordal-audit principal is listed."
+    },
+    {
+      "path": ".github/workflows/web-candidate-gate.yml",
+      "observation": "Only pull_request-triggered structural snapshot, packet and diff jobs; no dispatch input or mathematical verifier job."
+    },
+    {
+      "path": "WEB_CHANNEL_PROFILE.json",
+      "observation": "command_execution=false and trust_role=candidate_generator_and_transport_writer."
+    },
+    {
+      "path": "research/records/obligation-graphs.jsonl",
+      "observation": "The two admitted statements are the O(n) root and exact same-order split domination, not the weak asymptotic or low-core statements requested here."
+    },
+    {
+      "path": "research/records/evidence-links.jsonl",
+      "observation": "Empty in the fresh read; no applicable existing evidence binding."
+    }
+  ],
+  "required_trusted_actions_in_order": [
+    "Read the frozen candidate and source comparison, create correctly scoped weaker theorem obligations through authorized coordinator intake; do not reuse a stronger statement digest as if exact.",
+    "Select an existing policy only if its declared capability actually covers the source/proof task; otherwise trusted maintenance must admit a suitable policy outside this candidate PR.",
+    "Acquire authentic source PDF bytes, compute document digests, inspect the exact theorem locators and record source-faithfulness review.",
+    "Authorize a bounded mathematical runtime and execute the exact checker under the written contract; record actual complete range and all mutation results, or an exact failure witness.",
+    "Obtain trust-separated proof and semantic review of the general argument, including the entire optimal-face quantifiers, not only finite output.",
+    "Bind each genuine receipt to the frozen candidate, exact statement, principal trust domain, policy fingerprint and source/output digests through the trusted importer.",
+    "Invoke the obligation-closure gate only after all applicable capabilities and exact statements are satisfied. No weak theorem may close either currently stronger admitted obligation."
+  ],
+  "expected_receipt_fields": [
+    "actual verifier principal and trust domain",
+    "registered policy id and policy/content fingerprint",
+    "exact statement digest",
+    "candidate artifact path and SHA-256",
+    "source document digest and locator mapping",
+    "actual runtime/toolchain version and input digests",
+    "actual invocation, wall time, memory/thread/output budgets",
+    "exit status or signed review decision and output digest",
+    "faithfulness and axiom/escape scope",
+    "limitations and exact finite range where relevant"
+  ],
+  "actual_verifier_fingerprint": null,
+  "actual_verifier_run": null,
+  "actual_attestation": null,
+  "actual_mathematical_execution": null,
+  "human_approval": "The user authorized launching trusted admission; this request does not grant the Web generator a verifier identity or protected-path write permission.",
+  "secondary_gap_lemma": "Deferred until the primary admission-grade audit is closed. No secondary strengthening result is claimed."
+}
