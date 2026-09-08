@@ -1,0 +1,33 @@
+{
+  "schema": "candidate-text-bundle-v1",
+  "verdict": "candidate_only",
+  "format": "base64-xz-utf8-json-map",
+  "payload_sha256": "3c9b799b01aaa3494ab7be05a992d0c3134d5722c907f95cf7eeeb9d869d1f09",
+  "xz_sha256": "40f9e46abe7530f02c20582eb770d508ac2ac674c9ce29423506a95ff1111a9d",
+  "decoded_json_bytes": 155710,
+  "decoded_json_sha256": "5fa20b3eca2e4f412d1277bc6709e93f17663147fd021696edce96d16b370b87",
+  "parts": [
+    {"path":"replay.part-01.b64","bytes":8000,"sha256":"b0a681059eeebb6c5e63b23790ea23a454e5086b8d5b138c841ec570cb3d549b","git_blob_sha1":"a3f431b685070199c5370b5980a4528ed8c42762"},
+    {"path":"replay.part-02.b64","bytes":8000,"sha256":"45665229a55cb30f1f3a2914d7b86d762864f9cd202ec891852985b5e4328cd7","git_blob_sha1":"38f20e1adf72f8e068b4d1b82f96f98cbd48f507"},
+    {"path":"replay.part-03.b64","bytes":8000,"sha256":"5f5021aabc07e6ac382a555bf0cbb25d1f5b412237a2ff123f21398d9f678063","git_blob_sha1":"14b0b8a57507bd238de5d15f2155ec063f2b08bf"},
+    {"path":"replay.part-04.b64","bytes":7657,"sha256":"78ef2f55282f1dc32279933d69110bfe95bea951cbfe73c9b19058a37b40ef53","git_blob_sha1":"40b5adbd3977237a05f47cb3516bfefe258e367a"}
+  ],
+  "members": {
+    "combined-summary.json":{"bytes":856,"sha256":"19f1030e3fb894630b1e3aca6783fa958a176d95262e9f70487ac16528e6d8cb"},
+    "combined-table.csv":{"bytes":7517,"sha256":"cceb471230d82de2ce61270dc50caa7a8fb1ce288006e5a525f8cf6c1aa1869c"},
+    "examples-result.json":{"bytes":5282,"sha256":"8aa08601eb5359e2dca3ba48ab9e347f344af6dc714fc457382f878bb705a519"},
+    "examples.py":{"bytes":2850,"sha256":"bb2e899d433583c56bf395e761202c7dc08faa615d9ec8e0c2134b9760fca9aa"},
+    "joint-audit.json":{"bytes":17501,"sha256":"1e357b8f50605a57899abf7b65cf225b1fab3f23fcead1646dfa37ba2f7b293d"},
+    "joint.py":{"bytes":6969,"sha256":"bcab6673a691d18bcd0e10031747d0217ef1c1398d7f7f206aab66f8450e52a2"},
+    "joint_audit.py":{"bytes":6565,"sha256":"5550e44985daaa23e1ef6637b47b5c7856a89ec8ac396c7104c5d873d8ca6a23"},
+    "n9-108-117.json":{"bytes":1771,"sha256":"f5f1ca9e24dd9c30b14e05a72a0dbceeee5f22b466aa4ff8028e795da0c744f5"},
+    "n9-117-126.json":{"bytes":1797,"sha256":"a6d589bfc75529b60e89833b0561f52a75e659f3207e88c509f5ea11f5d208b6"},
+    "orbit.py":{"bytes":3791,"sha256":"e1067bbd8a32ac9d4325da548ee3225aeb99dc93b911f512f542fb224672d581"},
+    "recovery_checker.py":{"bytes":21591,"sha256":"6413676247c2dcc5533a86736e2762a0493d11c5e4c4d5dffd71bc6b2324fc80"},
+    "resume_n9.py":{"bytes":2244,"sha256":"ea5fbb05a92c480efe468c59956565451a5a0bc31772d6aa7064a0093d302495"},
+    "twolevel-n4-n8.json":{"bytes":30148,"sha256":"9b61e9a58abb4fa26d6e8a94de9a59d33ff38117b6f72523d5c7961aee705023"},
+    "twolevel-n9.json":{"bytes":23161,"sha256":"74cc7a490ec97771282c5aa2b18386ea5a40c862675611c38ba42bfd3e295f41"},
+    "twolevel_audit.py":{"bytes":6590,"sha256":"b344a65286eeb61dee78eecfa67055614c859cf6c6dd04ca85d7ad7076a33924"}
+  },
+  "reproduction": "Concatenate parts in this exact order with no separators. Verify payload_sha256 before decoding base64 and decompressing XZ. Verify decoded_json_sha256, parse the UTF-8 JSON object, verify every member, and write each flat filename as its UTF-8 value. No executable is automatically invoked."
+}
