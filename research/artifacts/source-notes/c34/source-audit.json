@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "status": "source_backed_not_trusted",
+  "primary_external_source": {
+    "authors": ["Michelle Delcourt", "Luke Postle"],
+    "title": "A Proof of Nash-Williams' Conjecture",
+    "identifier": "arXiv:2606.11178",
+    "version_read": "current arXiv version available on 2026-09-09",
+    "locators": [
+      {
+        "label": "Conjecture 1.1",
+        "comparison": "states the sufficiently-large K3-divisible minimum-degree 3n/4 triangle-decomposition assertion used in C34"
+      },
+      {
+        "label": "Theorem 1.8",
+        "comparison": "states that Conjecture 1.1 is true"
+      }
+    ],
+    "source_byte_sha256": null,
+    "source_byte_limit": "The original PDF bytes were not frozen in this candidate transaction. The theorem is source-backed, not source-attested or kernel-checked."
+  },
+  "hypothesis_mapping": {
+    "graph": "F prime is a finite simple graph on the original r core vertices",
+    "K3_divisible": "all degrees are even and the edge count is divisible by three after the parity-path and four-cycle repairs",
+    "minimum_degree": "the written calculation gives delta(F prime) at least 3r/4",
+    "sufficiently_large": "absorbed into an unspecified absolute threshold r0",
+    "conclusion": "a triangle decomposition of F prime"
+  },
+  "repository_dependencies": [
+    "research/artifacts/candidates/c24/nested/balanced-one-depth.md",
+    "research/artifacts/candidates/c25/proof.md",
+    "research/artifacts/candidates/c28/proof.md",
+    "research/artifacts/candidates/c32/proof.md",
+    "research/artifacts/candidates/c33/proof.md"
+  ],
+  "not_used_as_evidence": [
+    "search-result summaries",
+    "PR review",
+    "CI status",
+    "finite checker output",
+    "the discovery status of any numerical solver"
+  ],
+  "verdict": "candidate_only"
+}
