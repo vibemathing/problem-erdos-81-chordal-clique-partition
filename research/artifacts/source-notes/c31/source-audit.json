@@ -1,0 +1,20 @@
+{
+  "candidate": "candidate:erdos81-a01-c31-two-short-shared-boundary",
+  "inputs": [
+    {"path":"research/artifacts/candidates/c30/proof.md","relation":"prior exact fixed p=1,q=2 construction and one-third-face technique"},
+    {"path":"research/artifacts/candidates/c29/proof.md","relation":"prior parity-capacity charging and Q != actual host distinctions"},
+    {"path":"research/artifacts/candidates/c28/proof.md","relation":"exact one-third-face interval criterion"},
+    {"path":"research/artifacts/candidates/c24/nested/balanced-one-depth.md","relation":"merged balanced matching-class allocation; unique edge ownership and one omitted near-perfect matching charge"},
+    {"path":"research/artifacts/candidates/c27/twelfth-point.json","relation":"on-face denominator regression only"},
+    {"path":"research/records/failed-routes.jsonl","relation":"fresh-read empty"}
+  ],
+  "new_dependency": "No external theorem is required. The field line partition and two-coloring of a path are proved directly.",
+  "repository_main_read": "f2e2e609050840f1837f9e156e235247c0694d09",
+  "s14_note": "No separately named S14 artifact was present on main. The merged balanced continuation object actually read is c24/nested/balanced-one-depth.md; this candidate does not invent a different repository identity for it.",
+  "scope_controls": {
+    "equal_prefix": "included for p=q=2",
+    "quarter_point": "outside current one-third face; no Q value imported",
+    "twelfth_point": "inside one-third face but different parameters; no half-integrality assumed",
+    "zero_multiplicity": "handled only by the general conversion lemma as an empty resource class, not promoted to a new face theorem"
+  }
+}
