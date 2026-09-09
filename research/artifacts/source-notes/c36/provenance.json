@@ -1,0 +1,120 @@
+{
+  "artifact_files": {
+    "research/artifacts/candidates/c36/checker.py": {
+      "bytes": 12078,
+      "sha256": "826afdc52f19f9853a450e34146717dbb7a5b98788c95b2df0df24a5e9faf1f1"
+    },
+    "research/artifacts/candidates/c36/proof.md": {
+      "bytes": 11657,
+      "sha256": "444263f7458f7d39db2ddb97adce9bbbac0b3342cdac41b52c704e9079a0b43b"
+    },
+    "research/artifacts/candidates/c36/results.json": {
+      "bytes": 4477,
+      "sha256": "1272fdd1cf73238ae539d3410c89f169e4d7c83d8c0aabda685f2e2ec4e66c52"
+    }
+  },
+  "candidate": "candidate:erdos81-a01-c36-six-ray-dual",
+  "dependencies": [
+    {
+      "path": "research/artifacts/candidates/erdos81-a01-c22-c20-audit.md",
+      "relation": "exact prior for lambda semantics and lambda<=B(n)",
+      "revision": "193e0c9d758b004c219c157e402c9075657939ae",
+      "trust": "candidate/source-backed"
+    },
+    {
+      "path": "research/artifacts/candidates/c28/proof.md",
+      "relation": "prior full-face interval criterion",
+      "revision": "193e0c9d758b004c219c157e402c9075657939ae",
+      "trust": "candidate"
+    },
+    {
+      "path": "research/artifacts/candidates/c35/proof.md",
+      "relation": "prior full-face and complete-split root-safe theorem",
+      "revision": "193e0c9d758b004c219c157e402c9075657939ae",
+      "trust": "candidate"
+    }
+  ],
+  "fresh_base": "193e0c9d758b004c219c157e402c9075657939ae",
+  "next_route": "For d3,d5,d6,d7, derive actual ell_i+O(n) clique partitions or source-valid obstructions, starting with d6's complete graph with two independent holes.",
+  "problem_contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58",
+  "run_record": {
+    "environment": {
+      "arithmetic": "fractions.Fraction and integer enumeration",
+      "command_prefix": "/usr/bin/python3 -S",
+      "parent_timeout_seconds": 45,
+      "python": "3.13.5",
+      "threads": "one process per mode"
+    },
+    "failed_attempts": [
+      {
+        "child_exit_code": null,
+        "mode": "classify-initial-broad-simplex",
+        "note": "The initial version ran the exact primal simplex on every broad-box row and exceeded the parent limit; it is excluded from successful scope.",
+        "status": "timeout"
+      }
+    ],
+    "scope": {
+      "boundary_identity_rows": 634844,
+      "bounded_d8_dominance_rows": 80550,
+      "dual_active_sets": 3003,
+      "dual_vertices": 9,
+      "effective_rays": 6,
+      "exact_primal_simplex_rows": 10816,
+      "formula_parameter_rows": 129600,
+      "full_face_rows": 32652,
+      "mutations": "12/12",
+      "ray8_partition_rows": 960
+    },
+    "successful": [
+      {
+        "exit_code": 0,
+        "mode": "classify",
+        "outer_wall_seconds": 20.622400598999775,
+        "output_bytes": 853,
+        "output_sha256": "9b11daf7e7482883aa2693fbbdb86d11269aabe5038b75e2e965afe888cc324e",
+        "peak_rss_kib_reported": 1074640,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "exit_code": 0,
+        "mode": "ray8",
+        "outer_wall_seconds": 3.226920319999408,
+        "output_bytes": 185,
+        "output_sha256": "ae08333037c3182a166f3b37ca7990b500de37b8d0d3ecf634ed7a902313d95e",
+        "peak_rss_kib_reported": 1074640,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "exit_code": 0,
+        "mode": "boundary",
+        "outer_wall_seconds": 0.46371313399959035,
+        "output_bytes": 139,
+        "output_sha256": "45b972b9414254a63101a01c0558eaf21934f4c455ae52bb985a09988d42b33e",
+        "peak_rss_kib_reported": 1074640,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "exit_code": 0,
+        "mode": "mutations",
+        "outer_wall_seconds": 0.04257841400067264,
+        "output_bytes": 154,
+        "output_sha256": "034abfafca5bee52df9e7fd31fd591081a348e9655abad3bc9504e03ec8d4e0b",
+        "peak_rss_kib_reported": 1074640,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      }
+    ],
+    "trust": "generator-side exact checking; no registered independent verifier"
+  },
+  "schema_version": "1.0",
+  "semantic_boundary": [
+    "The fixed quotient formula is asserted only for a>=3 and c>=3; small core parts are handled by separate complete-split decompositions.",
+    "The all-one-third dual being feasible is not full-face optimality.",
+    "Q, L_D, J_fix, J, nu and lambda are distinct.",
+    "The ray8 construction is an actual clique partition; the four remaining mixed rays are not claimed closed.",
+    "No EvidenceLink, Result, Solution, or trusted closure is created."
+  ]
+}
