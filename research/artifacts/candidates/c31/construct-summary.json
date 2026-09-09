@@ -1,0 +1,22 @@
+{
+  "all_actual_r9_subsets_size_ge3": 466,
+  "complete_cardinalities": {"27": 25, "81": 79, "9": 7},
+  "named_large": [
+    {"Q_slack": "0", "a": 3, "actual_slack": "30", "r": 27},
+    {"Q_slack": "4", "a": 14, "actual_slack": "43", "r": 27},
+    {"Q_slack": "0", "a": 27, "actual_slack": "54", "r": 27},
+    {"Q_slack": "2", "a": 40, "actual_slack": "122", "r": 81},
+    {"Q_slack": "0", "a": 81, "actual_slack": "162", "r": 81}
+  ],
+  "nine": [
+    {"a":3,"L":"20","Q":"20","Q_slack":"0","actual_pack_value":"16","actual_slack":"12","alpha_deleted":[[0,2]],"beta_deleted":[[0,4],[1,6],[2,8]],"alpha_matchings":[[[0,1]],[[1,2]]],"beta_matchings":[[[0,3],[1,5],[2,7]],[[3,4],[5,6],[7,8]]],"core_triangles":[[0,5,8],[0,6,7],[1,3,8],[3,5,7],[2,3,6],[1,4,7],[2,4,5],[4,6,8]]},
+    {"a":4,"L":"62/3","Q":"20","Q_slack":"2","actual_pack_value":"16","actual_slack":"14","alpha_deleted":[[0,2]],"beta_deleted":[[0,4],[1,6],[2,8]],"alpha_matchings":[[[0,1]],[[1,2]]],"beta_matchings":[[[0,3],[1,5],[2,7]],[[3,4],[5,6],[7,8]]],"core_triangles":[[0,5,8],[0,6,7],[1,3,8],[3,5,7],[2,3,6],[1,4,7],[2,4,5],[4,6,8]]},
+    {"a":5,"L":"64/3","Q":"20","Q_slack":"4","actual_pack_value":"16","actual_slack":"16","alpha_deleted":[[0,2]],"beta_deleted":[[0,4],[1,6],[2,8]],"alpha_matchings":[[[0,1]],[[1,2]]],"beta_matchings":[[[0,3],[1,5],[2,7]],[[3,4],[5,6],[7,8]]],"core_triangles":[[0,5,8],[0,6,7],[1,3,8],[3,5,7],[2,3,6],[1,4,7],[2,4,5],[4,6,8]]},
+    {"a":6,"L":"22","Q":"22","Q_slack":"0","actual_pack_value":"17","actual_slack":"15","alpha_deleted":[[0,4],[1,5]],"beta_deleted":[[0,6],[2,7],[4,8]],"alpha_matchings":[[[0,2],[1,3]],[[2,4],[3,5]]],"beta_matchings":[[[0,1],[2,3],[4,5]],[[1,6],[3,7],[5,8]]],"core_triangles":[[0,3,8],[0,5,7],[1,2,8],[1,4,7],[2,5,6],[3,4,6],[6,7,8]]},
+    {"a":7,"L":"68/3","Q":"22","Q_slack":"2","actual_pack_value":"17","actual_slack":"17","alpha_deleted":[[0,4],[1,5]],"beta_deleted":[[0,6],[2,7],[4,8]],"alpha_matchings":[[[0,2],[1,3]],[[2,4],[3,5]]],"beta_matchings":[[[0,1],[2,3],[4,5]],[[1,6],[3,7],[5,8]]],"core_triangles":[[0,3,8],[0,5,7],[1,2,8],[1,4,7],[2,5,6],[3,4,6],[6,7,8]]},
+    {"a":8,"L":"70/3","Q":"22","Q_slack":"4","actual_pack_value":"17","actual_slack":"19","alpha_deleted":[[0,4],[1,5]],"beta_deleted":[[0,6],[2,7],[4,8]],"alpha_matchings":[[[0,2],[1,3]],[[2,4],[3,5]]],"beta_matchings":[[[0,1],[2,3],[4,5]],[[1,6],[3,7],[5,8]]],"core_triangles":[[0,3,8],[0,5,7],[1,2,8],[1,4,7],[2,5,6],[3,4,6],[6,7,8]]},
+    {"a":9,"L":"24","Q":"24","Q_slack":"0","actual_pack_value":"18","actual_slack":"18","alpha_deleted":[[0,6],[1,7],[2,8]],"beta_deleted":[[0,2],[3,5],[6,8]],"alpha_matchings":[[[0,3],[1,4],[2,5]],[[3,6],[4,7],[5,8]]],"beta_matchings":[[[0,1],[3,4],[6,7]],[[1,2],[4,5],[7,8]]],"core_triangles":[[0,4,8],[0,5,7],[1,3,8],[1,5,6],[2,3,7],[2,4,6]]}
+  ],
+  "note": "Full per-cardinality output was generated locally; compact repository output retains complete r=9 witnesses and exact coverage counts.",
+  "version": "c31-p2q2-shared-boundary-v1"
+}
