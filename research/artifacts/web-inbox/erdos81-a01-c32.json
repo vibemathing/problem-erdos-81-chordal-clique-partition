@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.1.0",
+  "channel": "chatgpt-web-github-issue-pr-writer",
+  "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+  "repository_identity": {
+    "binding_state": "verified",
+    "database_id": 1358762751,
+    "node_id": "R_kgDOUP0S_w",
+    "default_branch": "main"
+  },
+  "problem_id": "problem:erdos-81-chordal-clique-partition",
+  "problem_contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58",
+  "harness_snapshot_sha256": "8094cdb2e62dd9a252acb1d45095225ede87dc4153f25fb6a7ffb28114cab788",
+  "base_revision": "de0a67b00e14e200ab32da0a3b30d387be13dfb6",
+  "importer_policy_sha256": "a7650a8ba5be3fef370914b24a49b1118f57dc12f41980f21b11ef2b0a8267c1",
+  "attempt_id": "attempt:web-20260906-erdos81-a01",
+  "route_id": "route:split-extremal-reduction-v1",
+  "graph_id": "graph:erdos81-initial-v1",
+  "obligation_id": "obligation:erdos81-split-extremal-reduction",
+  "generator": {
+    "principal": "chatgpt-web-github",
+    "model_label": "GPT-5.6 Sol Pro",
+    "model_fingerprint_status": "unverified"
+  },
+  "transport": {
+    "branch": "web/attempt-erdos81-a01-c32-direction-packets",
+    "issue_number": 1,
+    "issue_url": "https://github.com/vibemathing/problem-erdos-81-chordal-clique-partition/issues/1",
+    "pull_request_number": 37,
+    "pull_request_url": "https://github.com/vibemathing/problem-erdos-81-chordal-clique-partition/pull/37"
+  },
+  "objective": "Extend the C31 p=q=2 shared-boundary atom to the first nontrivial multiplicities and then to a period-continuable actual-host direction-packet theorem whose capacity defect is linear in r with a constant independent of growing p and q on its explicit domain; isolate the exact high-multiplicity nonperiodic boundary obstruction.",
+  "candidate_artifacts": [
+    {
+      "candidate_id": "candidate:erdos81-a01-c32-direction-packets",
+      "kind": "proof",
+      "locator": "research/artifacts/candidates/c32/candidate.md",
+      "sha256": "82b8fa04728a7f281c7089938f3c19e6e1b45d1b1f7814534be3d818b40a256b"
+    }
+  ],
+  "atomic_claims": [
+    {
+      "claim_id": "claim:erdos81-c32-direction-packet",
+      "text": "For r=3^k, a=hm+b with m a power of three, and floor(p/2)<= (m-1)/2 plus floor(p/2)+floor(q/2)<= (r-1)/2, unions of disjoint affine direction factors followed by one Vizing repair give an actual host triangle packing with S<=h sigma_m(p)+pb+sigma_r(q); each leaf color is a genuine matching and every core edge has one owner.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:erdos81-c32-periodic",
+      "text": "When b=0 the construction has S<3r independently of p and q, and adding one whole m-coset changes no owner outside the newly added coset and increases S by the fixed local packet cost sigma_m(p), giving a genuine period-m continuation.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:erdos81-c32-arbitrary-cardinality",
+      "text": "For every actual short cardinality, if p(p+1)<=r and p+q<=r-1, the least admissible power-of-three period gives an actual packing with S<6r and hence nu_star-nu<2r; the constant is independent of the multiplicities.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:erdos81-c32-p3",
+      "text": "For p=3 and q in {2,3}, every actual A with a=3t+b admits an explicit two-direction actual packing with S=a+r+2b; for 4<=a<=r, explicit saturated primal formulas prove the full one-third face and nu_star-nu<=[a+r+2(a mod3)]/3<=(2r+4)/3.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:erdos81-c32-even-repair",
+      "text": "For positive even multiplicity t, deleting one smallest color class from a Vizing (t+1)-edge-coloring costs exactly one core plus two endpoint units per deleted edge; an odd-component parity argument gives the lower bound |R|>=tc/2 and the supplied nine-point certificates attain it for t=2,4,6,8.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:erdos81-c32-slots",
+      "text": "Translation slots P_s on a size-N fiber are pairwise edge-disjoint and a base triangle using slots s,t,s+t lifts bijectively; shared base edges are permitted only with distinct actual slots, and more than N full-slot requests on one base edge are impossible.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:erdos81-c32-near-factor-obstruction",
+      "text": "Selecting p canonical near-factor colors first on an affine block of order m leaves core defect e(m-1)/2-3 tau(D)>=p(m-p)/2, where e=m-p; therefore this route has a quadratic middle regime and cannot prove a multiplicity-independent linear bound.",
+      "status": "candidate"
+    },
+    {
+      "claim_id": "claim:erdos81-c32-finite",
+      "text": "Generator-side exact checks cover 240 cardinality constructions, 764 actual nine-core subset transports, 696 full-face substitutions, nine edge-color certificates, four exact even-repair certificates, all 512 nine-point omitted-color sets, 83 slot triples and three negative mutations; these runs do not prove the universal statements.",
+      "status": "candidate"
+    }
+  ],
+  "assumptions": [
+    "Finite simple two-class split hosts with core order r=3^k and an actual arbitrary short subset A; relabeling is transported back to that actual subset.",
+    "The direction-packet theorem uses Vizing's theorem for finite simple graphs; Misra-Gries supplies a constructive Delta+1 algorithm premise.",
+    "The all-one-third equality is asserted only where an explicit saturated primal or the exact C28 interval calculation is supplied.",
+    "Every reported leaf class is an actual matching; Q, J, L_D and J_fix are not substituted for nu.",
+    "Prior C24, C28, C30 and C31 materials are generator-authored candidates, not trusted Evidence."
+  ],
+  "risks": [
+    "For high p and an arbitrary nonperiodic short cardinality, the residual pb term remains; eliminating it requires a balanced partial-Latin boundary trade whose completion and slot constraints are both proved.",
+    "The displayed actual packings are lower-bound witnesses and do not determine the exact value of nu except where separately stated; no exact p=3 optimum is claimed.",
+    "Vizing and Misra-Gries were source-audited from bibliographic or abstract metadata, not independently formalized here.",
+    "The transported checker is source-equivalent to the locally executed checker, but byte identity is not asserted; all finite execution remains in the generator trust domain.",
+    "No trusted verifier, semantic review, EvidenceLink, Result, Solution, exact split-domination theorem or ProblemContract closure is generated."
+  ],
+  "open_obligations": [
+    "obligation:erdos81-split-extremal-reduction",
+    "obligation:erdos81-root"
+  ],
+  "failed_route_proposal": {
+    "route_fingerprint": "31ffc097822092329707f497de85bd7757a8cbd4a1c83e264829bf85c4818777",
+    "failure_class": "contradiction",
+    "blocker": "The route that selects p near-factor leaf colors first and retains only untouched affine triples has S_core>=p(m-p)/2. When p and m-p are both linear in m this contradicts the required O(m) packet defect.",
+    "evidence_locators": [
+      "research/artifacts/candidates/c32/proof.md#72-selected-near-factor-colors-have-a-quadratic-middle-regime",
+      "research/artifacts/candidates/c32/controls-results.json"
+    ],
+    "next_obligation": "obligation:erdos81-split-extremal-reduction"
+  },
+  "source_refs": [
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "problem-library/records/canonical-problems.jsonl",
+      "revision": "de0a67b00e14e200ab32da0a3b30d387be13dfb6",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/records/obligation-graphs.jsonl",
+      "revision": "de0a67b00e14e200ab32da0a3b30d387be13dfb6",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/records/failed-routes.jsonl",
+      "revision": "de0a67b00e14e200ab32da0a3b30d387be13dfb6",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/artifacts/candidates/c31/proof.md",
+      "revision": "de0a67b00e14e200ab32da0a3b30d387be13dfb6",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/artifacts/candidates/c28/proof.md",
+      "revision": "de0a67b00e14e200ab32da0a3b30d387be13dfb6",
+      "relation": "prior_art"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/artifacts/candidates/c32/proof.md",
+      "revision": "aa054a1683d819210e531a9a7f27df66bce62032",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/artifacts/candidates/c32/boundary-addendum.md",
+      "revision": "aa054a1683d819210e531a9a7f27df66bce62032",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/artifacts/source-notes/c32/run-record.json",
+      "revision": "aa054a1683d819210e531a9a7f27df66bce62032",
+      "relation": "exact"
+    },
+    {
+      "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+      "path": "research/artifacts/source-notes/c32/source-audit.json",
+      "revision": "aa054a1683d819210e531a9a7f27df66bce62032",
+      "relation": "exact"
+    }
+  ],
+  "requested_verification": [
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
+  ],
+  "verdict": "candidate_only",
+  "created_at": "2026-09-09T13:24:30Z"
+}

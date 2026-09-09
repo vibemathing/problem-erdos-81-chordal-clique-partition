@@ -1,0 +1,33 @@
+{
+  "candidate_id": "candidate:erdos81-a01-c32-direction-packets",
+  "certificates_sha256": "4a02f2e5a729bc15fd0a1c8ac05627f631965e202d0f98016966ccafbc3b6a37",
+  "command": "python3 checker.py construct",
+  "counts": {
+    "actual_subset_transports_r9": 764,
+    "cardinality_constructions": 240,
+    "face_cases": 696
+  },
+  "elapsed_seconds": 2.062745611999844,
+  "executed_checker_sha256": "52a0dcb86b153b4401072f8a435981d970da4ae1ddcbcb8cdac649ee705a5f2c",
+  "execution_boundary": "generator-side local exact run before transport; not a trusted verifier",
+  "exit_code": 0,
+  "named_r9": [
+    {"AAA": 0, "AAC": 2, "ACC": 5, "CCC": 1, "S_core": 3, "S_long": 6, "S_short": 6, "S_total": 15, "a": 4, "packing": 17, "q": 2, "r": 9},
+    {"AAA": 0, "AAC": 5, "ACC": 2, "CCC": 1, "S_core": 3, "S_long": 6, "S_short": 9, "S_total": 18, "a": 5, "packing": 17, "q": 2, "r": 9},
+    {"AAA": 0, "AAC": 6, "ACC": 0, "CCC": 1, "S_core": 3, "S_long": 6, "S_short": 6, "S_total": 15, "a": 6, "packing": 19, "q": 2, "r": 9},
+    {"AAA": 2, "AAC": 4, "ACC": 1, "CCC": 0, "S_core": 3, "S_long": 6, "S_short": 9, "S_total": 18, "a": 7, "packing": 19, "q": 2, "r": 9},
+    {"AAA": 4, "AAC": 3, "ACC": 0, "CCC": 0, "S_core": 3, "S_long": 6, "S_short": 12, "S_total": 21, "a": 8, "packing": 19, "q": 2, "r": 9},
+    {"AAA": 6, "AAC": 0, "ACC": 0, "CCC": 0, "S_core": 3, "S_long": 6, "S_short": 9, "S_total": 18, "a": 9, "packing": 21, "q": 2, "r": 9},
+    {"AAA": 0, "AAC": 2, "ACC": 5, "CCC": 1, "S_core": 0, "S_long": 9, "S_short": 6, "S_total": 15, "a": 4, "packing": 20, "q": 3, "r": 9},
+    {"AAA": 0, "AAC": 5, "ACC": 2, "CCC": 1, "S_core": 0, "S_long": 9, "S_short": 9, "S_total": 18, "a": 5, "packing": 20, "q": 3, "r": 9},
+    {"AAA": 0, "AAC": 6, "ACC": 0, "CCC": 1, "S_core": 0, "S_long": 9, "S_short": 6, "S_total": 15, "a": 6, "packing": 22, "q": 3, "r": 9},
+    {"AAA": 2, "AAC": 4, "ACC": 1, "CCC": 0, "S_core": 0, "S_long": 9, "S_short": 9, "S_total": 18, "a": 7, "packing": 22, "q": 3, "r": 9},
+    {"AAA": 4, "AAC": 3, "ACC": 0, "CCC": 0, "S_core": 0, "S_long": 9, "S_short": 12, "S_total": 21, "a": 8, "packing": 22, "q": 3, "r": 9},
+    {"AAA": 6, "AAC": 0, "ACC": 0, "CCC": 0, "S_core": 0, "S_long": 9, "S_short": 9, "S_total": 18, "a": 9, "packing": 24, "q": 3, "r": 9}
+  ],
+  "schema_version": "1.0.0",
+  "status": "ok",
+  "stderr_bytes": 0,
+  "stdout_sha256": "b5cc6728940dbd52220ad688144196a3739c8c390fe03e318fd055143a228997",
+  "transport_note": "The GitHub checker is a source-equivalent transport copy; byte identity with the executed local checker is not asserted."
+}

@@ -1,0 +1,82 @@
+{
+  "candidate_id": "candidate:erdos81-a01-c32-direction-packets",
+  "commands": [
+    {
+      "command": "python3 checker.py construct",
+      "elapsed_seconds": 2.062745611999844,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_path": "construct-output.json",
+      "stdout_sha256": "b5cc6728940dbd52220ad688144196a3739c8c390fe03e318fd055143a228997"
+    },
+    {
+      "command": "python3 checker.py controls",
+      "elapsed_seconds": 0.01558260199999495,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_path": "controls-output.json",
+      "stdout_sha256": "6063ceb687f409f6a6ad3e3fe716c8eca58cb068ea9723c2204d86dc55870c4d"
+    },
+    {
+      "command": "python3 checker.py all",
+      "elapsed_seconds": 2.089758533000122,
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_path": "checker-output.json",
+      "stdout_sha256": "f5e2f2625cd6f11455b859eda26c2824538e806fc14c02ae399d248ef7089db1"
+    }
+  ],
+  "discovery_run": {
+    "kind": "bounded floating MILP used only to find finite edge-color arrays",
+    "environment": {"python": "3.13.5", "numpy": "2.3.5", "scipy": "1.17.0"},
+    "elapsed_seconds": 1.1504727320000256,
+    "edge_coloring_status": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0},
+    "exact_even_repair": {
+      "2": {"rho": 3, "status": 0},
+      "4": {"rho": 2, "status": 0},
+      "6": {"rho": 3, "status": 0},
+      "8": {"rho": 4, "status": 0}
+    },
+    "proof_use": "Only exact integer edge/color arrays in certificates.json plus the written parity lower bound are used. Solver status and optimality are not universal proof inputs."
+  },
+  "environment": {
+    "implementation": "CPython",
+    "python": "3.13.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "checker_dependencies": "Python standard library only"
+  },
+  "execution_limits": {
+    "checker_termination": "finite loops over explicitly recorded ranges",
+    "network": "none in checker",
+    "threads": "single Python checker process; discovery solver defaults",
+    "unbounded_search": false
+  },
+  "finite_scope": {
+    "actual_subset_transports_r9": 764,
+    "cardinality_constructions": 240,
+    "face_parameter_substitutions": 696,
+    "vizing_color_certificates": 9,
+    "exact_even_repair_values": {
+      "2": {"components": 3, "rho": 3},
+      "4": {"components": 1, "rho": 2},
+      "6": {"components": 1, "rho": 3},
+      "8": {"components": 1, "rho": 4}
+    },
+    "near_factor_omitted_sets_m9": 512,
+    "translation_slot_triangle_pairs": 83,
+    "negative_mutations": 3
+  },
+  "byte_provenance": {
+    "executed_checker_sha256": "52a0dcb86b153b4401072f8a435981d970da4ae1ddcbcb8cdac649ee705a5f2c",
+    "executed_certificates_sha256": "4a02f2e5a729bc15fd0a1c8ac05627f631965e202d0f98016966ccafbc3b6a37",
+    "transported_checker_git_blob_sha1": "fa725eb3a1b4e39706892292cfb7b389b906635f",
+    "transported_checker_byte_identity": "not asserted; transported source is a source-equivalent candidate copy"
+  },
+  "limitations": [
+    "Finite runs are generator-side and do not verify the universal theorem.",
+    "The proof invokes Vizing's theorem as an external standard theorem.",
+    "No trusted verifier receipt or result admission exists."
+  ],
+  "recorded_at": "2026-09-09T13:00:38Z",
+  "schema_version": "1.0.0"
+}
