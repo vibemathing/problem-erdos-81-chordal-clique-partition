@@ -46,7 +46,7 @@
     },
     {
       "claim_id": "claim:erdos81-c32-periodic",
-      "text": "When b=0 the construction has S<3r independently of p and q, and adding one whole m-coset changes no previous owner and increases S by the fixed local packet cost sigma_m(p), giving a genuine period-m continuation.",
+      "text": "When b=0 the construction has S<3r independently of p and q, and adding one whole m-coset changes no owner outside the newly added coset and increases S by the fixed local packet cost sigma_m(p), giving a genuine period-m continuation.",
       "status": "candidate"
     },
     {
@@ -165,11 +165,9 @@
     }
   ],
   "requested_verification": [
-    "statement_faithfulness",
-    "proof_review",
-    "edge_incidence_audit",
-    "leaf_matching_audit",
-    "source_audit"
+    "kernel_check",
+    "axiom_escape_audit",
+    "statement_faithfulness"
   ],
   "verdict": "candidate_only",
   "created_at": "2026-09-09T13:24:30Z"
