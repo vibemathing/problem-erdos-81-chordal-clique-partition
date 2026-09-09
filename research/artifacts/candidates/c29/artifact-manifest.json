@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "bytes": 20509,
+      "git_blob_sha1": "07fba4deebc71bbe77961c9ebc8ccab1edd6c68c",
+      "path": "research/artifacts/candidates/c29/proof.md",
+      "sha256": "14f76a6afb7a349335062c3825323c4a64bd61e81ca1c64855cfb393254c1ebb"
+    },
+    {
+      "bytes": 19853,
+      "git_blob_sha1": "fc7eeb531ba1403fef8a65d032a352af2db74876",
+      "path": "research/artifacts/candidates/c29/checker.py",
+      "sha256": "826c1cfb01baf350f41aea7f25991a3798f9b0fd67f2334cbec3314be527c257"
+    },
+    {
+      "bytes": 1890,
+      "git_blob_sha1": "00c42ce087a910d2137bad5783bb7a7a15341b5c",
+      "path": "research/artifacts/candidates/c29/seed27.json",
+      "sha256": "896311f3f506479688e446041ce689c80e5ea907bacb696ebde5c73366b51231"
+    },
+    {
+      "bytes": 3688,
+      "git_blob_sha1": "3a2ddb2771dbe4d3081115fbbf26549117c62787",
+      "path": "research/artifacts/candidates/c29/nine-results.json",
+      "sha256": "eac48ad5b83a6114c11e30ba1cd5c40a9eed5446b51ad4b84334e115a82b69a0"
+    },
+    {
+      "bytes": 3397,
+      "git_blob_sha1": "8eb4a22b303e3f296652057d9e0030c34d7e268a",
+      "path": "research/artifacts/candidates/c29/oneone-results.json",
+      "sha256": "67b65752891929ebe11b47896e3689453e80c30f84f4f8f2ef8cea529ee8a808"
+    },
+    {
+      "bytes": 4428,
+      "git_blob_sha1": "771b7d6ca3365a85013b8e8f3ecbe9f6b592b551",
+      "path": "research/artifacts/candidates/c29/lift-results.json",
+      "sha256": "1ee7c079f35856c63d9040a0b50b24cce9de697bcc0ddef9089644a7abd4bea9"
+    },
+    {
+      "bytes": 1806,
+      "git_blob_sha1": "3b2cfdd75336cfa2f845e82f37218ee3b052860b",
+      "path": "research/artifacts/candidates/c29/mutations-results.json",
+      "sha256": "14528c8fc433546c6bb14d2747cd712fe9c9ab34367d0b75f78a94d47b5eac88"
+    },
+    {
+      "bytes": 3807,
+      "git_blob_sha1": "b0a96bcaf85991dd93212cdbfad357080d638eca",
+      "path": "research/artifacts/candidates/c29/README.md",
+      "sha256": "5a12d269a681a501348441039ac41216c8a0bb7727735aed4b7de2dfaf3d58c1"
+    },
+    {
+      "bytes": 7168,
+      "git_blob_sha1": "78920a30b59ed4d7f7422652c72edbf22ff83ca4",
+      "path": "research/artifacts/source-notes/c29/run-record.json",
+      "sha256": "ae7af4c5c1e923d9441c33bd843503d6c952042285a57c819d01600bc7f98b25"
+    },
+    {
+      "bytes": 2572,
+      "git_blob_sha1": "b894ccf3203e862300ffbb95786fed058ea4b961",
+      "path": "research/artifacts/source-notes/c29/scope-audit.json",
+      "sha256": "6f8077b4a48a80dd08fa0962f1d3c2679d6e1294755b1ab3100c3252dea4112a"
+    }
+  ],
+  "schema": "c29-byte-manifest-v1",
+  "verdict": "candidate_only"
+}
