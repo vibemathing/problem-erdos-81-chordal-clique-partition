@@ -1,0 +1,28 @@
+{
+  "candidate_id": "candidate:erdos81-a01-c32-direction-packets",
+  "certificates_sha256": "4a02f2e5a729bc15fd0a1c8ac05627f631965e202d0f98016966ccafbc3b6a37",
+  "command": "python3 checker.py controls",
+  "controls": {
+    "a3_face_excluded": true,
+    "exact_even_repairs": {
+      "2": {"components": 3, "rho": 3},
+      "4": {"components": 1, "rho": 2},
+      "6": {"components": 1, "rho": 3},
+      "8": {"components": 1, "rho": 4}
+    },
+    "near_factor_obstruction_subsets_m9": 512,
+    "negative_mutations": 3,
+    "translation_slots": {"fiber_sizes": 3, "triangle_slot_pairs": 83},
+    "unused_value": ["6", "9/2", false],
+    "vizing_certificates": 9
+  },
+  "elapsed_seconds": 0.01558260199999495,
+  "executed_checker_sha256": "52a0dcb86b153b4401072f8a435981d970da4ae1ddcbcb8cdac649ee705a5f2c",
+  "execution_boundary": "generator-side local exact run before transport; not a trusted verifier",
+  "exit_code": 0,
+  "schema_version": "1.0.0",
+  "status": "ok",
+  "stderr_bytes": 0,
+  "stdout_sha256": "6063ceb687f409f6a6ad3e3fe716c8eca58cb068ea9723c2204d86dc55870c4d",
+  "transport_note": "The GitHub checker is a source-equivalent transport copy; byte identity with the executed local checker is not asserted."
+}
