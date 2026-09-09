@@ -1,0 +1,152 @@
+{
+  "best_verified_result": "none",
+  "coverage": {
+    "construct": "All high-long-budget cardinality representations for r=3,9,27: counts 2,40,910, total 952; every one of 510 nonempty proper actual subsets of a nine-vertex core with all corresponding allowed high-long budgets, total 3762 subset-budget cases.",
+    "large": "Three named arbitrary-subset constructors with r=81,81,243, each with actual exact capacity certificates. No range above 27 is asserted.",
+    "mutations": 12,
+    "mutations_all_detected": true,
+    "named": "Five named full joint LP pairs, the frozen quarter and twelfth certificates, and an exact lifted full primal/dual at (r,a,p,q)=(9,4,1,1). No Q optimizer is used in this turn.",
+    "repair": "Three non-power-of-three auxiliary orders 6,18,30 exercise positive beta repair mass. They are checks of the repair lemma, not claimed complete target ranges.",
+    "types": "All 575 parameter tuples 6<=r<=10, 3<=a<=r-3, 0<=p<=a-1, 0<=q<=r-1; exact face criterion compared against both rational type LPs. Not all graph isomorphism classes."
+  },
+  "earlier_failed_probe": {
+    "child_exit_code": null,
+    "complete_range_claim": null,
+    "mode": "combined lp probe before separation of types and named runs",
+    "observed": "Tool-level timeout, no completed output or readable child-process exit.",
+    "recovery": "Separated bounded modes were genuinely rerun with the final source. Their success does not rewrite the earlier unknown process exit.",
+    "source_sha256": "151dbe6926dc767318018c315ce5cb5b5383f049e4001611b72fc0c98e7ab54e"
+  },
+  "generator_scope": "Different implementations share one generator and trust domain.",
+  "limitations": [
+    "No complete arbitrary-subset one-third-face theorem has been obtained.",
+    "Input K is source-backed, not executed or trust-verified.",
+    "All finite constructors used exact locally supplied factors; unsupported sizes are not silently skipped.",
+    "Finite tests do not establish the all-order proof.",
+    "The frontend generation failure reported by the user is not a mathematical failure and is not a failed-route proposal."
+  ],
+  "runs": [
+    {
+      "executed_command_normalized": [
+        "python",
+        "research/artifacts/candidates/c28/subset_checker.py",
+        "--mode",
+        "construct",
+        "--out",
+        "research/artifacts/candidates/c28/construct-results.json"
+      ],
+      "exit_code": 0,
+      "mode": "construct",
+      "normalization": "Private working-area prefixes removed; replay command uses a new output path.",
+      "outer_elapsed_seconds": 3.2198805670000183,
+      "outer_timeout": false,
+      "outer_wall_limit_seconds": 43,
+      "output_bytes": 12983,
+      "output_path": "research/artifacts/candidates/c28/construct-results.json",
+      "output_sha256": "9f7fd09b8934a364adb954d8c6183e79be2b314baa07d23a57873fa0364715f7",
+      "replay_command": [
+        "python",
+        "research/artifacts/candidates/c28/subset_checker.py",
+        "--mode",
+        "construct",
+        "--out",
+        "NEW-construct-results.json"
+      ],
+      "runtime": {
+        "arithmetic": "Fraction/integer",
+        "cpu_limit_seconds": 40,
+        "elapsed_seconds": 2.672520448999876,
+        "max_rss_kib": 107692,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "source_sha256": "97a3d55eb240a7b01735b2e913b333e28a7b055926cf39cc1abecee5f80e6c89",
+        "threads": 1,
+        "wall_limit_seconds": 38
+      },
+      "source_sha256": "97a3d55eb240a7b01735b2e913b333e28a7b055926cf39cc1abecee5f80e6c89",
+      "stderr_empty": true
+    },
+    {
+      "executed_command_normalized": [
+        "python",
+        "research/artifacts/candidates/c28/subset_checker.py",
+        "--mode",
+        "types",
+        "--out",
+        "research/artifacts/candidates/c28/types-results.json"
+      ],
+      "exit_code": 0,
+      "mode": "types",
+      "normalization": "Private working-area prefixes removed; replay command uses a new output path.",
+      "outer_elapsed_seconds": 2.3040921970000454,
+      "outer_timeout": false,
+      "outer_wall_limit_seconds": 43,
+      "output_bytes": 11406,
+      "output_path": "research/artifacts/candidates/c28/types-results.json",
+      "output_sha256": "7c1f8f07ca5906ea716d6dd1c4587de951a4c2969da1810245d95b9985873b5a",
+      "replay_command": [
+        "python",
+        "research/artifacts/candidates/c28/subset_checker.py",
+        "--mode",
+        "types",
+        "--out",
+        "NEW-types-results.json"
+      ],
+      "runtime": {
+        "arithmetic": "Fraction/integer",
+        "cpu_limit_seconds": 40,
+        "elapsed_seconds": 1.7214414550001038,
+        "max_rss_kib": 94892,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "source_sha256": "97a3d55eb240a7b01735b2e913b333e28a7b055926cf39cc1abecee5f80e6c89",
+        "threads": 1,
+        "wall_limit_seconds": 38
+      },
+      "source_sha256": "97a3d55eb240a7b01735b2e913b333e28a7b055926cf39cc1abecee5f80e6c89",
+      "stderr_empty": true
+    },
+    {
+      "executed_command_normalized": [
+        "python",
+        "research/artifacts/candidates/c28/subset_checker.py",
+        "--mode",
+        "named",
+        "--out",
+        "research/artifacts/candidates/c28/named-results.json"
+      ],
+      "exit_code": 0,
+      "mode": "named",
+      "normalization": "Private working-area prefixes removed; replay command uses a new output path.",
+      "outer_elapsed_seconds": 4.910839054999997,
+      "outer_timeout": false,
+      "outer_wall_limit_seconds": 43,
+      "output_bytes": 5048,
+      "output_path": "research/artifacts/candidates/c28/named-results.json",
+      "output_sha256": "7fd1d6860694b57e399711cae3fa274965277149add87f26c52b572ec4485695",
+      "replay_command": [
+        "python",
+        "research/artifacts/candidates/c28/subset_checker.py",
+        "--mode",
+        "named",
+        "--out",
+        "NEW-named-results.json"
+      ],
+      "runtime": {
+        "arithmetic": "Fraction/integer",
+        "cpu_limit_seconds": 40,
+        "elapsed_seconds": 4.3269549219999135,
+        "max_rss_kib": 95020,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "source_sha256": "97a3d55eb240a7b01735b2e913b333e28a7b055926cf39cc1abecee5f80e6c89",
+        "threads": 1,
+        "wall_limit_seconds": 38
+      },
+      "source_sha256": "97a3d55eb240a7b01735b2e913b333e28a7b055926cf39cc1abecee5f80e6c89",
+      "stderr_empty": true
+    }
+  ],
+  "trusted_verifier_run": false,
+  "verdict": "candidate_only"
+}
