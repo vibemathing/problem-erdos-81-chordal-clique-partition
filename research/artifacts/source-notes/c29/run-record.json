@@ -1,0 +1,177 @@
+{
+  "best_verified_result": "none",
+  "failed_probe": {
+    "child_exit_code": null,
+    "complete_output": false,
+    "description": "Initial combined nine-mode run hit the container tool timeout; no process JSON or final output was found on bounded readback and no checker process remained. The final version uses two exact six-row quotient LPs plus direct full edge-incidence certificates, and removes forced-zero residual rows before LP. No failed process is reclassified as success.",
+    "mode": "nine_full_edge_revised_before_reduction",
+    "outer_tool_limit_seconds": 45,
+    "status": "probe_tool_timeout",
+    "timing_not_recovered": true,
+    "verdict": "candidate_only"
+  },
+  "final_runs": [
+    {
+      "command": [
+        "python",
+        "checker.py",
+        "--mode",
+        "nine",
+        "--out",
+        "nine-results.json"
+      ],
+      "exit_code": 0,
+      "mode": "nine",
+      "outer_timeout_seconds": 43,
+      "output_bytes": 3688,
+      "output_sha256": "eac48ad5b83a6114c11e30ba1cd5c40a9eed5446b51ad4b84334e115a82b69a0",
+      "python": "3.13.5",
+      "runtime": {
+        "arithmetic": "fractions.Fraction and exact integer incidence",
+        "checker_sha256": "826c1cfb01baf350f41aea7f25991a3798f9b0fd67f2334cbec3314be527c257",
+        "cpu_limit_seconds": 39,
+        "elapsed_seconds": 0.06064754199996969,
+        "internal_wall_seconds": 36,
+        "max_rss_kib": 95144,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "seed_sha256": "896311f3f506479688e446041ce689c80e5ea907bacb696ebde5c73366b51231",
+        "threads": 1
+      },
+      "started_at": "2026-09-09T05:47:00.736552+00:00",
+      "stderr": "",
+      "stdout": "{\"mode\": \"nine\", \"status\": \"finite_exact_checks_passed\", \"bytes\": 3688, \"sha256\": \"eac48ad5b83a6114c11e30ba1cd5c40a9eed5446b51ad4b84334e115a82b69a0\", \"elapsed\": 0.06064754199996969}\n",
+      "timed_out": false,
+      "trusted_verifier_run": false,
+      "wall_seconds": 0.6349346150000201
+    },
+    {
+      "command": [
+        "python",
+        "checker.py",
+        "--mode",
+        "oneone",
+        "--out",
+        "oneone-results.json"
+      ],
+      "exit_code": 0,
+      "mode": "oneone",
+      "outer_timeout_seconds": 43,
+      "output_bytes": 3397,
+      "output_sha256": "67b65752891929ebe11b47896e3689453e80c30f84f4f8f2ef8cea529ee8a808",
+      "python": "3.13.5",
+      "runtime": {
+        "arithmetic": "fractions.Fraction and exact integer incidence",
+        "checker_sha256": "826c1cfb01baf350f41aea7f25991a3798f9b0fd67f2334cbec3314be527c257",
+        "cpu_limit_seconds": 39,
+        "elapsed_seconds": 2.3266673289999744,
+        "internal_wall_seconds": 36,
+        "max_rss_kib": 107592,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "seed_sha256": "896311f3f506479688e446041ce689c80e5ea907bacb696ebde5c73366b51231",
+        "threads": 1
+      },
+      "started_at": "2026-09-09T05:47:02.009612+00:00",
+      "stderr": "",
+      "stdout": "{\"mode\": \"oneone\", \"status\": \"finite_exact_checks_passed\", \"bytes\": 3397, \"sha256\": \"67b65752891929ebe11b47896e3689453e80c30f84f4f8f2ef8cea529ee8a808\", \"elapsed\": 2.3266673289999744}\n",
+      "timed_out": false,
+      "trusted_verifier_run": false,
+      "wall_seconds": 2.9177870219998567
+    },
+    {
+      "command": [
+        "python",
+        "checker.py",
+        "--mode",
+        "lift",
+        "--out",
+        "lift-results.json"
+      ],
+      "exit_code": 0,
+      "mode": "lift",
+      "outer_timeout_seconds": 43,
+      "output_bytes": 4428,
+      "output_sha256": "1ee7c079f35856c63d9040a0b50b24cce9de697bcc0ddef9089644a7abd4bea9",
+      "python": "3.13.5",
+      "runtime": {
+        "arithmetic": "fractions.Fraction and exact integer incidence",
+        "checker_sha256": "826c1cfb01baf350f41aea7f25991a3798f9b0fd67f2334cbec3314be527c257",
+        "cpu_limit_seconds": 39,
+        "elapsed_seconds": 1.5830124169999635,
+        "internal_wall_seconds": 36,
+        "max_rss_kib": 104696,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "seed_sha256": "896311f3f506479688e446041ce689c80e5ea907bacb696ebde5c73366b51231",
+        "threads": 1
+      },
+      "started_at": "2026-09-09T05:47:05.520535+00:00",
+      "stderr": "",
+      "stdout": "{\"mode\": \"lift\", \"status\": \"finite_exact_checks_passed\", \"bytes\": 4428, \"sha256\": \"1ee7c079f35856c63d9040a0b50b24cce9de697bcc0ddef9089644a7abd4bea9\", \"elapsed\": 1.5830124169999635}\n",
+      "timed_out": false,
+      "trusted_verifier_run": false,
+      "wall_seconds": 2.231903913999986
+    },
+    {
+      "command": [
+        "python",
+        "checker.py",
+        "--mode",
+        "mutations",
+        "--out",
+        "mutations-results.json"
+      ],
+      "exit_code": 0,
+      "mode": "mutations",
+      "outer_timeout_seconds": 43,
+      "output_bytes": 1806,
+      "output_sha256": "14528c8fc433546c6bb14d2747cd712fe9c9ab34367d0b75f78a94d47b5eac88",
+      "python": "3.13.5",
+      "runtime": {
+        "arithmetic": "fractions.Fraction and exact integer incidence",
+        "checker_sha256": "826c1cfb01baf350f41aea7f25991a3798f9b0fd67f2334cbec3314be527c257",
+        "cpu_limit_seconds": 39,
+        "elapsed_seconds": 0.001333670999883907,
+        "internal_wall_seconds": 36,
+        "max_rss_kib": 95148,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "seed_sha256": "896311f3f506479688e446041ce689c80e5ea907bacb696ebde5c73366b51231",
+        "threads": 1
+      },
+      "started_at": "2026-09-09T05:47:08.423691+00:00",
+      "stderr": "",
+      "stdout": "{\"mode\": \"mutations\", \"status\": \"finite_exact_checks_passed\", \"bytes\": 1806, \"sha256\": \"14528c8fc433546c6bb14d2747cd712fe9c9ab34367d0b75f78a94d47b5eac88\", \"elapsed\": 0.001333670999883907}\n",
+      "timed_out": false,
+      "trusted_verifier_run": false,
+      "wall_seconds": 0.5825291920000382
+    }
+  ],
+  "schema": "c29-generator-execution-record-v1",
+  "scope": "Final v5 executions only. Earlier internal development runs are not substituted for these final byte-bound results. No full-nine-core Q enumeration was run; optimality follows from the written parity bound.",
+  "seed_discovery": {
+    "counts": {
+      "a": 12,
+      "b": 27,
+      "z": 104
+    },
+    "cpu_limit_seconds": 38,
+    "elapsed_seconds": 10.651152183000022,
+    "exact_certificate": true,
+    "max_rss_kib": 233760,
+    "memory_limit_bytes": 1073741824,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "method": "Joint model on (27,12,27,2,2), binary z/alpha/beta, every core and endpoint row equality; scipy.optimize.milp feasibility search. The selected arrays are stored in seed27.json and exactly replayed.",
+    "numpy": "2.3.5",
+    "proof_dependency": "Explicit finite edge arrays only; no floating solver optimality/status is used in the theorem.",
+    "python": "3.13.5",
+    "scipy": "1.17.0",
+    "solver_time_limit_seconds": 30,
+    "status": 0,
+    "threads": 1,
+    "trust": "generator_side_discovery_only"
+  },
+  "trusted_verifier_run": false,
+  "verdict": "candidate_only"
+}
