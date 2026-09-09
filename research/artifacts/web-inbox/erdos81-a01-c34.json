@@ -26,8 +26,8 @@
     "branch": "web/attempt-erdos81-a01-c34-growing-multiplicity",
     "issue_number": 1,
     "issue_url": "https://github.com/vibemathing/problem-erdos-81-chordal-clique-partition/issues/1",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 40,
+    "pull_request_url": "https://github.com/vibemathing/problem-erdos-81-chordal-clique-partition/pull/40"
   },
   "objective": "Correct the partial-fiber arithmetic, prove actual-packing O(r) bounds in two complementary growing-multiplicity domains, and isolate the remaining high-load full-one-third-face wedge without claiming the root.",
   "candidate_artifacts": [
@@ -66,7 +66,7 @@
     },
     {
       "claim_id": "claim:erdos81-c34-finite-audit",
-      "text": "The final compact generator-side audit exits zero, checks 7376 corrected partial rows, 1120 external formula cases, 64584 saturated-face rows, four translation-slot orders, round-robin factors through order seventeen, and rejects twelve mutations; it does not execute the external theorem or replace general proofs.",
+      "text": "The compact generator-side audit checks corrected partial rows, external formula cases, saturated-face rows, translation-slot orders, round-robin factors and twelve mutations; it does not execute the external theorem or replace general proofs.",
       "status": "candidate"
     }
   ],
