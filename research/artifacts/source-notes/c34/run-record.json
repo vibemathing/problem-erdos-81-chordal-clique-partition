@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "status": "generator_side_execution",
+  "final_command": "python compact_checker.py --out compact-results.json",
+  "final_source_path": "research/artifacts/candidates/c34/checker.py",
+  "final_output_path": "research/artifacts/candidates/c34/results.json",
+  "runtime": {
+    "python": "CPython 3.13.5",
+    "arithmetic": "standard-library Fraction and integer arithmetic",
+    "threads": 1,
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "timeout": false
+  },
+  "completed_checks": [
+    "mechanical-word load balancing and corrected partial-component arithmetic",
+    "translation-slot edge ownership for m=3,9,27,81",
+    "1120 complete external-formula parameter cases",
+    "four named growth cases including r=729,p=80,q=400",
+    "saturated-short face classification on 64584 parameter rows",
+    "round-robin matching classes through order 17",
+    "twelve deliberately false mutations, all rejected"
+  ],
+  "preserved_failure": {
+    "class": "discarded_implementation_probe",
+    "description": "An earlier full product prototype chose three consecutive fibers rather than an actual quotient affine triple and triggered an edge-ownership assertion. It was not used in the final checker or proof.",
+    "mathematical_effect": "none; the proof and final audit use quotient-line ownership explicitly"
+  },
+  "not_executed": [
+    "the Delcourt--Postle triangle-decomposition theorem",
+    "a trusted independent verifier",
+    "a proof assistant",
+    "an exhaustive optimizer for the complete one-third face"
+  ],
+  "evidence_status": "not EvidenceLink",
+  "verdict": "candidate_only"
+}
