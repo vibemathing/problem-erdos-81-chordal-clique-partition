@@ -1,0 +1,36 @@
+{
+  "authors": [
+    "Michelle Delcourt",
+    "Luke Postle"
+  ],
+  "locators": {
+    "corollary_used": "Corollary 1.5, PDF printed page 5 (PDF index 4); parsed PDF lines 135-137",
+    "definition_divisible": "PDF printed page 4 (PDF index 3), lines defining K3-divisible: 3 divides edge count and every degree is even",
+    "full_claim_not_needed": "Theorem 1.8 says Nash-Williams' Conjecture is true; C32 uses only Corollary 1.5 with a fixed positive margin",
+    "pdf_abstract": "page 1, abstract; parsed lines 4-6 of the PDF view"
+  },
+  "normalized_statement": "For each fixed epsilon>0, every sufficiently large K3-divisible n-vertex graph with minimum degree at least (3/4+epsilon)n has a triangle decomposition.",
+  "normalized_statement_sha256": "c6d11944a0ff0f1d4cf4749da8edd6e91cc25c9e660d92ae6dcd34bd4bf8e5e2",
+  "primary_source_urls": [
+    "https://arxiv.org/abs/2606.11178v1",
+    "https://arxiv.org/pdf/2606.11178v1"
+  ],
+  "retrieved_date": "2026-09-09",
+  "source_date": "2026-06-09 (arXiv submission); PDF dated 2026-06-10",
+  "source_file_digest_note": "The browsing connector exposed parsed PDF/HTML and screenshots, but not reusable original PDF bytes; no PDF digest is claimed.",
+  "source_file_sha256": null,
+  "source_id": "arXiv:2606.11178v1",
+  "statement_comparison": {
+    "divisibility": "C32 removes a T-join and zero/one/two C4s, proving even degrees and edge count divisible by 3 before invocation",
+    "fixed_object": "residual core graph F prime",
+    "isolated_vertices": "not applicable because the minimum-degree hypothesis is linear and positive",
+    "minimum_degree": "C32 proves delta(F prime)>=(3/4+eta)r-8, then fixes epsilon=eta/2 and takes r sufficiently large",
+    "quantifiers": "for each fixed eta>0 choose the source threshold; then uniformly for every A,p,q and every resulting F prime",
+    "source_order_n": "equals the core order r, not the original split-host order"
+  },
+  "status": "source_backed_not_trusted",
+  "title": "A Proof of Nash-Williams' Conjecture",
+  "trust_boundary": "Recent preprint, source-backed only; no registered source attestation, kernel check, semantic review, EvidenceLink or admission receipt.",
+  "version_pin": "arXiv:2606.11178v1; later revisions are not used to define the source-backed input",
+  "visual_check": "PDF page 1 and page 5 screenshots were rendered successfully in the research session."
+}
