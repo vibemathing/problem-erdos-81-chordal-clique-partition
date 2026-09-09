@@ -1,0 +1,84 @@
+{
+  "verdict": "candidate_only",
+  "best_verified_result": "none",
+  "trusted_verifier_run": false,
+  "runs": [
+    {
+      "mode": "construct",
+      "source_path": "research/artifacts/candidates/c30/checker.py",
+      "source_sha256": "af685256b34b558bd927ed8a2d941655e030f984344bd7b88218695a8c13b57b",
+      "arguments": [
+        "construct",
+        "--seconds",
+        "38",
+        "--out",
+        "research/artifacts/candidates/c30/construct-results.json"
+      ],
+      "outer_wall_seconds": 43,
+      "elapsed_seconds": 8.001765868000007,
+      "timed_out": false,
+      "exit_code": 0,
+      "stdout_utf8": "{\"mode\": \"construct\", \"status\": \"finite_checks_passed\", \"bytes\": 7578, \"sha256\": \"ca7fb4907d5a1e7feca4057b1e1ddb59b3faf756d6665f05704ae0bfc6862679\", \"elapsed\": 6.884300482999947}\n",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_path": "research/artifacts/candidates/c30/construct-results.json",
+      "output_exists": true,
+      "output_sha256": "ca7fb4907d5a1e7feca4057b1e1ddb59b3faf756d6665f05704ae0bfc6862679",
+      "verdict": "candidate_only",
+      "trusted_verifier_run": false
+    },
+    {
+      "mode": "lp",
+      "source_path": "research/artifacts/candidates/c30/checker.py",
+      "source_sha256": "af685256b34b558bd927ed8a2d941655e030f984344bd7b88218695a8c13b57b",
+      "arguments": [
+        "lp",
+        "--seconds",
+        "38",
+        "--out",
+        "research/artifacts/candidates/c30/lp-results.json"
+      ],
+      "outer_wall_seconds": 43,
+      "elapsed_seconds": 4.963317326000038,
+      "timed_out": false,
+      "exit_code": 0,
+      "stdout_utf8": "{\"mode\": \"lp\", \"status\": \"finite_checks_passed\", \"bytes\": 9277, \"sha256\": \"0bb5df0cd3d1fdb912ce9e11b7a42fe5b3d9d59138eec63825576ac3504cc925\", \"elapsed\": 3.6671451319999733}\n",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_path": "research/artifacts/candidates/c30/lp-results.json",
+      "output_exists": true,
+      "output_sha256": "0bb5df0cd3d1fdb912ce9e11b7a42fe5b3d9d59138eec63825576ac3504cc925",
+      "verdict": "candidate_only",
+      "trusted_verifier_run": false
+    },
+    {
+      "mode": "controls",
+      "source_path": "research/artifacts/candidates/c30/checker.py",
+      "source_sha256": "af685256b34b558bd927ed8a2d941655e030f984344bd7b88218695a8c13b57b",
+      "arguments": [
+        "controls",
+        "--seconds",
+        "38",
+        "--out",
+        "research/artifacts/candidates/c30/controls-results.json"
+      ],
+      "outer_wall_seconds": 43,
+      "elapsed_seconds": 0.8906382359999725,
+      "timed_out": false,
+      "exit_code": 0,
+      "stdout_utf8": "{\"mode\": \"controls\", \"status\": \"finite_checks_passed\", \"bytes\": 1776, \"sha256\": \"b5c6d7d051925c6732b9c7088ad5422114f5f1d8ff6730ef12a16a32f83d1d43\", \"elapsed\": 0.003386384000009457}\n",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_path": "research/artifacts/candidates/c30/controls-results.json",
+      "output_exists": true,
+      "output_sha256": "b5c6d7d051925c6732b9c7088ad5422114f5f1d8ff6730ef12a16a32f83d1d43",
+      "verdict": "candidate_only",
+      "trusted_verifier_run": false
+    }
+  ],
+  "limitations": [
+    "Global Q optimum is proved by the parity-residue bound, not exhaustive Q optimization.",
+    "LP pair implementations and all checks share the generator trust domain.",
+    "Degree dynamic programming is a relaxation over even degrees with a modulus condition, not full residual graph enumeration."
+  ]
+}
