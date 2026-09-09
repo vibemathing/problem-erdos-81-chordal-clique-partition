@@ -1,0 +1,73 @@
+{
+  "candidate": "candidate:erdos81-a01-c37-d7-cone",
+  "runs": {
+    "algebra": {
+      "exit_code": 0,
+      "max_rss_kib": 10368,
+      "outer_wall_seconds": 6.35,
+      "output_bytes": 234,
+      "output_sha256": "27c66ed3f8915f5dca6f937e667b0d7b772a7a0a96789216cb5d3bafdd060fe2",
+      "summary": {
+        "attaining_tuple": [33,32,20,44,20,20],
+        "d7_dominant_rows": 404910,
+        "elapsed_seconds": 6.223974067000199,
+        "largest_certified_bound_expression": "1202/3",
+        "parameter_rows": 2073600,
+        "peak_rss_kib": 10240,
+        "python": "3.13.5",
+        "version": "c37-d7-v1"
+      },
+      "system_seconds": 0.02,
+      "user_seconds": 6.32
+    },
+    "mutations": {
+      "exit_code": 0,
+      "max_rss_kib": 10368,
+      "outer_wall_seconds": 0.03,
+      "output_bytes": 149,
+      "output_sha256": "ee9075455fcf636d5035dc8bd991fce1035927f41d5c7c811c38009f53404496",
+      "summary": {
+        "elapsed_seconds": 0.00026736500058177626,
+        "mutations_detected": 12,
+        "mutations_total": 12,
+        "peak_rss_kib": 10240,
+        "python": "3.13.5",
+        "version": "c37-d7-v1"
+      },
+      "system_seconds": 0.0,
+      "user_seconds": 0.03
+    },
+    "witness": {
+      "exit_code": 0,
+      "max_rss_kib": 10752,
+      "outer_wall_seconds": 0.04,
+      "output_bytes": 1330,
+      "output_sha256": "def7e8f47fa121af91f99c5e67c7669a4c81904ba545e4160c7664fc753b99ea",
+      "summary": {
+        "actual_cases": [
+          {"Delta0":4,"a":3,"c":3,"colors_before_repair":5,"d0":0,"deleted_color_edges":4,"gap_bound":"7","nu7":"13","p":2,"packing_triangles":6,"q":3,"r0":5,"search_steps":16},
+          {"Delta0":4,"a":4,"c":3,"colors_before_repair":5,"d0":2,"deleted_color_edges":2,"gap_bound":"2","nu7":"19","p":2,"packing_triangles":17,"q":4,"r0":7,"search_steps":20},
+          {"Delta0":4,"a":5,"c":3,"colors_before_repair":5,"d0":2,"deleted_color_edges":0,"gap_bound":"7","nu7":"26","p":2,"packing_triangles":19,"q":5,"r0":7,"search_steps":20},
+          {"Delta0":6,"a":6,"c":3,"colors_before_repair":7,"d0":2,"deleted_color_edges":3,"gap_bound":"3","nu7":"34","p":2,"packing_triangles":31,"q":6,"r0":9,"search_steps":31},
+          {"Delta0":4,"a":4,"c":4,"colors_before_repair":5,"d0":2,"deleted_color_edges":2,"gap_bound":"7","nu7":"24","p":3,"packing_triangles":17,"q":4,"r0":7,"search_steps":20},
+          {"Delta0":6,"a":6,"c":4,"colors_before_repair":7,"d0":2,"deleted_color_edges":3,"gap_bound":"10","nu7":"41","p":3,"packing_triangles":31,"q":6,"r0":9,"search_steps":31},
+          {"Delta0":8,"a":8,"c":3,"colors_before_repair":9,"d0":2,"deleted_color_edges":4,"gap_bound":"4","nu7":"53","p":2,"packing_triangles":49,"q":8,"r0":11,"search_steps":330}
+        ],
+        "affine_factor_orders": [3,9,27],
+        "elapsed_seconds": 0.0035044189999098307,
+        "peak_rss_kib": 10496,
+        "python": "3.13.5",
+        "version": "c37-d7-v1"
+      },
+      "system_seconds": 0.0,
+      "user_seconds": 0.04
+    }
+  },
+  "schema_version": "1.0",
+  "source_sha256": "92d4bee09ce794a8e72c954855e9444637018a2a32f8fbfb4fa5bb3449e32157",
+  "trust": "generator-side finite checking only; not a trusted verifier",
+  "universal_inputs": {
+    "Kirkman": "source-backed C28 input for every c-prime congruent 3 mod 6",
+    "Vizing": "finite fan theorem proved in the C24 two-level candidate"
+  }
+}
