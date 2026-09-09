@@ -26,8 +26,8 @@
     "branch": "web/attempt-erdos81-a01-c33-balanced-boundary",
     "issue_number": 1,
     "issue_url": "https://github.com/vibemathing/problem-erdos-81-chordal-clique-partition/issues/1",
-    "pull_request_number": null,
-    "pull_request_url": null
+    "pull_request_number": 39,
+    "pull_request_url": "https://github.com/vibemathing/problem-erdos-81-chordal-clique-partition/pull/39"
   },
   "objective": "Close the C32 balanced partial-Latin boundary obligation when two complete short fibers are available, preserve actual per-leaf matching and one-use core ownership, and extend multiplicity-independent O(r) packing defect beyond the square-root range.",
   "candidate_artifacts": [
