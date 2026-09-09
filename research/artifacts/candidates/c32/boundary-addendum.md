@@ -2,6 +2,16 @@
 
 This addendum refines, but does not enlarge, the claims of `proof.md`.
 
+## Period-owner correction
+
+In Section 4.2, “changes no old owner” means **changes no owner outside the newly added coset**. Inside that coset, the chosen short-direction core lines are necessarily reassigned to short-leaf resource colors (with the same fixed local coloring and, for even multiplicity, the same deleted color). The period identity is local:
+
+\[
+S(a+m)-S(a)=\sigma_m(p),
+\]
+
+and no owner outside the new coset is touched.
+
 ## Zero short class
 
 In Section 4.3, when `p=0`, choose the period `m=1`. The short packet and the residual term `pb` are both zero; only the long packet remains.
