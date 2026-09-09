@@ -1,0 +1,94 @@
+{
+  "candidate": "candidate:erdos81-a01-c36-six-ray-dual",
+  "failed_exploration": {
+    "child_exit_code": null,
+    "mode": "classify-initial-broad-simplex",
+    "note": "The first version invoked the exact simplex on every broad-box row and exceeded the parent limit. It is excluded from the successful scope.",
+    "parent_timeout_seconds": 45,
+    "status": "timeout"
+  },
+  "final_runs": {
+    "boundary": {
+      "exit_code": 0,
+      "outer_wall_seconds": 0.46371313399959035,
+      "output": {
+        "boundary_identity_rows": 634844,
+        "elapsed_seconds": 0.4185568900002181,
+        "peak_rss_kib": 1074640,
+        "python": "3.13.5",
+        "version": "c36-six-ray-v1"
+      },
+      "output_bytes": 139,
+      "output_sha256": "45b972b9414254a63101a01c0558eaf21934f4c455ae52bb985a09988d42b33e",
+      "stderr_bytes": 0,
+      "stdout_bytes": 0
+    },
+    "classify": {
+      "exit_code": 0,
+      "outer_wall_seconds": 20.622400598999775,
+      "output": {
+        "active_basis_certificate": {
+          "d0": ["AAA", "AAC", "ACC", "alpha", "betaAA", "betaAC"],
+          "d1": ["AAA", "AAC", "alpha", "betaAC", "betaCC", "longC>=0"],
+          "d2": ["AAA", "alpha", "betaAA", "betaAC", "betaCC", "longC>=0"],
+          "d3": ["AAC", "ACC", "alpha", "betaAA", "betaAC", "AC>=0"],
+          "d4": ["AAC", "ACC", "alpha", "betaAC", "betaCC", "AC>=0"],
+          "d5": ["ACC", "CCC", "alpha", "betaAA", "betaAC", "short>=0"],
+          "d6": ["ACC", "CCC", "alpha", "betaAC", "betaCC", "short>=0"],
+          "d7": ["CCC", "alpha", "betaAA", "betaAC", "betaCC", "short>=0"],
+          "d8": ["alpha", "betaAA", "betaAC", "betaCC", "short>=0", "longC>=0"]
+        },
+        "dual_vertices": 9,
+        "effective_ray_indices": [0, 3, 5, 6, 7, 8],
+        "elapsed_seconds": 20.55383398000049,
+        "exact_primal_simplex_rows": 10816,
+        "formula_parameter_rows": 129600,
+        "full_face_rows": 32652,
+        "peak_rss_kib": 1074640,
+        "python": "3.13.5",
+        "ray_tie_counts": [32652, 0, 170, 12288, 2248, 15081, 26715, 28870, 30960],
+        "version": "c36-six-ray-v1"
+      },
+      "output_bytes": 853,
+      "output_sha256": "9b11daf7e7482883aa2693fbbdb86d11269aabe5038b75e2e965afe888cc324e",
+      "stderr_bytes": 0,
+      "stdout_bytes": 0
+    },
+    "mutations": {
+      "exit_code": 0,
+      "outer_wall_seconds": 0.04257841400067264,
+      "output": {
+        "elapsed_seconds": 0.000462914000308956,
+        "mutations_detected": 12,
+        "mutations_total": 12,
+        "peak_rss_kib": 1074640,
+        "python": "3.13.5",
+        "version": "c36-six-ray-v1"
+      },
+      "output_bytes": 154,
+      "output_sha256": "034abfafca5bee52df9e7fd31fd591081a348e9655abad3bc9504e03ec8d4e0b",
+      "stderr_bytes": 0,
+      "stdout_bytes": 0
+    },
+    "ray8": {
+      "exit_code": 0,
+      "outer_wall_seconds": 3.226920319999408,
+      "output": {
+        "bounded_d8_dominance_rows": 80550,
+        "elapsed_seconds": 3.1799770729994634,
+        "odd_boundary_rows": 30,
+        "partition_rows": 960,
+        "peak_rss_kib": 1074640,
+        "python": "3.13.5",
+        "version": "c36-six-ray-v1"
+      },
+      "output_bytes": 185,
+      "output_sha256": "ae08333037c3182a166f3b37ca7990b500de37b8d0d3ecf634ed7a902313d95e",
+      "stderr_bytes": 0,
+      "stdout_bytes": 0
+    }
+  },
+  "schema_version": "1.0",
+  "source_sha256": "826afdc52f19f9853a450e34146717dbb7a5b98788c95b2df0df24a5e9faf1f1",
+  "trust": "generator-side exact arithmetic and finite enumeration; no trusted verifier receipt"
+}
