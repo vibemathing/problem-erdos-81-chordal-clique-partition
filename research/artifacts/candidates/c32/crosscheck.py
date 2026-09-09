@@ -42,6 +42,7 @@ def base_check():
 
 def type_lp(r,a,p,q):
     c=r-a
+    # zAAA,zAAC,zACC,zCCC,alphaAA,betaAA,betaAC,betaCC
     rows=[];rhs=[]
     if a>=2:rows.append([a-2,c,0,0,1,1,0,0]);rhs.append(1)
     if a and c:rows.append([0,a-1,c-1,0,0,0,1,0]);rhs.append(1)
@@ -59,6 +60,7 @@ def main(out):
     face3=[]
     for r in (9,27):
         for a in range(r+1):face3.append({'r':r,'a':a,'p3q3_type_saturated':type_lp(r,a,3,3)})
+    # Independent edge-color facts behind the aggregate/actual distinction.
     assert not nx.algorithms.matching.is_matching(nx.Graph(BASE_A),set(BASE_A))
     result={
       'status':'independent_generator_crosscheck_passed','verdict':'candidate_only','trusted_verifier_run':False,
