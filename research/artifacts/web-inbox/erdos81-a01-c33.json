@@ -86,7 +86,7 @@
     "failure_class": "contradiction",
     "blocker": "In a one-buffer construction that uses only UUB midpoint-fan triangles, b partial vertices with D triangle incidences create exactly 2bD incidences on the full m-fiber. When b<m/2 this leaves at least 2D(m-2b) aggregate full-fiber endpoint deficit before coloring, which is superlinear in the middle multiplicity regime. A successful route must mix genuine UUU resources through a Steiner trade rather than repeat midpoint fans or per-layer boundary deletion.",
     "evidence_locators": [
-      "research/artifacts/candidates/c33/proof.md#5-pressure-tests-and-route-boundary",
+      "research/artifacts/candidates/c33/one-buffer-obstruction.md",
       "research/artifacts/candidates/c33/results.json"
     ],
     "next_obligation": "obligation:erdos81-split-extremal-reduction"
