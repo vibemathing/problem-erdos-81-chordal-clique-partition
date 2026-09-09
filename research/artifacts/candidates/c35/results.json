@@ -1,0 +1,121 @@
+{
+  "candidate": "candidate:erdos81-a01-c35-face-margin",
+  "failed_exploration": {
+    "exit_code": null,
+    "note": "An earlier oversized algebra probe reached the outer 45-second limit before a readable child exit and is not part of the final scope.",
+    "status": "timeout"
+  },
+  "raw_output_policy": {
+    "algebra_and_mutation_outputs": "fully represented by summary and SHA-256 above",
+    "reproduce": [
+      "python research/artifacts/candidates/c35/checker.py algebra --out NEW-algebra.json",
+      "python research/artifacts/candidates/c35/checker.py small --out NEW-small.json",
+      "python research/artifacts/candidates/c35/checker.py mutations --out NEW-mutations.json"
+    ],
+    "small_output": "18615-byte exact row table intentionally not duplicated in this compact artifact; its SHA-256 is frozen above and checker.py reproduces it"
+  },
+  "runs": {
+    "algebra": {
+      "bytes": 219,
+      "process": {
+        "exit_code": 0,
+        "max_rss_kib": 95276,
+        "outer_wall": "6.64",
+        "system": "0.10",
+        "user": "6.99"
+      },
+      "sha256": "e5dd2b70960cf09a8d3c1b7f2d2e71b99283e6d37f3eb4e527bf6a1ea006a08d"
+    },
+    "mutations": {
+      "bytes": 158,
+      "process": {
+        "exit_code": 0,
+        "max_rss_kib": 93736,
+        "outer_wall": "0.79",
+        "system": "0.09",
+        "user": "1.09"
+      },
+      "sha256": "17b2cc5ec4f8c73bc106ed8c01175e577170f8ba1a2cc5066cc47242acc4ed7c"
+    },
+    "small": {
+      "bytes": 18615,
+      "process": {
+        "exit_code": 0,
+        "max_rss_kib": 132400,
+        "outer_wall": "1.05",
+        "system": "0.11",
+        "user": "1.40"
+      },
+      "sha256": "a4cb89912b700be31f1abcb594c3b2be8f5fc95c9f5f96b59cd8465fcfebb149"
+    }
+  },
+  "schema_version": "1.0",
+  "scope": {
+    "algebra_parameter_rows": 48503,
+    "bounded_c28_face_rows": 3065,
+    "complete_split_orders_through": 40,
+    "exact_small_max_original_order": 8,
+    "exact_small_parameter_representations": 286,
+    "mutations_detected": "12/12",
+    "safe_condition_hits": 30021
+  },
+  "selected_exact_small_rows": [
+    {
+      "a": 1,
+      "cp": 3,
+      "edges": 3,
+      "n": 4,
+      "nu": 0,
+      "p": 3,
+      "p23": 3,
+      "q": 0,
+      "r": 1
+    },
+    {
+      "a": 2,
+      "cp": 5,
+      "edges": 7,
+      "n": 5,
+      "nu": 1,
+      "p": 2,
+      "p23": 5,
+      "q": 1,
+      "r": 2
+    },
+    {
+      "a": 3,
+      "cp": 4,
+      "edges": 9,
+      "n": 5,
+      "nu": 2,
+      "p": 2,
+      "p23": 5,
+      "q": 0,
+      "r": 3
+    },
+    {
+      "a": 4,
+      "cp": 6,
+      "edges": 18,
+      "n": 7,
+      "nu": 6,
+      "p": 2,
+      "p23": 6,
+      "q": 1,
+      "r": 4
+    },
+    {
+      "a": 6,
+      "cp": 1,
+      "edges": 21,
+      "n": 7,
+      "nu": 7,
+      "p": 1,
+      "p23": 7,
+      "q": 0,
+      "r": 6
+    }
+  ],
+  "source_sha256": "e300990809847fb65192b0ab695314bb693772487c47609b14fcabf11a22d1e5",
+  "trust": "generator-side bounded checking only; no trusted verifier receipt"
+}
