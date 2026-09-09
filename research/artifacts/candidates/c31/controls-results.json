@@ -1,0 +1,18 @@
+{
+  "equal_prefix": "A=V is included for p=q=2; alpha/beta are tagged and edge-disjoint direction classes",
+  "python": "3.13.5",
+  "quarter": {
+    "L": "5",
+    "inside": false,
+    "params": [5,2,4,1,1],
+    "uniform": "16/3"
+  },
+  "twelfth": {
+    "L": "31/3",
+    "inside": true,
+    "params": [7,3,7,1,1],
+    "uniform": "31/3"
+  },
+  "version": "c31-p2q2-shared-boundary-v1",
+  "zero_short_class": "conversion lemma uses empty H and empty deletion set"
+}
