@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "checker": "research/artifacts/candidates/c34/checker.py",
+  "checker_version": "c34-compact-v1",
+  "execution": {
+    "executed": true,
+    "exit_code": 0,
+    "python": "3.13.5",
+    "arithmetic": "fractions.Fraction and integers",
+    "threads": 1,
+    "stderr_empty": true
+  },
+  "scope": {
+    "corrected_partial_cases": 7376,
+    "translation_slot_orders": [3, 9, 27, 81],
+    "external_formula_complete_cases": 1120,
+    "external_named_cases": 4,
+    "saturated_short_face_cases": [
+      {"r": 27, "cases": 594},
+      {"r": 81, "cases": 6156},
+      {"r": 243, "cases": 57834}
+    ],
+    "round_robin_orders": "0 through 17",
+    "negative_mutations": 12,
+    "negative_mutations_rejected": 12
+  },
+  "diagnostic": {
+    "m": 9,
+    "b": 1,
+    "p": 8,
+    "resource_edges": 66,
+    "endpoint_defect": 20,
+    "capacity_packet": 42
+  },
+  "named_growth_example": {
+    "r": 729,
+    "m": 81,
+    "R": 9,
+    "h": 4,
+    "b": 40,
+    "p": 80,
+    "q": 400,
+    "hypotheses_checked": true
+  },
+  "external_triangle_decomposition_theorem_executed": false,
+  "finite_checks_replace_general_proof": false,
+  "trusted_verifier_receipt": null,
+  "verdict": "candidate_only"
+}
