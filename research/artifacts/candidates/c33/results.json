@@ -1,0 +1,51 @@
+{
+  "candidate_id": "candidate:erdos81-a01-c33-balanced-boundary",
+  "status": "ok",
+  "execution_boundary": "generator-side exact finite runs; not independent evidence or a universal proof",
+  "checker_sha256_local": "416b4642032e887e911a0c0d106694909402bc1e81029e238efad4e7e65863a0",
+  "runs": [
+    {
+      "command": "python3 checker.py balanced",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.20902239800034295,
+      "stdout_sha256": "8b6560ba54e66cb1fb4e271975fce4361503d350f360fe7441c322d3045ebbdc"
+    },
+    {
+      "command": "python3 checker.py owners",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.0507734109996818,
+      "stdout_sha256": "f8d4e85d3736ac5ab11545f09d3765483ddfb64bcb7c4dfb17235ef919f33817"
+    },
+    {
+      "command": "python3 checker.py controls",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.00032754700077930465,
+      "stdout_sha256": "66e3ca62726b8178df2eb2f82cfa90c37e7bcd25f20ed2d33d1d5087ca93bdb5"
+    },
+    {
+      "command": "python3 checker.py all",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "elapsed_seconds": 0.28881176699997013,
+      "stdout_sha256": "c88ec82a68b7e9a0f92d7afa9e366169f3f5764c3ee569d1720086239e27b23a"
+    }
+  ],
+  "finite_scope": {
+    "balanced_arrays": 956,
+    "boundary_parameter_rows": 843,
+    "actual_owner_instances": 26,
+    "rejected_mutations": 5,
+    "orders": "all b,D on m=3,9,27; named b,D on m=81; actual blow-ups r=9,27 and selected r=81"
+  },
+  "local_artifact_sha256": {
+    "candidate.md": "30159d498579ced206c33990686697ce816f1834b91d94d498646856ae1b8139",
+    "proof.md": "14740fe9a937f2d46e77c116f03810e30390f15fa1e25e2f1bfbabf08a4f071a",
+    "checker.py": "416b4642032e887e911a0c0d106694909402bc1e81029e238efad4e7e65863a0",
+    "all-results.json": "c88ec82a68b7e9a0f92d7afa9e366169f3f5764c3ee569d1720086239e27b23a",
+    "run-record.json": "275215e561d97ea698a7c496d2dd0a51ed50d30c3f975ae7aa50246cef30514f"
+  },
+  "transport_note": "The repository checker is a source-equivalent compact copy. Byte identity with the locally executed checker is not asserted."
+}
