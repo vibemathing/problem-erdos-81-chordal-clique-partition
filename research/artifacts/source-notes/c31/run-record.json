@@ -1,0 +1,50 @@
+{
+  "candidate": "candidate:erdos81-a01-c31-two-short-shared-boundary",
+  "environment": {
+    "arithmetic": "fractions.Fraction and integer arithmetic",
+    "python": "3.13.5",
+    "threads": 1
+  },
+  "limitations": [
+    "Finite execution checks constructions only; it is not the universal proof.",
+    "No exhaustive Q optimizer or trusted verifier is used.",
+    "The actual host packing witness is not asserted maximum.",
+    "The growing-budget multi-layer invariant remains open."
+  ],
+  "runs": [
+    {
+      "command": "python research/artifacts/candidates/c31/checker.py construct --out construct-results.json",
+      "exit_code": 0,
+      "full_output_retained_outside_repository": true,
+      "full_output_sha256": "0e7c2b97b9ce6fd4610b82debe49f89014a616a89ef662a4c65a7ef4f5467424",
+      "mode": "construct",
+      "output_sha256": "0e7c2b97b9ce6fd4610b82debe49f89014a616a89ef662a4c65a7ef4f5467424",
+      "peak_rss_kib": 94632,
+      "repository_compact_summary_sha256": "55ba079f7e588f8bd4f99ec127a405f0b6d430b9107c53f4dce42ef5de4522be",
+      "scope": {
+        "all_actual_r9_subsets_size_ge3": 466,
+        "cardinality_cases": 111,
+        "r_cardinalities": [9,27,81]
+      },
+      "stderr_bytes": 0,
+      "wall_seconds": 5.56
+    },
+    {
+      "command": "python research/artifacts/candidates/c31/checker.py controls --out controls-results.json",
+      "exit_code": 0,
+      "full_output_sha256": "987c4503884e3a343779b5ae2a05098518045ee851cb1e1edcc8f52eba0621e7",
+      "mode": "controls",
+      "output_sha256": "987c4503884e3a343779b5ae2a05098518045ee851cb1e1edcc8f52eba0621e7",
+      "peak_rss_kib": 93736,
+      "scope": {
+        "equal_prefix_boundary": true,
+        "quarter_outside_face": true,
+        "twelfth_inside_face": true,
+        "zero_short_conversion_boundary": true
+      },
+      "stderr_bytes": 0,
+      "wall_seconds": 0.9
+    }
+  ],
+  "status": "generator-side exact finite replay; not trusted verification"
+}
