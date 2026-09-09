@@ -1,0 +1,264 @@
+def factor_classes(n):
+    if n <= 1:
+        return []
+    if n % 2 == 0:
+        z=n-1; inf=n-1; out=[]
+        for s in range(z):
+            M={tuple(sorted((inf,s)))}
+            for i in range(1,(n-2)//2+1): M.add(tuple(sorted(((s+i)%z,(s-i)%z))))
+            check_matching(M); out.append(M)
+    else:
+        out=[]
+        for s in range(n):
+            M={tuple(sorted(((s+i)%n,(s-i)%n))) for i in range(1,(n-1)//2+1)}
+            check_matching(M); out.append(M)
+    cnt=collections.Counter(e for M in out for e in M)
+    ck(len(cnt)==math.comb(n,2) and set(cnt.values())=={1}, "factorization ownership")
+    return out
+
+def degrees(r,E):
+    d=[0]*r
+    for u,v in E:d[u]+=1;d[v]+=1
+    return d
+
+def maximum_matching(E,r):
+    """Exact bitmask search; used only for bounded dense-check instances."""
+    adj=[0]*r
+    for u,v in E: adj[u]|=1<<v;adj[v]|=1<<u
+    @lru_cache(None)
+    def rec(mask):
+        tick()
+        if mask==0:return ()
+        u=(mask&-mask).bit_length()-1
+        best=rec(mask^(1<<u))
+        cand=adj[u]&mask&~((1<<(u+1))-1)
+        while cand:
+            lb=cand&-cand;v=lb.bit_length()-1;cand^=lb
+            got=((u,v),)+rec(mask^(1<<u)^(1<<v))
+            if len(got)>len(best):best=got
+        return best
+    return {tuple(sorted(e)) for e in rec((1<<r)-1)}
+
+def resource_and_residual(r,a,p,q):
+    allE=set(it.combinations(range(r),2)); used=set(); short=[]; long=[]
+    if p:
+        classes=factor_classes(a);ck(p<=len(classes),"short cap")
+        for M in classes[:p]:
+            ck(not used&M,"short collision");used|=M;short.append(M)
+    for _ in range(q):
+        M=maximum_matching(allE-used,r)
+        ck(len(M)==(r-1)//2,"long near-perfect failure")
+        ck(not used&M,"long collision");used|=M;long.append(M)
+    return short,long,allE-used
+
+def parity_correction(r,F):
+    F=set(F); T=set(); internals=set(); O=[v for v,d in enumerate(degrees(r,F)) if d%2]
+    ck(len(O)%2==0,"odd set parity")
+    for x,y in zip(O[::2],O[1::2]):
+        e=tuple(sorted((x,y)))
+        if e in F and e not in T:
+            T.add(e);continue
+        common=[]
+        for z in range(r):
+            if z in (x,y) or z in internals:continue
+            e1=tuple(sorted((x,z)));e2=tuple(sorted((y,z)))
+            if e1 in F and e2 in F and e1 not in T and e2 not in T:common.append(z)
+        ck(common,"no correction path")
+        z=common[0];internals.add(z)
+        T.add(tuple(sorted((x,z))));T.add(tuple(sorted((y,z))))
+    ck(T<=F and max(degrees(r,T),default=0)<=3 and len(T)<=r,"T bounds")
+    oddT={v for v,d in enumerate(degrees(r,T)) if d%2}
+    ck(oddT==set(O),"T join parity")
+    F1=F-T;ck(all(d%2==0 for d in degrees(r,F1)),"F1 parity")
+    return F1,T
+
+def find_c4(r,E):
+    E=set(E)
+    for x,y in it.combinations(range(r),2):
+        common=[z for z in range(r) if z not in (x,y) and tuple(sorted((x,z))) in E and tuple(sorted((y,z))) in E]
+        if len(common)>=2:
+            u,v=common[:2]
+            C={tuple(sorted((x,u))),tuple(sorted((u,y))),tuple(sorted((y,v))),tuple(sorted((v,x)))}
+            if len(C)==4 and C<=E:return C
+    return None
+
+def divisibility_correction(r,F1):
+    E=set(F1);C=set();h=len(E)%3
+    for _ in range(h):
+        cyc=find_c4(r,E);ck(cyc is not None,"no C4")
+        E-=cyc;C|=cyc
+    ck(all(d%2==0 for d in degrees(r,E)) and len(E)%3==0,"K3 divisibility")
+    return E,C
+
+def triangle_decomposition(r,E,node_cap=2_000_000):
+    E=tuple(sorted(E));idx={e:i for i,e in enumerate(E)};tris=[];by=[[] for _ in E]
+    for t in it.combinations(range(r),3):
+        es=edges(t)
+        if all(e in idx for e in es):
+            mask=sum(1<<idx[e] for e in es);j=len(tris);tris.append((t,mask))
+            for e in es:by[idx[e]].append(j)
+    nodes=0
+    @lru_cache(None)
+    def rec(mask):
+        nonlocal nodes
+        nodes+=1
+        if nodes>node_cap:raise TimeoutError("exact cover node cap")
+        if mask==0:return ()
+        opts=None
+        mm=mask
+        while mm:
+            lb=mm&-mm;k=lb.bit_length()-1;mm^=lb
+            av=[j for j in by[k] if tris[j][1]&mask==tris[j][1]]
+            if not av:return None
+            if opts is None or len(av)<len(opts):
+                opts=av
+                if len(opts)==1:break
+        for j in opts:
+            t,m=tris[j];ans=rec(mask^m)
+            if ans is not None:return (t,)+ans
+        return None
+    ans=rec((1<<len(E))-1)
+    return ans,nodes
+
+def edge_colorable(E,n,m):
+    E=tuple(sorted(E));inc=[set() for _ in range(n)];order=sorted(range(len(E)),key=lambda i:-(sum(1 for e in E if E[i][0] in e or E[i][1] in e)))
+    color=[-1]*len(E)
+    def go(pos):
+        if pos==len(order):return True
+        i=order[pos];u,v=E[i]
+        for c in range(m):
+            if c not in inc[u] and c not in inc[v]:
+                color[i]=c;inc[u].add(c);inc[v].add(c)
+                if go(pos+1):return True
+                inc[u].remove(c);inc[v].remove(c);color[i]=-1
+        return False
+    return go(0)
+
+def rho_exact(E,n,m):
+    E=tuple(sorted(E))
+    for k in range(len(E)+1):
+        for rem in it.combinations(range(len(E)),k):
+            R=set(rem);left=[e for i,e in enumerate(E) if i not in R]
+            if edge_colorable(left,n,m):return k
+    raise AssertionError
+
+def face_ok(r,a,p,q):
+    c=r-a
+    if a<3 or c<3:return None
+    d=r-1-q;s=d-p
+    if p>a-1 or s<0:return False
+    ell=max(F(0),F(a*(c-q),2),F(c*(a-q),2))
+    up=min(F(a*c,2),F(a*s,2),F(c*d,2),F(a*s+c*d,6))
+    return ell<=up
+
+def run_fixed3():
+    rows=[]
+    for r in (9,27,81):
+        for a in range(r+1):
+            tick();rows.append(fixed3_witness(r,range(a)))
+    subsets=0
+    for mask in range(1<<9):
+        A=[v for v in range(9) if mask>>v&1]
+        fixed3_witness(9,A);subsets+=1
+    return {"mode":"fixed3","version":VERSION,"complete_cardinality_cases":len(rows),"complete_actual_nine_subsets":subsets,"rows":rows,"universal_proof_in":"proof.md Section 3"}
+
+def run_seed():
+    base=check_base_seed();rows=[]
+    for m in (1,3):
+        for x in range(m):
+            for y in range(m-x):
+                tick();rows.append(lift_seed(m,x,y))
+    for x,y in ((0,0),(1,0),(0,1),(2,2),(4,0),(0,4),(3,5)):
+        if x+y<=8:rows.append(lift_seed(9,x,y))
+    return {"mode":"seed","version":VERSION,"base":base,"complete_m_1_3":True,"named_m9":7,"rows":rows,"all_order_proof_in":"proof.md Section 5"}
+
+def run_dense():
+    cases=[];exact=[]
+    for r in (9,11,13,15,17):
+        lim=r//5
+        for a in range(r+1):
+            cap=0 if a<=1 else a-1 if a%2==0 else a
+            for p in range(min(cap,lim)+1):
+                for q in range(lim-p+1):
+                    tick();short,long,F0=resource_and_residual(r,a,p,q)
+                    F1,T=parity_correction(r,F0);F2,C=divisibility_correction(r,F1)
+                    ck(min(degrees(r,F2),default=0)>=r-1-p-q-7,"degree certificate")
+                    cases.append({"r":r,"a":a,"p":p,"q":q,"T_edges":len(T),"C_edges":len(C),"residual_edges":len(F2),"min_degree":min(degrees(r,F2),default=0)})
+    for r,a,p,q in ((9,4,0,0),(11,5,1,1),(13,6,1,1),(15,13,2,1)):
+        short,long,F0=resource_and_residual(r,a,p,q);F1,T=parity_correction(r,F0);F2,C=divisibility_correction(r,F1)
+        dec,nodes=triangle_decomposition(r,F2)
+        ck(dec is not None and 3*len(dec)==len(F2),"small exact decomposition")
+        exact.append({"r":r,"a":a,"p":p,"q":q,"triangles":len(dec),"search_nodes":nodes,"leave_core":len(T|C),
+                      "decomposition":[list(t) for t in dec],
+                      "parity_correction_edges":[list(e) for e in sorted(T)],
+                      "divisibility_correction_edges":[list(e) for e in sorted(C)]})
+    rho_rows=[]
+    for n in range(1,6):
+        allE=list(it.combinations(range(n),2))
+        for mask in range(1<<len(allE)):
+            E=[e for i,e in enumerate(allE) if mask>>i&1]
+            deg=degrees(n,E);m=max(deg,default=0)
+            rho=rho_exact(E,n,m) if m else 0
+            ck(rho<=n//2,"rho bound")
+            rho_rows.append((n,len(E),m,rho))
+    return {"mode":"dense","version":VERSION,"complete_preprocessor_cases":len(cases),"preprocessor_rows":cases,"small_exact_decompositions":exact,"complete_simple_graph_rho_scope":"all labeled graphs on at most five vertices","rho_cases":len(rho_rows),"rho_max":max(x[3] for x in rho_rows),"source_theorem_not_executed":True}
+
+def expect_fail(name,fn,out):
+    try:fn()
+    except Exception as e:
+        out.append({"name":name,"rejected":True,"exception":type(e).__name__});return
+    raise ValueError("mutation survived: "+name)
+
+def run_controls():
+    rejected=[]
+    expect_fail("base_missing_beta",lambda: _bad_base(BASE_B[:-1]),rejected)
+    expect_fail("base_duplicate_beta",lambda: _bad_base(BASE_B+[BASE_B[0]]),rejected)
+    expect_fail("lift_non_power_three",lambda: lift_seed(2,0,0),rejected)
+    expect_fail("lift_extra_budget_overflow",lambda: lift_seed(3,2,1),rejected)
+    expect_fail("fixed3_bad_k",lambda: fixed3_witness(3,{0,1}),rejected)
+    expect_fail("fixed3_bad_actual_vertex",lambda: fixed3_witness(9,{0,9}),rejected)
+    expect_fail("matching_repeat_vertex",lambda: check_matching({(0,1),(0,2)}),rejected)
+    expect_fail("factor_duplicate_edge",lambda: _bad_factor(),rejected)
+    expect_fail("parity_missing_edge",lambda: _bad_parity(),rejected)
+    expect_fail("wrong_residue_cycle",lambda: _bad_residue(),rejected)
+    expect_fail("rho_negative_colors",lambda: _bad_rho(),rejected)
+    expect_fail("q_point_called_actual",lambda: _bad_identity(),rejected)
+    stress=[]
+    for r in (9,27,81,243,729):
+        a=(r-1)//2;p=q=2*r//5
+        ok=face_ok(r,a,p,q);ck(ok is True,"stress not on face")
+        stress.append({"r":r,"a":a,"c":r-a,"p":p,"q":q,"face":True,"low_margin_1_5":p+q<=r/5,"high_long":q>=max(a,r-a)})
+    scope={"quarter":{"r":5,"a":2,"p":1,"q":1,"on_uniform_face":False},"twelfth":{"r":7,"a":3,"p":1,"q":1,"on_uniform_face":True},"no_Q_values_inferred":True}
+    return {"mode":"controls","version":VERSION,"mutations":rejected,"mutation_count":len(rejected),"stress_family":stress,"scope_controls":scope}
+
+def _bad_base(beta):
+    load=collections.Counter()
+    for t in BASE_P:
+        for e in edges(t):load[e]+=1
+    for e in BASE_A+beta:load[e]+=1
+    ck(len(load)==36 and set(load.values())=={1},"bad base detected")
+def _bad_factor():
+    cnt=collections.Counter(e for M in factor_classes(5) for e in M);cnt[(0,1)]+=1
+    ck(set(cnt.values())=={1},"factor duplicate detected")
+def _bad_parity():
+    F=set(it.combinations(range(9),2));F.remove((0,1));F1,T=parity_correction(9,F);T.remove(next(iter(T)));ck({v for v,d in enumerate(degrees(9,T)) if d%2}=={v for v,d in enumerate(degrees(9,F)) if d%2},"parity mutation")
+def _bad_residue():
+    E=set(it.combinations(range(9),2));E.remove((0,1));ck(len(E)%3==0,"residue mutation")
+def _bad_rho():
+    ck(-1>=0,"negative color count")
+def _bad_identity():
+    ck(edge_colorable(BASE_A,3,2),"aggregate Q/J is not automatically actual")
+
+def main():
+    global DEADLINE
+    ap=argparse.ArgumentParser();ap.add_argument("mode",choices=("fixed3","seed","dense","controls"));ap.add_argument("--out",type=pathlib.Path,required=True);ap.add_argument("--seconds",type=int,default=80)
+    args=ap.parse_args();ck(1<=args.seconds<=180,"time budget")
+    resource.setrlimit(resource.RLIMIT_AS,(1073741824,1073741824));resource.setrlimit(resource.RLIMIT_CPU,(args.seconds+3,args.seconds+4))
+    start=time.monotonic();DEADLINE=start+args.seconds
+    result={"fixed3":run_fixed3,"seed":run_seed,"dense":run_dense,"controls":run_controls}[args.mode]()
+    result["status"]="finite_checks_passed";result["verdict"]="candidate_only";result["trusted_verifier_run"]=False;result["best_verified_result"]="none"
+    result["runtime"]={"python":platform.python_version(),"arithmetic":"fractions.Fraction and exact integer incidence; bounded backtracking","wall_seconds":time.monotonic()-start,"max_rss_kib":resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,"memory_bytes":1073741824,"threads":1,"source_sha256":SOURCE_SHA256}
+    raw=(json.dumps(result,sort_keys=True,indent=2)+"\n").encode();ck(len(raw)<1048576,"output too large")
+    with args.out.open("xb") as f:f.write(raw)
+    print(json.dumps({"mode":args.mode,"status":result["status"],"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"seconds":result["runtime"]["wall_seconds"]},sort_keys=True))
+if __name__=="__main__":main()
