@@ -1,0 +1,266 @@
+"""C32 generator-side exact checks. Not a trusted verifier.
+
+Usage:
+  python checker.py fixed3 --out FILE
+  python checker.py seed --out FILE
+  python checker.py dense --out FILE
+  python checker.py controls --out FILE
+
+The universal proofs are in proof.md. Finite runs only check constructions,
+capacity ownership, correction invariants, and scoped small instances.
+"""
+from __future__ import annotations
+import argparse, collections, hashlib, itertools as it, json, math, pathlib
+import platform, resource, time
+from fractions import Fraction as F
+from functools import lru_cache
+
+VERSION = "c32-growing-multiplicity-v1"
+DEADLINE = float("inf")
+
+def ck(ok, msg):
+    if not ok:
+        raise ValueError(msg)
+
+def tick():
+    if time.monotonic() > DEADLINE:
+        raise TimeoutError("internal deadline")
+
+def edges(vertices):
+    return [tuple(sorted(e)) for e in it.combinations(sorted(vertices), 2)]
+
+def is_power3(n):
+    if n < 1:
+        return False
+    while n > 1 and n % 3 == 0:
+        n //= 3
+    return n == 1
+
+def power3_exp(n):
+    ck(is_power3(n), "not a power of three")
+    k = 0
+    while n > 1:
+        n //= 3
+        k += 1
+    return k
+
+def vec_add_neg(i, j, k):
+    """Return -i-j in F_3^k, encoded in base three."""
+    out = 0
+    place = 1
+    for _ in range(k):
+        out += (-(i % 3) - (j % 3)) % 3 * place
+        i //= 3
+        j //= 3
+        place *= 3
+    return out
+
+def third(i, j, k):
+    return vec_add_neg(i, j, k)
+
+@lru_cache(None)
+def affine_lines(r):
+    k = power3_exp(r)
+    out = set()
+    for u, v in it.combinations(range(r), 2):
+        w = third(u, v, k)
+        ck(w not in (u, v), "affine third repeats")
+        out.add(tuple(sorted((u, v, w))))
+    cnt = collections.Counter(e for t in out for e in edges(t))
+    ck(len(cnt) == math.comb(r, 2) and set(cnt.values()) == {1}, "affine edge partition")
+    return tuple(sorted(out))
+
+def d0_class(r):
+    return [tuple(range(j, j + 3)) for j in range(0, r, 3)]
+
+def d1_class(r):
+    return [(j + i, j + i + 3, j + i + 6)
+            for j in range(0, r, 9) for i in range(3)]
+
+def check_matching(es):
+    seen = set()
+    for u, v in es:
+        ck(u != v and u not in seen and v not in seen, "not a matching")
+        seen.add(u); seen.add(v)
+
+def color_triangle_factor(triples):
+    colors = [set(), set(), set()]
+    for t in triples:
+        u, v, w = sorted(t)
+        for idx, e in enumerate(((u, v), (v, w), (u, w))):
+            ck(e not in colors[idx], "duplicate colored edge")
+            colors[idx].add(e)
+    for cls in colors:
+        check_matching(cls)
+    return colors
+
+def fixed3_witness(r, A):
+    A = set(A); a = len(A)
+    ck(power3_exp(r) >= 2, "fixed3 requires k>=2")
+    D0 = d0_class(r)
+    D1 = d1_class(r)
+    anchor = (0, 3, 6)
+    D1 = sorted(t for t in D1 if t != anchor) + [anchor]
+    t, b = divmod(a, 3)
+    chosen = D1[:t]
+    marked = {v for z in chosen for v in z}
+    if b:
+        extra_line = next(z for z in reversed(D1) if z not in chosen)
+        marked |= set(extra_line[:b])
+    ck(len(marked) == a, "marked cardinality")
+    src = sorted(marked) + sorted(set(range(r)) - marked)
+    dst = sorted(A) + sorted(set(range(r)) - A)
+    perm = dict(zip(src, dst))
+    ck(set(perm) == set(range(r)) and set(perm.values()) == set(range(r)), "non-bijection")
+    tr = lambda z: tuple(sorted(perm[v] for v in z))
+    D0t = [tr(z) for z in D0]
+    chosent = [tr(z) for z in chosen]
+    removed = set(D0) | set(chosen)
+    P = {tr(z) for z in affine_lines(r) if z not in removed}
+    long_colors = color_triangle_factor(D0t)
+    short_colors = color_triangle_factor(chosent)
+    core_load = collections.Counter(e for z in P for e in edges(z))
+    for cls in long_colors + short_colors:
+        for e in cls:
+            core_load[e] += 1
+    ck(len(core_load) == math.comb(r, 2) and set(core_load.values()) == {1}, "fixed3 core ownership")
+    for cls in short_colors:
+        ck(all(set(e) <= A for e in cls), "short edge outside A")
+    short_spokes_covered = sum(2 * len(cls) for cls in short_colors)
+    long_spokes_covered = sum(2 * len(cls) for cls in long_colors)
+    leave = 3 * a + 3 * r - short_spokes_covered - long_spokes_covered
+    ck(leave == r + a + 2 * b, "fixed3 leave formula")
+    return {
+        "r": r, "a": a, "b": b,
+        "core_triangles": len(P),
+        "short_leaf_triangle_counts": [len(x) for x in short_colors],
+        "long_leaf_triangle_counts": [len(x) for x in long_colors],
+        "leave_edges": leave,
+    }
+
+BASE_P = [(0,3,4),(1,6,8),(2,4,7),(3,5,6),(5,7,8)]
+BASE_A = [(0,1),(0,2),(1,2)]
+BASE_B = [(0,5),(0,6),(0,7),(0,8),(1,3),(1,4),(1,5),(1,7),
+          (2,3),(2,5),(2,6),(2,8),(3,7),(3,8),(4,5),(4,6),(4,8),(6,7)]
+
+def check_base_seed():
+    load = collections.Counter()
+    for t in BASE_P:
+        for e in edges(t): load[e] += 1
+    for e in BASE_A + BASE_B: load[e] += 1
+    ck(len(load) == 36 and set(load.values()) == {1}, "base seed core ownership")
+    da = collections.Counter(v for e in BASE_A for v in e)
+    db = collections.Counter(v for e in BASE_B for v in e)
+    ck(all(da[v] == 2 for v in range(3)), "base alpha degrees")
+    ck(all(db[v] == 4 for v in range(9)), "base beta degrees")
+    return {"core_triangles":len(BASE_P),"alpha_edges":len(BASE_A),"beta_edges":len(BASE_B),"value":26}
+
+def vector_sub(a, b, k):
+    out = 0; place = 1
+    for _ in range(k):
+        out += ((a % 3) - (b % 3)) % 3 * place
+        a //= 3; b //= 3; place *= 3
+    return out
+
+def neg_vec(a, k):
+    out=0;place=1
+    for _ in range(k):
+        out += (-(a%3))%3*place
+        a//=3;place*=3
+    return out
+
+def direction_key(t, k):
+    u, v, w = t
+    d = vector_sub(v, u, k)
+    nd = neg_vec(d, k)
+    return min(d, nd)
+
+@lru_cache(None)
+def direction_factors(m):
+    if m == 1:
+        return tuple()
+    k = power3_exp(m)
+    mp = collections.defaultdict(list)
+    for t in affine_lines(m):
+        mp[direction_key(t, k)].append(t)
+    out = []
+    for key in sorted(mp):
+        fac = tuple(sorted(mp[key]))
+        verts = collections.Counter(v for t in fac for v in t)
+        ck(len(fac) == m // 3 and len(verts) == m and set(verts.values()) == {1}, "not a factor")
+        out.append(fac)
+    ck(len(out) == (m - 1) // 2, "direction count")
+    return tuple(out)
+
+def lift_seed(m, x, y):
+    ck(is_power3(m) and x >= 0 and y >= 0 and x + y <= m - 1, "lift domain")
+    h = power3_exp(m)
+    r = 9 * m; A = set(range(3 * m))
+    core = []
+    alpha = collections.defaultdict(F)
+    beta = collections.defaultdict(F)
+    # Between-fiber ownership.
+    for u, v, w in BASE_P:
+        for i in range(m):
+            for j in range(m):
+                z = vec_add_neg(i, j, h)
+                core.append((tuple(sorted((u*m+i, v*m+j, w*m+z))), F(1)))
+    for u, v in BASE_A:
+        for i in range(m):
+            for j in range(m): alpha[tuple(sorted((u*m+i, v*m+j)))] += 1
+    for u, v in BASE_B:
+        for i in range(m):
+            for j in range(m): beta[tuple(sorted((u*m+i, v*m+j)))] += 1
+    # Within-fiber ownership. Core weights are the Q (integer-core) choice.
+    factors = direction_factors(m)
+    for u in range(9):
+        short = u < 3
+        total = (x + y) if short else y
+        whole, odd = divmod(total, 2)
+        ck(whole + odd <= len(factors), "not enough directions")
+        chosen_whole = set(range(whole))
+        half_idx = whole if odd else None
+        for idx, fac in enumerate(factors):
+            gamma = F(1) if idx in chosen_whole else F(1,2) if idx == half_idx else F(0)
+            for line in fac:
+                T = tuple(sorted(u*m+i for i in line))
+                if gamma == 0:
+                    core.append((T, F(1)))
+                # If gamma=1/2, Q rounds the complementary core half DOWN to zero.
+                for e0 in edges(line):
+                    e = tuple(sorted((u*m+e0[0], u*m+e0[1])))
+                    if short and total:
+                        alpha[e] += F(x, total) * gamma
+                        beta[e] += F(y, total) * gamma
+                    elif not short:
+                        beta[e] += gamma
+    # Check one owner/capacity and exact endpoint budgets.
+    load = collections.defaultdict(F)
+    core_seen = set()
+    for T,w in core:
+        ck(w.denominator == 1 and w in (0,1), "nonintegral Q core")
+        if w:
+            ck(T not in core_seen, "duplicate core triangle")
+            core_seen.add(T)
+            for e in edges(T): load[e] += w
+    da=[F(0)]*r; db=[F(0)]*r
+    for e,w in alpha.items():
+        ck(set(e) <= A and w >= 0, "bad alpha")
+        load[e] += w
+        for v in e: da[v] += w
+    for e,w in beta.items():
+        ck(w >= 0, "bad beta")
+        load[e] += w
+        for v in e: db[v] += w
+    ck(all(v <= 1 for v in load.values()), "lift core overload")
+    p=2*m+x; q=4*m+y
+    ck(all(da[v] == (p if v in A else 0) for v in range(r)), "lift alpha endpoint")
+    ck(all(db[v] == q for v in range(r)), "lift beta endpoint")
+    sc=F(math.comb(r,2))-sum(load.values())
+    expected=F(3*m*((x+y)%2)+6*m*(y%2),2)
+    ck(sc == expected, "lift slack formula")
+    L=F(math.comb(r,2)+len(A)*p+r*q,3)
+    val=sum(w for _,w in core)+sum(alpha.values())+sum(beta.values())
+    ck(L-val == sc/3, "lift objective identity")
+    return {"m":m,"r":r,"a":3*m,"p":p,"q":q,"L":str(L),"Q_witness":str(val),"core_slack":str(sc),"L_minus_Q":str(sc/3),"core_triangles":len(core_seen),"alpha_support":len(alpha),"beta_support":len(beta)}
+
