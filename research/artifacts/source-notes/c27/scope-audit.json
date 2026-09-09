@@ -1,0 +1,39 @@
+{
+  "base_revision": "0588b8372b85a65f1838e5ca4fcb009a03ffd12e",
+  "canonical_failed_routes_empty": true,
+  "dependency": {
+    "path": "research/artifacts/candidates/c25/extreme_audit.py",
+    "role": "finite exact checking, not universal proof",
+    "sha256": "bcee9e8a3d427059c5a10b9e3ce893ec1ae674f58feec3b10333e18ad8984c49"
+  },
+  "external_theorem_dependencies": [],
+  "fresh_main_read": true,
+  "latest_confirmed_issue_checkpoint": 5593329037,
+  "previous_recovery_bundle": {
+    "proof_sha256": "911052d91753a994ca754ce057ac0a1fd666bc119a23140f50a0558f7afd300a",
+    "remote_main_path": "research/artifacts/candidates/c26/value-reservoir",
+    "remote_read_status": 404,
+    "resubmitted_in_this_PR": false,
+    "sha256": "c527ac0aaf997f3be67ecce38b944d7d8af0f886c6dd51d40cd6feef8c4df480",
+    "verified_manifest_entries": 14
+  },
+  "prior_subroute_obstacles": [
+    "C25 permanent-integral-support freezing can cause a superlinear restricted-face deficit; not a target counterexample.",
+    "An arbitrary fixed complete reservoir can have a quadratic restriction deficit; not a Q counterexample."
+  ],
+  "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+  "semantic_warning": "The old quarter example (5,2,4,1,1) is outside the uniform face. The new (7,3,7,1,1) extreme point is on it and includes twelfth-valued coordinates.",
+  "source_and_trust_receipt": null,
+  "source_scope": "Primary-source searches for triangle decompositions and design detachments did not supply a theorem used here. No source-summary or search-hit implication is used. The proof gives its finite-vector arithmetic, line ownership and all-order construction explicitly. No novelty or exhaustive bibliography claim.",
+  "statement_comparison": {
+    "not_proved": [
+      "Arbitrary-size uniform-face L-Q<=Kr.",
+      "Nonuniform optimal duals.",
+      "Many-level induction.",
+      "ProblemContract cp<=n^2/6+Cn."
+    ],
+    "proved_subclass": "Affine-compatible r,a,b and their stated at-most-two-core-vertex deletion extensions.",
+    "uniform_face": "An optimal full dual has positive prices only 1/3; feasibility of that dual alone is insufficient. For r>=3 in capped domain this means L=(C(r,2)+ap+bq)/3."
+  },
+  "verdict": "candidate_only"
+}

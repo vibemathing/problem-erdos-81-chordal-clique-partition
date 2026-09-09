@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "bytes": 3661,
+      "git_blob_sha1": "30995f5df5a2cea2ae73ba1c626950e93e799d18",
+      "path": "research/artifacts/candidates/c27/README.md",
+      "sha256": "0f398d7e5a2bad6909e1956b1ac9f7a342f91b5eb27eeae8b0b08e064eb63aec"
+    },
+    {
+      "bytes": 3282,
+      "git_blob_sha1": "e9cd5134d6d05c384f37701e4b3796a3bae5215e",
+      "path": "research/artifacts/candidates/c27/construct-results.json",
+      "sha256": "870700d58ac8c491c7e9bac8f9119a8ebd480295c1c15c989793ac2848eabaf4"
+    },
+    {
+      "bytes": 7558,
+      "git_blob_sha1": "b950421b4e996bb8ca198a6fec572040e6170f4b",
+      "path": "research/artifacts/candidates/c27/lp-results.json",
+      "sha256": "603e55c50628221587a0da8f6987f508ec8229841f9a1100e20eff55b0742f08"
+    },
+    {
+      "bytes": 1506,
+      "git_blob_sha1": "8b183e5766fe570e71b0cdb349e6a8bcd83f887d",
+      "path": "research/artifacts/candidates/c27/padding-results.json",
+      "sha256": "5063fbafde4dbe8559d7dcbe1121b83e41fab5524f03a3d5b373b662b97b0c29"
+    },
+    {
+      "bytes": 2441,
+      "git_blob_sha1": "77e9b151136d07f7ecafc5c3a067bc04786291a6",
+      "path": "research/artifacts/candidates/c27/padding_check.py",
+      "sha256": "ba15d51959a43d512b3985546c2000014db4b091c5f2ae164f0fd0f3bf8e9066"
+    },
+    {
+      "bytes": 16407,
+      "git_blob_sha1": "36eea935b593bf0431392395c24c56c4fe6c8598",
+      "path": "research/artifacts/candidates/c27/proof.md",
+      "sha256": "b2f512a8c1bedece23f90d69a4952c350a03a44ea2b41efc62b858552f1d5520"
+    },
+    {
+      "bytes": 3589,
+      "git_blob_sha1": "be1f52d491c1cbd46bda517ae373a71ca086a144",
+      "path": "research/artifacts/candidates/c27/twelfth-point.json",
+      "sha256": "f25f6b06d50933b500e5c0433fd9b1af90e1228381201437b2341e49bd6687ef"
+    },
+    {
+      "bytes": 13191,
+      "git_blob_sha1": "3a49004eaa9efe3c7ae1062b14e51041747d9a3b",
+      "path": "research/artifacts/candidates/c27/uniform_face_checker.py",
+      "sha256": "62eac2694c37c6f9c08c737be9a039a4a8c38ba881f3850d7b9b3f3610dacadb"
+    },
+    {
+      "bytes": 4372,
+      "git_blob_sha1": "d44df86a5967c347d485a5a29b174609bc89a550",
+      "path": "research/artifacts/source-notes/c27/run-record.json",
+      "sha256": "f51b6410dc76350d9d30bdf515f84a19eef1f6ee30daf16dcb2771ea5b5f5b58"
+    },
+    {
+      "bytes": 2256,
+      "git_blob_sha1": "5adf06808ca3c48091204913c810e6893c75b15a",
+      "path": "research/artifacts/source-notes/c27/scope-audit.json",
+      "sha256": "ac9c8d3408b55af20672e89df3cebc94aee173fc5c0104ce9a6bb5a77f6a13a8"
+    }
+  ],
+  "scope": "C27 only. The manifest excludes itself and the PR-bound packet; their hashes belong in the Issue checkpoint.",
+  "verdict": "candidate_only"
+}

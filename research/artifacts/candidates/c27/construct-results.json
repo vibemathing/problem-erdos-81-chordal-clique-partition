@@ -1,0 +1,166 @@
+{
+  "best_verified_result": "none",
+  "complete_affine_ranges": [
+    {
+      "complete_affine_parameter_cases": 3,
+      "r": 1
+    },
+    {
+      "complete_affine_parameter_cases": 15,
+      "r": 3
+    },
+    {
+      "complete_affine_parameter_cases": 102,
+      "r": 9
+    },
+    {
+      "complete_affine_parameter_cases": 819,
+      "r": 27
+    }
+  ],
+  "limitations": [
+    "Only the affine-flag subclass is covered by the all-order constructive theorem.",
+    "Finite checks do not prove the arbitrary-size one-third face theorem.",
+    "The named twelfth point has no Q optimization in this run."
+  ],
+  "mode": "construct",
+  "mutations_detected": [
+    "core_double_spending",
+    "short_edge_outside_prefix",
+    "long_endpoint_overload",
+    "repeated_triangle_vertex",
+    "negative_coordinate",
+    "quarter_core_not_integral",
+    "nonaffine_prefix_silently_allowed",
+    "excess_combined_degree",
+    "positive_zero_prefix_budget",
+    "bad_reservoir_direction_units",
+    "odd_budget_called_saturated",
+    "support_changes_counted_as_loss"
+  ],
+  "named_cases": [
+    {
+      "L": "2166",
+      "Q_witness": "2166",
+      "charged_endpoint_budget": 0,
+      "parameters": [
+        81,
+        9,
+        81,
+        2,
+        40
+      ]
+    },
+    {
+      "L": "2196",
+      "Q_witness": "2166",
+      "charged_endpoint_budget": 90,
+      "parameters": [
+        81,
+        9,
+        81,
+        3,
+        41
+      ]
+    },
+    {
+      "L": "1248",
+      "Q_witness": "1236",
+      "charged_endpoint_budget": 36,
+      "parameters": [
+        81,
+        9,
+        27,
+        5,
+        17
+      ]
+    },
+    {
+      "L": "11133",
+      "Q_witness": "11097",
+      "charged_endpoint_budget": 108,
+      "parameters": [
+        243,
+        27,
+        81,
+        13,
+        45
+      ]
+    },
+    {
+      "L": "27603",
+      "Q_witness": "27513",
+      "charged_endpoint_budget": 270,
+      "parameters": [
+        243,
+        27,
+        243,
+        25,
+        217
+      ]
+    },
+    {
+      "L": "1314",
+      "Q_witness": "1314",
+      "charged_endpoint_budget": 0,
+      "parameters": [
+        81,
+        27,
+        27,
+        7,
+        19
+      ]
+    },
+    {
+      "L": "180",
+      "Q_witness": "171",
+      "charged_endpoint_budget": 27,
+      "parameters": [
+        27,
+        0,
+        27,
+        0,
+        7
+      ]
+    },
+    {
+      "L": "138",
+      "Q_witness": "135",
+      "charged_endpoint_budget": 9,
+      "parameters": [
+        27,
+        1,
+        9,
+        0,
+        7
+      ]
+    }
+  ],
+  "runtime": {
+    "CPU_limit_seconds": 42,
+    "arithmetic": "fractions.Fraction and exact integer arithmetic",
+    "elapsed_seconds": 6.33289012900002,
+    "internal_wall_seconds": 39,
+    "max_rss_kib": 113512,
+    "memory_limit_bytes": 1073741824,
+    "python": "3.13.5",
+    "source_sha256": "62eac2694c37c6f9c08c737be9a039a4a8c38ba881f3850d7b9b3f3610dacadb",
+    "threads": 1
+  },
+  "status": "finite_checks_passed",
+  "support_trade": {
+    "actual_objective_loss": "0",
+    "old_integral_core_removed": 375,
+    "parameters": [
+      81,
+      9,
+      81,
+      2,
+      40
+    ],
+    "proven_lower_bound": 162
+  },
+  "trusted_verifier_run": false,
+  "verdict": "candidate_only",
+  "version": "c27-uniform-affine-v1"
+}
