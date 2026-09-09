@@ -1,0 +1,65 @@
+{
+  "base_revision": "de0a67b00e14e200ab32da0a3b30d387be13dfb6",
+  "excluded_verbose_local_outputs": [
+    "fixed3-results.json",
+    "seed-results.json",
+    "dense-results.json",
+    "controls-results.json",
+    "crosscheck-results.json"
+  ],
+  "files": [
+    {
+      "bytes": 2027,
+      "path": "research/artifacts/candidates/c32/README.md",
+      "sha256": "023b2acf2ceacc83f6f4d56eaf45fe5a382a7132cba47f63c08d065e8ef98fcb"
+    },
+    {
+      "bytes": 9431,
+      "path": "research/artifacts/candidates/c32/checker-core-a.pyfrag",
+      "sha256": "fdc844901a5adefceb97aca16baac041a23844b91cb2afa8e6557169fe1b0d09"
+    },
+    {
+      "bytes": 12587,
+      "path": "research/artifacts/candidates/c32/checker-core-b.pyfrag",
+      "sha256": "a075c167d2acb64aaacc49bf161cb3654c050ecc721822621ac41ef5f99b133a"
+    },
+    {
+      "bytes": 445,
+      "path": "research/artifacts/candidates/c32/checker.py",
+      "sha256": "2c623e8b423c46b7a98cc53ac438bb686e25b750fd6128740e0acb7af39a1207"
+    },
+    {
+      "bytes": 3743,
+      "path": "research/artifacts/candidates/c32/crosscheck.py",
+      "sha256": "265d680bffef9e8749309b2c77ecd9803f06187a5f2fee5d31b1b7411fbadbf0"
+    },
+    {
+      "bytes": 19721,
+      "path": "research/artifacts/candidates/c32/proof.md",
+      "sha256": "208c20c808d7403a942a566aea002eb6413f43d0a0c04d75ee15cf500307b588"
+    },
+    {
+      "bytes": 8038,
+      "path": "research/artifacts/candidates/c32/results-summary.json",
+      "sha256": "ef5a7ea1733872cee03576139e3ab580cfeabd6eeb30a4c1d8bc4c8473ffd387"
+    },
+    {
+      "bytes": 1463,
+      "path": "research/artifacts/candidates/c32/seed9.json",
+      "sha256": "d5381bf4ce4f44f976d225c3eac23a56f7d5a4706f3f985dfde9326375e82186"
+    },
+    {
+      "bytes": 4454,
+      "path": "research/artifacts/source-notes/c32/run-record.json",
+      "sha256": "e42e2ceaebd8151066b2f6e9e44e64a899f01cf7baeb59d1690031788db74d58"
+    },
+    {
+      "bytes": 2391,
+      "path": "research/artifacts/source-notes/c32/source-audit.json",
+      "sha256": "a09b2812b063ffab9cbe3762e441459bf6b2cf26fc97b18538f3416bfa63f65d"
+    }
+  ],
+  "note": "Verbose generator outputs are reproducible from committed sources; run-record.json and results-summary.json freeze commands, output digests, scopes, and load-bearing finite certificates. Manifest excludes itself and the later PR-bound packet.",
+  "schema": "c32-artifact-manifest-v2",
+  "status": "candidate_only"
+}
