@@ -1,0 +1,117 @@
+{
+  "best_verified_result": "none",
+  "limitations": [
+    "All operations are generator-side finite checks.",
+    "Only the specified affine sizes are complete in the constructive parameter sweep.",
+    "Q is not optimized on the named r=7 extreme point or the three padding examples.",
+    "The arbitrary-size one-third face theorem remains open."
+  ],
+  "runs": [
+    {
+      "command": [
+        "python",
+        "uniform_face_checker.py",
+        "--mode",
+        "construct",
+        "--out",
+        "construct-results.json"
+      ],
+      "exit_code": 0,
+      "kind": "generator_side_bounded_process",
+      "mode": "construct",
+      "outer_elapsed_seconds": 7.91439715599995,
+      "outer_timeout": false,
+      "outer_wall_limit_seconds": 44,
+      "output_exists": true,
+      "output_sha256": "870700d58ac8c491c7e9bac8f9119a8ebd480295c1c15c989793ac2848eabaf4",
+      "run_date_utc": "2026-09-09T02:11:25.566229+00:00",
+      "runtime": {
+        "CPU_limit_seconds": 42,
+        "arithmetic": "fractions.Fraction and exact integer arithmetic",
+        "elapsed_seconds": 6.33289012900002,
+        "internal_wall_seconds": 39,
+        "max_rss_kib": 113512,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "source_sha256": "62eac2694c37c6f9c08c737be9a039a4a8c38ba881f3850d7b9b3f3610dacadb",
+        "threads": 1
+      },
+      "source_sha256": "62eac2694c37c6f9c08c737be9a039a4a8c38ba881f3850d7b9b3f3610dacadb",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ef5f30b5d8a0573ed7ca3f59b75882fbb9a756dd1fd1ccf1e028701726d919ab",
+      "trusted_verifier_run": false,
+      "verdict": "candidate_only"
+    },
+    {
+      "command": [
+        "python",
+        "uniform_face_checker.py",
+        "--mode",
+        "lp",
+        "--out",
+        "lp-results.json"
+      ],
+      "exit_code": 0,
+      "kind": "generator_side_bounded_process",
+      "mode": "lp",
+      "outer_elapsed_seconds": 11.822071381,
+      "outer_timeout": false,
+      "outer_wall_limit_seconds": 44,
+      "output_exists": true,
+      "output_sha256": "603e55c50628221587a0da8f6987f508ec8229841f9a1100e20eff55b0742f08",
+      "run_date_utc": "2026-09-09T02:11:44.275946+00:00",
+      "runtime": {
+        "CPU_limit_seconds": 42,
+        "arithmetic": "fractions.Fraction and exact integer arithmetic",
+        "elapsed_seconds": 10.292693105000012,
+        "internal_wall_seconds": 39,
+        "max_rss_kib": 95904,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "source_sha256": "62eac2694c37c6f9c08c737be9a039a4a8c38ba881f3850d7b9b3f3610dacadb",
+        "threads": 1
+      },
+      "source_sha256": "62eac2694c37c6f9c08c737be9a039a4a8c38ba881f3850d7b9b3f3610dacadb",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2d444aa8e1b2dc36da93ded901f3dac0fbb06799e4e15b769fb80d2b6e53d45e",
+      "trusted_verifier_run": false,
+      "verdict": "candidate_only"
+    },
+    {
+      "command": [
+        "python",
+        "padding_check.py",
+        "--out",
+        "padding-results.json"
+      ],
+      "exit_code": 0,
+      "kind": "generator_side_bounded_process",
+      "mode": "padding",
+      "outer_elapsed_seconds": 4.45725010000001,
+      "outer_timeout": false,
+      "outer_wall_limit_seconds": 40,
+      "output_sha256": "5063fbafde4dbe8559d7dcbe1121b83e41fab5524f03a3d5b373b662b97b0c29",
+      "runtime": {
+        "CPU_limit_seconds": 39,
+        "arithmetic": "fractions.Fraction",
+        "elapsed_seconds": 2.8976251499998398,
+        "internal_wall_seconds": 36,
+        "max_rss_kib": 93104,
+        "memory_limit_bytes": 1073741824,
+        "python": "3.13.5",
+        "source_sha256": "ba15d51959a43d512b3985546c2000014db4b091c5f2ae164f0fd0f3bf8e9066",
+        "threads": 1
+      },
+      "source_sha256": "ba15d51959a43d512b3985546c2000014db4b091c5f2ae164f0fd0f3bf8e9066",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6df1cd56b7a75c91aa42f7aee5f91b0d71ca6084914f65efd6c430970c098912",
+      "trusted_verifier_run": false,
+      "verdict": "candidate_only"
+    }
+  ],
+  "trusted_verifier_run": false,
+  "verdict": "candidate_only"
+}
