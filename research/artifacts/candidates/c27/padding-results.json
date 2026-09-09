@@ -1,0 +1,74 @@
+{
+  "Q_optimized": false,
+  "cases": [
+    {
+      "L": "13",
+      "Q_witness": "8",
+      "actual_witness_deficit": "5",
+      "deleted_core_vertices": [
+        8
+      ],
+      "discarded_object_mass": "4",
+      "edge_charge_upper_bound": 8,
+      "parameters": [
+        8,
+        3,
+        8,
+        1,
+        1
+      ],
+      "uniform_face": true
+    },
+    {
+      "L": "31/3",
+      "Q_witness": "5",
+      "actual_witness_deficit": "16/3",
+      "deleted_core_vertices": [
+        7,
+        8
+      ],
+      "discarded_object_mass": "7",
+      "edge_charge_upper_bound": 16,
+      "parameters": [
+        7,
+        3,
+        7,
+        1,
+        1
+      ],
+      "uniform_face": true
+    },
+    {
+      "L": "38/3",
+      "Q_witness": "8",
+      "actual_witness_deficit": "14/3",
+      "deleted_core_vertices": [
+        2
+      ],
+      "discarded_object_mass": "4",
+      "edge_charge_upper_bound": 8,
+      "parameters": [
+        8,
+        2,
+        8,
+        1,
+        1
+      ],
+      "uniform_face": true
+    }
+  ],
+  "runtime": {
+    "CPU_limit_seconds": 39,
+    "arithmetic": "fractions.Fraction",
+    "elapsed_seconds": 2.8976251499998398,
+    "internal_wall_seconds": 36,
+    "max_rss_kib": 93104,
+    "memory_limit_bytes": 1073741824,
+    "python": "3.13.5",
+    "source_sha256": "ba15d51959a43d512b3985546c2000014db4b091c5f2ae164f0fd0f3bf8e9066",
+    "threads": 1
+  },
+  "status": "finite_checks_passed",
+  "trusted_verifier_run": false,
+  "verdict": "candidate_only"
+}
