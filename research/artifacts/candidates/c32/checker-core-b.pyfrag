@@ -228,10 +228,12 @@ def run_controls():
         a=(r-1)//2;p=q=2*r//5
         ok=face_ok(r,a,p,q);ck(ok is True,"stress not on face")
         stress.append({"r":r,"a":a,"c":r-a,"p":p,"q":q,"face":True,"low_margin_1_5":p+q<=r/5,"high_long":q>=max(a,r-a)})
+    # Scope controls only: the historical quarter/twelfth points are not target parameters.
     scope={"quarter":{"r":5,"a":2,"p":1,"q":1,"on_uniform_face":False},"twelfth":{"r":7,"a":3,"p":1,"q":1,"on_uniform_face":True},"no_Q_values_inferred":True}
     return {"mode":"controls","version":VERSION,"mutations":rejected,"mutation_count":len(rejected),"stress_family":stress,"scope_controls":scope}
 
 def _bad_base(beta):
+    old=BASE_B[:]
     load=collections.Counter()
     for t in BASE_P:
         for e in edges(t):load[e]+=1
@@ -247,6 +249,7 @@ def _bad_residue():
 def _bad_rho():
     ck(-1>=0,"negative color count")
 def _bad_identity():
+    # The base alpha K3 has Delta two but needs three edge colors.
     ck(edge_colorable(BASE_A,3,2),"aggregate Q/J is not automatically actual")
 
 def main():
