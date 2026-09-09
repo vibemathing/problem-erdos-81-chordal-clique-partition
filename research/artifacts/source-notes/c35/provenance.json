@@ -1,0 +1,125 @@
+{
+  "artifact_files": {
+    "research/artifacts/candidates/c35/checker.py": {
+      "bytes": 10398,
+      "sha256": "e300990809847fb65192b0ab695314bb693772487c47609b14fcabf11a22d1e5"
+    },
+    "research/artifacts/candidates/c35/proof.md": {
+      "bytes": 11557,
+      "sha256": "9655e5c61ec65fee044e7862f46bf7863c91345349d9e7344985a0bbb1b6d1f2"
+    },
+    "research/artifacts/candidates/c35/results.json": {
+      "bytes": 3000,
+      "sha256": "7df39cc1ef268c33345a4ac76383975af7c377c6848f7ecddc95548c1f06a826"
+    }
+  },
+  "candidate": "candidate:erdos81-a01-c35-face-margin",
+  "dependencies": [
+    {
+      "path": "research/artifacts/candidates/erdos81-a01-c22-c20-audit.md",
+      "relation": "exact input for identities and the uniform fixed-K3 packing-gap quantifiers",
+      "revision": "3af18d3b9a5890783fd70c651c38d54bf291353e",
+      "trust": "source-backed candidate, not independently verified here"
+    },
+    {
+      "path": "research/artifacts/candidates/c28/proof.md",
+      "relation": "prior exact full-one-third face criterion",
+      "revision": "3af18d3b9a5890783fd70c651c38d54bf291353e",
+      "trust": "candidate"
+    },
+    {
+      "path": "research/artifacts/candidates/c32/proof.md",
+      "relation": "prior multiplicity-independent actual-packing packets",
+      "revision": "3af18d3b9a5890783fd70c651c38d54bf291353e",
+      "trust": "candidate"
+    },
+    {
+      "path": "research/artifacts/candidates/c33/proof.md",
+      "relation": "prior two-buffer completion and remaining one-buffer boundary",
+      "revision": "3af18d3b9a5890783fd70c651c38d54bf291353e",
+      "trust": "candidate"
+    },
+    {
+      "path": "research/artifacts/candidates/c34/proof.md",
+      "relation": "prior growing-multiplicity actual-packing domains and dense-residual theorem",
+      "revision": "3af18d3b9a5890783fd70c651c38d54bf291353e",
+      "trust": "candidate; external Delcourt--Postle input is source-backed, not trusted"
+    }
+  ],
+  "fresh_base": "3af18d3b9a5890783fd70c651c38d54bf291353e",
+  "new_external_sources": [],
+  "next_route": "Analyze the high-face-excess nonuniform-dual region isolated by equation (15), integrating C34's dense-residual and product domains before attempting further one-buffer exact packing.",
+  "problem_contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58",
+  "run_record": {
+    "attempts": [
+      {
+        "exit_code": null,
+        "mode": "algebra-initial-oversized",
+        "note": "An earlier pre-C35 exploratory container call reached its 45-second outer timeout before a readable child exit. It is retained as failed exploration and excluded from final scope.",
+        "status": "timeout"
+      },
+      {
+        "consolidated_entry": "research/artifacts/candidates/c35/results.json#runs.algebra",
+        "exit_code": 0,
+        "mode": "algebra",
+        "outer_wall_seconds": 6.64,
+        "peak_rss_kib": 95276,
+        "raw_output_bytes": 219,
+        "raw_output_sha256": "e5dd2b70960cf09a8d3c1b7f2d2e71b99283e6d37f3eb4e527bf6a1ea006a08d",
+        "status": "success",
+        "system_seconds": 0.1,
+        "user_seconds": 6.99
+      },
+      {
+        "consolidated_entry": "research/artifacts/candidates/c35/results.json#runs.small",
+        "exit_code": 0,
+        "mode": "small",
+        "outer_wall_seconds": 1.05,
+        "peak_rss_kib": 132400,
+        "raw_output_bytes": 18615,
+        "raw_output_sha256": "a4cb89912b700be31f1abcb594c3b2be8f5fc95c9f5f96b59cd8465fcfebb149",
+        "status": "success",
+        "system_seconds": 0.11,
+        "user_seconds": 1.4
+      },
+      {
+        "consolidated_entry": "research/artifacts/candidates/c35/results.json#runs.mutations",
+        "exit_code": 0,
+        "mode": "mutations",
+        "outer_wall_seconds": 0.79,
+        "peak_rss_kib": 93736,
+        "raw_output_bytes": 158,
+        "raw_output_sha256": "17b2cc5ec4f8c73bc106ed8c01175e577170f8ba1a2cc5066cc47242acc4ed7c",
+        "status": "success",
+        "system_seconds": 0.09,
+        "user_seconds": 1.09
+      }
+    ],
+    "candidate": "candidate:erdos81-a01-c35-face-margin",
+    "environment": {
+      "address_space_limit": "container default; no explicit in-script limit",
+      "arithmetic": "fractions.Fraction and integer bit-mask dynamic programming",
+      "outer_timeout_seconds": 45,
+      "python": "3.13.5",
+      "threads": "one Python process per mode"
+    },
+    "final_scope": {
+      "algebra_parameter_rows": 48503,
+      "bounded_c28_face_rows": 3065,
+      "complete_split_orders_through": 40,
+      "exact_small_max_original_order": 8,
+      "exact_small_parameter_representations": 286,
+      "mutations_detected": "12/12"
+    },
+    "schema_version": "1.0",
+    "trust": "generator-side finite checking only; not a trusted verifier or evidence receipt"
+  },
+  "schema_version": "1.0",
+  "semantic_boundary": [
+    "Full-face means optimal equality lambda=m/3, not feasibility of the all-one-third dual.",
+    "The theorem proves the original quadratic-plus-linear inequality on one split subclass; it does not prove nu_star-nu=O(r).",
+    "Q, L_D, J_fix, J, nu remain distinct and are not used interchangeably.",
+    "The uniform o(n^2) theorem is source-backed through C22; no trusted attestation is created.",
+    "The frontend EMPTY_RESPONSE event is not a failed mathematical route."
+  ]
+}
