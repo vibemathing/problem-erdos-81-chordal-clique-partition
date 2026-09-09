@@ -5,7 +5,7 @@ Status: `NONTERMINAL_CHECKPOINT`; `verdict=candidate_only`; `best_verified_resul
 ## Contents
 
 - `proof.md`: multiplicity-independent `Q -> actual host` conversion, fixed `p=q=3` construction, arbitrary growing low-total-multiplicity theorem, and a high-multiplicity nine-seed lift.
-- `checker.py`: standard-library exact construction and pressure-test program.
+- `checker.py` plus `checker-core-a.pyfrag` and `checker-core-b.pyfrag`: standard-library exact construction and pressure-test program; the wrapper concatenates the two plain-text audited source fragments.
 - `crosscheck.py`: independent tuple-vector/NetworkX/SciPy finite cross-check; generator-side only.
 - `seed9.json`: exact saturated `(r,a,p,q)=(9,3,2,4)` aggregate seed.
 - `results-summary.json`: load-bearing finite certificates, coverage, mutation results, and SHA-256 identities of the verbose local outputs.
