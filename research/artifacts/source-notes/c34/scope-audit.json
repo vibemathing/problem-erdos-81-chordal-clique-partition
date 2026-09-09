@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "problem_id": "problem:erdos-81-chordal-clique-partition",
+  "verdict": "candidate_only",
+  "definition_checks": {
+    "clique_partition": "edge-disjoint exact clique partition, not clique cover",
+    "packing": "edge-disjoint triangle packing",
+    "L": "fractional triangle-packing optimum nu_star",
+    "Q": "integer core-triangle variables with aggregate fractional leaf resources",
+    "J": "integer core and aggregate resource variables",
+    "nu": "actual packing after each aggregate leaf graph is decomposed into the individual leaf matchings",
+    "nonidentifications": ["Q is not L_D", "Q is not J_fix", "Q is not J", "Q is not nu"]
+  },
+  "ownership_checks": [
+    "each product core edge has exactly one affine or Latin owner",
+    "different direction-translation slots are edge-disjoint",
+    "short internal factors, the short partial component, external long slots, and retained core triangles use disjoint core-edge classes",
+    "aggregate resource repair is charged once per short or long class, not once per individual leaf"
+  ],
+  "boundary_checks": [
+    "zero multiplicity gives an empty resource graph and zero repair",
+    "equal prefix A=V is asserted only in domains whose hypotheses permit it",
+    "the fixed p=q=3 case is included in the arbitrary-set low-load theorem for all sufficiently large r",
+    "the old quarter-valued point remains outside the full one-third face",
+    "the twelfth-denominator point remains an on-face control",
+    "fractional denominators are never used as a rounding premise"
+  ],
+  "scale_checks": [
+    "m and R are powers of three in the translation-slot theorem",
+    "R is at least nine before reserving one quotient direction and external long slots",
+    "the dense-residual theorem has no power-of-three or affine-alignment hypothesis",
+    "support may change quadratically and support distance is not charged"
+  ],
+  "statement_identity": {
+    "proved_candidates": [
+      "two explicit growing-multiplicity subdomain bounds for nu_star-nu",
+      "multiplicity-independent Q-to-nu conversion bound in the two-level model",
+      "exact saturated-short face classification"
+    ],
+    "not_proved": [
+      "the entire one-third face",
+      "the unrestricted two-level integrality gap",
+      "the split-domination obligation",
+      "the ProblemContract n^2/6+O(n) root"
+    ]
+  },
+  "first_open_lemma": "Control L-Q by O(r) on the high-load saturated-short wedge p=a-1, c>=a+1, 0<=q<=c, outside the dense-residual and available product-slot domains.",
+  "root_closed": false,
+  "best_verified_result": null
+}
