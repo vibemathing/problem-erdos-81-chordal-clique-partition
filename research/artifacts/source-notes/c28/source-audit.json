@@ -1,0 +1,40 @@
+{
+  "comparison": {
+    "no_use": "No inference of a theorem for the low-long-budget strip, nonuniform prices, multiple short levels, or the root.",
+    "object": "pairwise edge-disjoint triangle factors in a complete simple graph",
+    "requested_factor_count": "hA/2 or hC/2, at most (block_order-1)/2",
+    "required_order": "good block order a0 or c0, each chosen congruent to 3 modulo 6; not the entire r+p+q host order",
+    "use": "Only general availability of the supplied factor certificates. Given them, all repacking, capacity and objective estimates are proved in proof.md."
+  },
+  "external_effects": "Only public primary implementation documentation read; no other GitHub repository accessed.",
+  "input_id": "K",
+  "kind": "source_statement_comparison",
+  "original_reference": {
+    "acquisition": "Original publisher/DOI access and local byte retrieval did not produce readable original paper bytes. No screenshot or source attestation is asserted.",
+    "authors": [
+      "D. K. Ray-Chaudhuri",
+      "R. M. Wilson"
+    ],
+    "doi": "10.1090/pspum/019/9959",
+    "original_paper_read": false,
+    "original_pdf_sha256": null,
+    "publication": "Proceedings of Symposia in Pure Mathematics 19, pp. 187-203 (1971)",
+    "title": "Solution of Kirkman's schoolgirl problem"
+  },
+  "source": {
+    "full_original_bytes_sha256": null,
+    "locator": "kirkman_triple_system function documentation, lines 493-497 in retrieved text; resolvability definition at lines 415 and 552; RCW71 reference at lines 429-431",
+    "parsed_primary_implementation_text_read": true,
+    "quote_format": "Short parsed-body excerpt with its mathematical formula; not original PDF bytes.",
+    "retrieved_date": "2026-09-09",
+    "short_quote": "It exists if and only if \\(v\\equiv 3\\pmod{6}\\).",
+    "url": "https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/designs/resolvable_bibd.html",
+    "version": "SageMath 10.8 Reference Manual"
+  },
+  "source_free_cases": "The explicit cyclic factors, full affine factors and exact projective-15 resolution used by the finite code are proved/checked separately. SageMath and its KTS routine were not executed. Unsupported factor requests raise an exception.",
+  "statement": "For each integer v>=3 with v congruent to 3 modulo 6, K_v has a decomposition into (v-1)/2 triangle factors. A factor partitions the v vertices into triples.",
+  "status": "source-backed via official implementation specification; original proof not audited",
+  "trusted_source_receipt": null,
+  "trusted_verifier_receipt": null,
+  "verdict": "candidate_only"
+}
