@@ -1,0 +1,64 @@
+{
+  "files": [
+    {
+      "bytes": 3133,
+      "git_blob_sha1": "d2ca1622095cc1480fbb29d310b51a2f88e6397c",
+      "path": "research/artifacts/candidates/c28/README.md",
+      "sha256": "cf59bc00b3ad438ab2b88bf01108ff903f8a847d934cf9b2c89a8588132ff62b"
+    },
+    {
+      "bytes": 12983,
+      "git_blob_sha1": "cfbc18da9900acbae16a4b7caba9b2cc0f4f9f18",
+      "path": "research/artifacts/candidates/c28/construct-results.json",
+      "sha256": "9f7fd09b8934a364adb954d8c6183e79be2b314baa07d23a57873fa0364715f7"
+    },
+    {
+      "bytes": 5048,
+      "git_blob_sha1": "9c3c21bc679bdfebc97d422ce2ca51111d9d410d",
+      "path": "research/artifacts/candidates/c28/named-results.json",
+      "sha256": "7fd1d6860694b57e399711cae3fa274965277149add87f26c52b572ec4485695"
+    },
+    {
+      "bytes": 14251,
+      "git_blob_sha1": "9cb7e3252a542762e0e3cfe617d7947cde5306a1",
+      "path": "research/artifacts/candidates/c28/proof.md",
+      "sha256": "5ee579bcdfacde739d134d3ad281c3915df41b32f18340e078149b3711ef058f"
+    },
+    {
+      "bytes": 18464,
+      "git_blob_sha1": "d125395546a0096a209e23b5e6e28a88b9d69243",
+      "path": "research/artifacts/candidates/c28/subset_checker.py",
+      "sha256": "97a3d55eb240a7b01735b2e913b333e28a7b055926cf39cc1abecee5f80e6c89"
+    },
+    {
+      "bytes": 11406,
+      "git_blob_sha1": "72521a39d13ba4f54743f74f3506249238ff1435",
+      "path": "research/artifacts/candidates/c28/types-results.json",
+      "sha256": "7c1f8f07ca5906ea716d6dd1c4587de951a4c2969da1810245d95b9985873b5a"
+    },
+    {
+      "bytes": 6549,
+      "git_blob_sha1": "818c8e28afb04186513471bca8eda3b01fecc40a",
+      "path": "research/artifacts/source-notes/c28/run-record.json",
+      "sha256": "b439de706632d5ee61bbba1ab6656ef57707c6105c092629df80706eaf115402"
+    },
+    {
+      "bytes": 2594,
+      "git_blob_sha1": "1a76f2b6ce6252e82cadcfeddce338b642114ffc",
+      "path": "research/artifacts/source-notes/c28/source-audit.json",
+      "sha256": "c2650b9ae95288f3811f04aeec9f9d9c66e9207132605bca06ad9f8e73cb9f51"
+    }
+  ],
+  "immutable_dependencies": [
+    {
+      "path": "research/artifacts/candidates/c25/extreme_audit.py",
+      "sha256": "bcee9e8a3d427059c5a10b9e3ce893ec1ae674f58feec3b10333e18ad8984c49"
+    },
+    {
+      "path": "research/artifacts/candidates/c27/twelfth-point.json",
+      "sha256": "f25f6b06d50933b500e5c0433fd9b1af90e1228381201437b2341e49bd6687ef"
+    }
+  ],
+  "schema": "c28-artifact-byte-manifest-v1",
+  "verdict": "candidate_only"
+}
