@@ -81,6 +81,16 @@
     "obligation:erdos81-split-extremal-reduction",
     "obligation:erdos81-root"
   ],
+  "failed_route_proposal": {
+    "route_fingerprint": "0b3a8af1dcd98e74ac6617d7949d27fc2ceeb0bb378b3907a5afad3138014a2f",
+    "failure_class": "contradiction",
+    "blocker": "In a one-buffer construction that uses only UUB midpoint-fan triangles, b partial vertices with D triangle incidences create exactly 2bD incidences on the full m-fiber. When b<m/2 this leaves at least 2D(m-2b) aggregate full-fiber endpoint deficit before coloring, which is superlinear in the middle multiplicity regime. A successful route must mix genuine UUU resources through a Steiner trade rather than repeat midpoint fans or per-layer boundary deletion.",
+    "evidence_locators": [
+      "research/artifacts/candidates/c33/proof.md#5-pressure-tests-and-route-boundary",
+      "research/artifacts/candidates/c33/results.json"
+    ],
+    "next_obligation": "obligation:erdos81-split-extremal-reduction"
+  },
   "source_refs": [
     {
       "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
@@ -104,7 +114,7 @@
       "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
       "path": "research/artifacts/candidates/c32/proof.md",
       "revision": "5f7049f2678bc0ea096fe6fef2a206c5e5c1f114",
-      "relation": "strictly_extended"
+      "relation": "stronger"
     },
     {
       "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
