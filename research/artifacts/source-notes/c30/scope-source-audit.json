@@ -1,0 +1,44 @@
+{
+  "verdict": "candidate_only",
+  "best_verified_result": "none",
+  "repository": "vibemathing/problem-erdos-81-chordal-clique-partition",
+  "fresh_base": "c1f2486638441e48b345efce7a7159815491e7fa",
+  "frozen_statement": "For k>=2, r=3^k, p=1, q=2 and every actual A with 2<=a<=r, L=(C(r,2)+a+2r)/3 and L-Q=(a+(a mod 3))/6.",
+  "proof_ceiling": "proof-drafted",
+  "mathematical_dependencies": [
+    "finite graph edge counting",
+    "explicit F_3 vector arithmetic",
+    "LP weak duality",
+    "integer congruence arithmetic"
+  ],
+  "source_discovery": [
+    {
+      "url": "https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/designs/resolvable_bibd.html",
+      "kind": "official implementation documentation",
+      "purpose": "Terminology only: parallel classes partition the ground set. No design-existence theorem is imported.",
+      "used_to_close_proof": false,
+      "execution": false
+    }
+  ],
+  "prior_candidates": {
+    "c28": "interval model and high-long region; no external factor input reused",
+    "c29": "previous parity charge sharpened by the residual edge-count congruence",
+    "c25": "exact LP code only",
+    "c27": "frozen twelfth-denominator scope control only"
+  },
+  "identity_separation": {
+    "Q": "integral core variables, fractional leaf allocations",
+    "L_D": "restricted allowed core support with fractional core weights",
+    "J_fix": "extra frozen-support integer optimization; never used",
+    "ProblemContract": "all chordal graphs cp<=n^2/6+Cn, not this fixed-budget Q slice"
+  },
+  "remaining_open": [
+    "uniformly growing p,q on the entire one-third face",
+    "general two-level gap",
+    "exact split domination",
+    "ProblemContract root",
+    "trusted semantic/kernel/closure receipts"
+  ],
+  "no_trusted_attestation": true,
+  "frontend_failure_is_mathematical_failed_route": false
+}
