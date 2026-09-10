@@ -1,0 +1,24 @@
+{
+  "audit": {
+    "d5_rows": 1745949,
+    "max_beta_degree_excess": 6,
+    "max_delta": 5,
+    "max_unused_AA_factors_even": 7,
+    "max_unused_AA_factors_odd": 8
+  },
+  "elapsed_seconds": 17.255016824999984,
+  "mutations": {
+    "mutations_detected": 12,
+    "mutations_total": 12
+  },
+  "python": "3.13.5",
+  "version": "c39-d5-equitable-v1",
+  "witnesses": [
+    {"beta_colors":3,"beta_deleted":1,"beta_max_degree":3,"core_ACC":3,"core_CCC":0,"cprime":3,"packing_triangles":14,"params":[4,3,3,2]},
+    {"beta_colors":3,"beta_deleted":0,"beta_max_degree":3,"core_ACC":3,"core_CCC":0,"cprime":3,"packing_triangles":18,"params":[5,3,3,3]},
+    {"beta_colors":4,"beta_deleted":3,"beta_max_degree":4,"core_ACC":3,"core_CCC":0,"cprime":3,"packing_triangles":24,"params":[6,4,4,3]},
+    {"beta_colors":6,"beta_deleted":6,"beta_max_degree":6,"core_ACC":3,"core_CCC":0,"cprime":3,"packing_triangles":39,"params":[8,5,6,4]},
+    {"beta_colors":1,"beta_deleted":0,"beta_max_degree":1,"core_ACC":36,"core_CCC":0,"cprime":9,"packing_triangles":77,"params":[9,9,8,1]}
+  ],
+  "trust":"generator-side finite checker only; universal proof is symbolic plus candidate/source-backed inputs"
+}
