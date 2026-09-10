@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "candidate": "candidate:erdos81-a01-c37-d7-cone",
+  "fresh_base": "a97e4b640733adfc4aa35129f9e98e4411f8767a",
+  "problem_contract_sha256": "39ad638dd62d81566a3a4d2e73d7feaab175863c6bcc84c05e9270a4d6377f58",
+  "artifact_files": {
+    "research/artifacts/candidates/c37/proof.md": {"bytes":8879,"sha256":"53e9ec4fdab0230f81dc278a782d4101957cce2789bb9ff12bcc239c45d64a1e"},
+    "research/artifacts/candidates/c37/checker.py": {"bytes":8139,"sha256":"92d4bee09ce794a8e72c954855e9444637018a2a32f8fbfb4fa5bb3449e32157"},
+    "research/artifacts/candidates/c37/results.json": {"bytes":4726,"sha256":"07d18806d628fb6303beadcffe57bc1387f6233b705fe4f3f45c8d296966047c"}
+  },
+  "dependencies": [
+    {"path":"research/artifacts/candidates/c36/proof.md","revision":"a97e4b640733adfc4aa35129f9e98e4411f8767a","relation":"exact prior quotient-ray classification","trust":"candidate"},
+    {"path":"research/artifacts/candidates/c24/twolevel/proof.md","revision":"a97e4b640733adfc4aa35129f9e98e4411f8767a","relation":"finite fan proof of Delta-plus-one edge coloring","trust":"candidate proof dependency"},
+    {"path":"research/artifacts/source-notes/c28/source-audit.json","revision":"a97e4b640733adfc4aa35129f9e98e4411f8767a","relation":"source-backed Kirkman resolution input for every c-prime congruent 3 modulo 6","trust":"source-backed; original proof bytes not audited"},
+    {"path":"research/artifacts/candidates/erdos81-a01-c22-c20-audit.md","revision":"a97e4b640733adfc4aa35129f9e98e4411f8767a","relation":"lambda semantics, p23 identity and lambda upper bound","trust":"candidate/source-backed"}
+  ],
+  "run_record": {
+    "environment": {"python":"3.13.5","arithmetic":"fractions.Fraction and exact finite graph search","threads":"one process per mode"},
+    "successful": [
+      {"mode":"algebra","command":"python research/artifacts/candidates/c37/checker.py algebra --out NEW-algebra.json","exit_code":0,"outer_wall_seconds":6.35,"peak_rss_kib":10368,"output_bytes":234,"output_sha256":"27c66ed3f8915f5dca6f937e667b0d7b772a7a0a96789216cb5d3bafdd060fe2","scope":"2073600 parameter rows; 404910 d7-dominant rows"},
+      {"mode":"witness","command":"python research/artifacts/candidates/c37/checker.py witness --out NEW-witness.json","exit_code":0,"outer_wall_seconds":0.04,"peak_rss_kib":10752,"output_bytes":1330,"output_sha256":"def7e8f47fa121af91f99c5e67c7669a4c81904ba545e4160c7664fc753b99ea","scope":"seven actual edge-colored cases and affine factor orders 3,9,27"},
+      {"mode":"mutations","command":"python research/artifacts/candidates/c37/checker.py mutations --out NEW-mutations.json","exit_code":0,"outer_wall_seconds":0.03,"peak_rss_kib":10368,"output_bytes":149,"output_sha256":"ee9075455fcf636d5035dc8bd991fce1035927f41d5c7c811c38009f53404496","scope":"12 of 12 mutations detected"}
+    ],
+    "trust": "generator-side bounded checking only; no registered independent verifier"
+  },
+  "semantic_boundary": [
+    "The result is only the d7 cone in the nondegenerate two-neighborhood split model.",
+    "The construction is an actual host triangle packing; its unassigned graph edges become singleton clique blocks.",
+    "Q, L_D, J_fix, J, nu and lambda remain distinct.",
+    "Kirkman is source-backed and the C24 fan proof is generator-authored; neither is a trusted receipt.",
+    "CI, finite runs and self-review are not Evidence or Result admission."
+  ],
+  "next_route": "Treat d6: combine an A-side short factorization with an A-by-long-by-C Latin rectangle and a compatible C-side residual design, retaining one-use core ownership."
+}
